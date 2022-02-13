@@ -313,12 +313,10 @@ function get_all_nfts(){
                 textAlign: "center",
               }}
             >
-     <s.TextTitle style={{ textAlign: "center", color: "red" }}>
-     <center>Random wallets will get NFTs airdropped to them. </center>
-     </s.TextTitle>
+
           <s.TextTitle style={{ textAlign: "center", color: "var(--accent-text)" }}>
 
-     The more CryptoMan you hold the better the chances are of winning!
+     Just a Sweetkitten
      </s.TextTitle>
             </span>
             <s.SpacerSmall />
@@ -344,7 +342,7 @@ function get_all_nfts(){
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 CryptoMan costs {CONFIG.DISPLAY_COST}{" "}
+                  1 8-Bit Cat costs {CONFIG.DISPLAY_COST}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
