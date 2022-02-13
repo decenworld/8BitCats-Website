@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #733",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/733.png",
+  "dna": "56ff9f855cf3a8b7c2eda4b386f95e6395ffb19d",
+  "edition": 733,
+  "date": 1644783999207,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Night",
+      "frequency": "15.85%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Pink",
+      "frequency": "13.78%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Hoddie II",
+      "frequency": "10.49%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Relaxed II",
+      "frequency": "15.12%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Beanie",
+      "frequency": "11.10%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

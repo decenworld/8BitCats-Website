@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #769",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/769.png",
+  "dna": "fcbd4669ae71835943c1b7b5e1ea8b430ca0cc73",
+  "edition": 769,
+  "date": 1644784002012,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Pink",
+      "frequency": "11.59%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Yellow",
+      "frequency": "13.66%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Pink Shirt",
+      "frequency": "9.02%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Dead",
+      "frequency": "5.00%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Red Cap",
+      "frequency": "6.95%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

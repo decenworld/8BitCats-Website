@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #631",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/631.png",
+  "dna": "58b1f064f868ac62627f572b98197bf9f9e55cc3",
+  "edition": 631,
+  "date": 1644783991187,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skyday",
+      "frequency": "16.34%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Pink",
+      "frequency": "13.78%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Jacket",
+      "frequency": "7.93%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Love",
+      "frequency": "9.51%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Green Beanie",
+      "frequency": "8.54%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #509",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/509.png",
+  "dna": "e3c4a43edc937a3a4ef51b2ecd1bca1d29301eb9",
+  "edition": 509,
+  "date": 1644783981621,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Day",
+      "frequency": "18.90%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Green",
+      "frequency": "14.51%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Spotted Red Coat",
+      "frequency": "7.32%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Relaxed II",
+      "frequency": "15.12%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Ice Cream",
+      "frequency": "3.17%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

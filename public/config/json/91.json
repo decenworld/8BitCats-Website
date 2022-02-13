@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #91",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/91.png",
+  "dna": "ab08c8eacfb7cbfa1f589268744bdbc1d181b7ad",
+  "edition": 91,
+  "date": 1644783948769,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Day",
+      "frequency": "18.90%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Purple",
+      "frequency": "13.90%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Cute Fight Shirt",
+      "frequency": "5.12%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Glasses",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Beanie",
+      "frequency": "11.10%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

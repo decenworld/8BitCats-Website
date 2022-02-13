@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #242",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/242.png",
+  "dna": "b6d570ff29aa3614f103f910f54315e5780f0c1d",
+  "edition": 242,
+  "date": 1644783960606,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Night",
+      "frequency": "15.85%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Blue",
+      "frequency": "18.90%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Hoddie II",
+      "frequency": "10.49%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Relaxed I",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Sweatband",
+      "frequency": "10.24%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

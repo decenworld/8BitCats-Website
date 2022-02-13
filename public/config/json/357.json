@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #357",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/357.png",
+  "dna": "147ee2d06c0cfc74f0c6bb0a39cbc2744582dac3",
+  "edition": 357,
+  "date": 1644783969665,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Night",
+      "frequency": "15.85%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Yellow",
+      "frequency": "13.66%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Suit",
+      "frequency": "12.44%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Excited I",
+      "frequency": "13.05%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Samurai Hat",
+      "frequency": "9.15%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

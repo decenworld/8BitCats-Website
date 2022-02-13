@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #299",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/299.png",
+  "dna": "cdc9d43379ec088437f8169aea14265ebbfb237a",
+  "edition": 299,
+  "date": 1644783965113,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skynight",
+      "frequency": "14.02%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Green",
+      "frequency": "14.51%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Fantom Shirt",
+      "frequency": "4.15%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Cheeky",
+      "frequency": "19.88%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Cute Hat",
+      "frequency": "8.05%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

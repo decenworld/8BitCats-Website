@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #597",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/597.png",
+  "dna": "68d22b29e21f7496e8055c8c740f5a2ab5077716",
+  "edition": 597,
+  "date": 1644783988522,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Day",
+      "frequency": "18.90%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "White",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Pink Shirt",
+      "frequency": "9.02%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Glasses",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Watermelon",
+      "frequency": "5.73%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #691",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/691.png",
+  "dna": "0fb8ea150e522785d838c52cea0b9f47ba1c6e6d",
+  "edition": 691,
+  "date": 1644783995909,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skyday",
+      "frequency": "16.34%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Yellow",
+      "frequency": "13.66%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Hoddie II",
+      "frequency": "10.49%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Relaxed I",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Apple",
+      "frequency": "6.10%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

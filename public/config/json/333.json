@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #333",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/333.png",
+  "dna": "0e032037079039e700d7a68d7edafaf3a8e29c1c",
+  "edition": 333,
+  "date": 1644783967784,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skyday",
+      "frequency": "16.34%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "White",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Jacket",
+      "frequency": "7.93%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Cheeky",
+      "frequency": "19.88%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Beanie",
+      "frequency": "11.10%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #515",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/515.png",
+  "dna": "1b2a76035b42818c51af66d04c2c53d8e1ae2416",
+  "edition": 515,
+  "date": 1644783982086,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Pink",
+      "frequency": "11.59%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Purple",
+      "frequency": "13.90%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Cute Fight Shirt",
+      "frequency": "5.12%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Relaxed II",
+      "frequency": "15.12%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Cool Captain",
+      "frequency": "3.78%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

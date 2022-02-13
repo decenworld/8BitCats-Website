@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #808",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/808.png",
+  "dna": "4bd46f082a74ba193c9f7890870ed9bfe638c0f7",
+  "edition": 808,
+  "date": 1644784005088,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skynight",
+      "frequency": "14.02%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Green",
+      "frequency": "14.51%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "King Coat",
+      "frequency": "3.90%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Cheeky",
+      "frequency": "19.88%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Apple",
+      "frequency": "6.10%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

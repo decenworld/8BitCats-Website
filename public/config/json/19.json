@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #19",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/19.png",
+  "dna": "fdedcb60c1df41bed71b2dc8d9279103e944a066",
+  "edition": 19,
+  "date": 1644783943111,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skynight",
+      "frequency": "14.02%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Red",
+      "frequency": "11.71%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Duck",
+      "frequency": "3.29%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Glasses",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Ice Cream",
+      "frequency": "3.17%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

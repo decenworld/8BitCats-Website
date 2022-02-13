@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #623",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/623.png",
+  "dna": "7531a9fbc803b30fb37ee9e316eb44ef0e09f4ed",
+  "edition": 623,
+  "date": 1644783990566,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skyday",
+      "frequency": "16.34%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "White",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Pink Shirt",
+      "frequency": "9.02%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Excited II",
+      "frequency": "10.37%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Captain",
+      "frequency": "6.59%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

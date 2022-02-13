@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #317",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/317.png",
+  "dna": "fd62e871c81f854dccba0e3a3b32d8b827cdd471",
+  "edition": 317,
+  "date": 1644783966522,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Night",
+      "frequency": "15.85%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Pink",
+      "frequency": "13.78%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Hoddie II",
+      "frequency": "10.49%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Glasses",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Ice Cream",
+      "frequency": "3.17%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

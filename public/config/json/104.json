@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #104",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/104.png",
+  "dna": "c59a2f5ebf1be7cee837e1cfaa0f48f2915c0e53",
+  "edition": 104,
+  "date": 1644783949789,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skyday",
+      "frequency": "16.34%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Blue",
+      "frequency": "18.90%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Hoddie II",
+      "frequency": "10.49%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Relaxed I",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Samurai Hat",
+      "frequency": "9.15%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

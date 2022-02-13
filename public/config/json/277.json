@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #277",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/277.png",
+  "dna": "058d4feed04d94a68939e0e792ef661b606e53a5",
+  "edition": 277,
+  "date": 1644783963366,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Skyday",
+      "frequency": "16.34%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Blue",
+      "frequency": "18.90%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Pink Shirt",
+      "frequency": "9.02%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Cheeky",
+      "frequency": "19.88%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Captain",
+      "frequency": "6.59%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

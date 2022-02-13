@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #365",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/365.png",
+  "dna": "5ec1d3bf8a79adb211267a8901fd120f04264252",
+  "edition": 365,
+  "date": 1644783970300,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Night",
+      "frequency": "15.85%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Purple",
+      "frequency": "13.90%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Hoddie II",
+      "frequency": "10.49%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Relaxed I",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Fedora",
+      "frequency": "5.37%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

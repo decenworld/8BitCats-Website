@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0xb8c3bdc19f0f47da5fb562f6772e20ed2883e6fc",
+  "SCAN_LINK": "https://ftmscan.com/token/0xb8c3bdc19f0f47da5fb562f6772e20ed2883e6fc",
+  "NETWORK": {
+    "NAME": "Fantom Opera",
+    "SYMBOL": "FTM",
+    "ID": 250
+  },
+  "NFT_NAME": "8-Bit Cats",
+  "SYMBOL": "CAT",
+  "MAX_SUPPLY": 820,
+  "WEI_COST": 12000000000000000000,
+  "DISPLAY_COST": 12,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "nftkey",
+  "MARKETPLACE_LINK": "https://nftkey.app/collections/cryptoman",
+  "SHOW_BACKGROUND": true
+}

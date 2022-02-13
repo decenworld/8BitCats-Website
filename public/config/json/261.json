@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #261",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/261.png",
+  "dna": "279af58be4988cc081447f12ce3b4331118f4169",
+  "edition": 261,
+  "date": 1644783962105,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Green",
+      "frequency": "14.39%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Pink",
+      "frequency": "13.78%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Spotted Red Coat",
+      "frequency": "7.32%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Excited I",
+      "frequency": "13.05%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Halo",
+      "frequency": "2.07%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

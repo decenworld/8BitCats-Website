@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #46",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/46.png",
+  "dna": "77724ba9004f93c06711a23e7bd656d3fa95fb12",
+  "edition": 46,
+  "date": 1644783945234,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Night",
+      "frequency": "15.85%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Blue",
+      "frequency": "18.90%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Astronaut",
+      "frequency": "6.10%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Relaxed I",
+      "frequency": "13.54%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Fedora",
+      "frequency": "5.37%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

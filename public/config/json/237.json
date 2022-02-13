@@ -1,0 +1,36 @@
+{
+  "name": "8Bit Cats #237",
+  "description": "A collection of 8Bit Cats",
+  "image": "ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7/237.png",
+  "dna": "07221396d6ea10be6868ae1f98c2f58a18153129",
+  "edition": 237,
+  "date": 1644783960220,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Green",
+      "frequency": "14.39%"
+    },
+    {
+      "trait_type": "Body",
+      "value": "Purple",
+      "frequency": "13.90%"
+    },
+    {
+      "trait_type": "Clothing",
+      "value": "Hoodie",
+      "frequency": "12.80%"
+    },
+    {
+      "trait_type": "Face",
+      "value": "Love",
+      "frequency": "9.51%"
+    },
+    {
+      "trait_type": "Hats",
+      "value": "Fedora",
+      "frequency": "5.37%"
+    }
+  ],
+  "compiler": "8Bit Collection"
+}

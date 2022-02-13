@@ -1,0 +1,312 @@
+{
+  "Background": [
+    {
+      "trait": "Day",
+      "weight": "17",
+      "occurrence": "155 in 820 editions (18.90 %)",
+      "frequency": "18.90%"
+    },
+    {
+      "trait": "Green",
+      "weight": "13",
+      "occurrence": "118 in 820 editions (14.39 %)",
+      "frequency": "14.39%"
+    },
+    {
+      "trait": "Night",
+      "weight": "15",
+      "occurrence": "130 in 820 editions (15.85 %)",
+      "frequency": "15.85%"
+    },
+    {
+      "trait": "Orange",
+      "weight": "10",
+      "occurrence": "73 in 820 editions (8.90 %)",
+      "frequency": "8.90%"
+    },
+    {
+      "trait": "Pink",
+      "weight": "12",
+      "occurrence": "95 in 820 editions (11.59 %)",
+      "frequency": "11.59%"
+    },
+    {
+      "trait": "Skyday",
+      "weight": "17",
+      "occurrence": "134 in 820 editions (16.34 %)",
+      "frequency": "16.34%"
+    },
+    {
+      "trait": "Skynight",
+      "weight": "16",
+      "occurrence": "115 in 820 editions (14.02 %)",
+      "frequency": "14.02%"
+    }
+  ],
+  "Body": [
+    {
+      "trait": "Blue",
+      "weight": "18",
+      "occurrence": "155 in 820 editions (18.90 %)",
+      "frequency": "18.90%"
+    },
+    {
+      "trait": "Green",
+      "weight": "16",
+      "occurrence": "119 in 820 editions (14.51 %)",
+      "frequency": "14.51%"
+    },
+    {
+      "trait": "Pink",
+      "weight": "12",
+      "occurrence": "113 in 820 editions (13.78 %)",
+      "frequency": "13.78%"
+    },
+    {
+      "trait": "Purple",
+      "weight": "14",
+      "occurrence": "114 in 820 editions (13.90 %)",
+      "frequency": "13.90%"
+    },
+    {
+      "trait": "Red",
+      "weight": "11",
+      "occurrence": "96 in 820 editions (11.71 %)",
+      "frequency": "11.71%"
+    },
+    {
+      "trait": "White",
+      "weight": "14",
+      "occurrence": "111 in 820 editions (13.54 %)",
+      "frequency": "13.54%"
+    },
+    {
+      "trait": "Yellow",
+      "weight": "15",
+      "occurrence": "112 in 820 editions (13.66 %)",
+      "frequency": "13.66%"
+    }
+  ],
+  "Clothing": [
+    {
+      "trait": "Astronaut",
+      "weight": "5",
+      "occurrence": "50 in 820 editions (6.10 %)",
+      "frequency": "6.10%"
+    },
+    {
+      "trait": "Cotton Sweater",
+      "weight": "10",
+      "occurrence": "80 in 820 editions (9.76 %)",
+      "frequency": "9.76%"
+    },
+    {
+      "trait": "Cute Fight Shirt",
+      "weight": "5",
+      "occurrence": "42 in 820 editions (5.12 %)",
+      "frequency": "5.12%"
+    },
+    {
+      "trait": "Duck",
+      "weight": "4",
+      "occurrence": "27 in 820 editions (3.29 %)",
+      "frequency": "3.29%"
+    },
+    {
+      "trait": "Fantom Shirt",
+      "weight": "6",
+      "occurrence": "34 in 820 editions (4.15 %)",
+      "frequency": "4.15%"
+    },
+    {
+      "trait": "Hoddie II",
+      "weight": "11",
+      "occurrence": "86 in 820 editions (10.49 %)",
+      "frequency": "10.49%"
+    },
+    {
+      "trait": "Hoodie",
+      "weight": "12",
+      "occurrence": "105 in 820 editions (12.80 %)",
+      "frequency": "12.80%"
+    },
+    {
+      "trait": "Jacket",
+      "weight": "7",
+      "occurrence": "65 in 820 editions (7.93 %)",
+      "frequency": "7.93%"
+    },
+    {
+      "trait": "King Coat",
+      "weight": "4",
+      "occurrence": "32 in 820 editions (3.90 %)",
+      "frequency": "3.90%"
+    },
+    {
+      "trait": "Pink Shirt",
+      "weight": "8",
+      "occurrence": "74 in 820 editions (9.02 %)",
+      "frequency": "9.02%"
+    },
+    {
+      "trait": "Purple Shirt",
+      "weight": "9",
+      "occurrence": "63 in 820 editions (7.68 %)",
+      "frequency": "7.68%"
+    },
+    {
+      "trait": "Spotted Red Coat",
+      "weight": "8",
+      "occurrence": "60 in 820 editions (7.32 %)",
+      "frequency": "7.32%"
+    },
+    {
+      "trait": "Suit",
+      "weight": "11",
+      "occurrence": "102 in 820 editions (12.44 %)",
+      "frequency": "12.44%"
+    }
+  ],
+  "Face": [
+    {
+      "trait": "Cheeky",
+      "weight": "18",
+      "occurrence": "163 in 820 editions (19.88 %)",
+      "frequency": "19.88%"
+    },
+    {
+      "trait": "Dead",
+      "weight": "5",
+      "occurrence": "41 in 820 editions (5.00 %)",
+      "frequency": "5.00%"
+    },
+    {
+      "trait": "Excited I",
+      "weight": "13",
+      "occurrence": "107 in 820 editions (13.05 %)",
+      "frequency": "13.05%"
+    },
+    {
+      "trait": "Excited II",
+      "weight": "12",
+      "occurrence": "85 in 820 editions (10.37 %)",
+      "frequency": "10.37%"
+    },
+    {
+      "trait": "Glasses",
+      "weight": "14",
+      "occurrence": "111 in 820 editions (13.54 %)",
+      "frequency": "13.54%"
+    },
+    {
+      "trait": "Love",
+      "weight": "10",
+      "occurrence": "78 in 820 editions (9.51 %)",
+      "frequency": "9.51%"
+    },
+    {
+      "trait": "Relaxed I",
+      "weight": "12",
+      "occurrence": "111 in 820 editions (13.54 %)",
+      "frequency": "13.54%"
+    },
+    {
+      "trait": "Relaxed II",
+      "weight": "16",
+      "occurrence": "124 in 820 editions (15.12 %)",
+      "frequency": "15.12%"
+    }
+  ],
+  "Hats": [
+    {
+      "trait": "Apple",
+      "weight": "5",
+      "occurrence": "50 in 820 editions (6.10 %)",
+      "frequency": "6.10%"
+    },
+    {
+      "trait": "Beanie",
+      "weight": "12",
+      "occurrence": "91 in 820 editions (11.10 %)",
+      "frequency": "11.10%"
+    },
+    {
+      "trait": "Bucket Hat",
+      "weight": "7",
+      "occurrence": "63 in 820 editions (7.68 %)",
+      "frequency": "7.68%"
+    },
+    {
+      "trait": "Captain",
+      "weight": "6",
+      "occurrence": "54 in 820 editions (6.59 %)",
+      "frequency": "6.59%"
+    },
+    {
+      "trait": "Cool Captain",
+      "weight": "3",
+      "occurrence": "31 in 820 editions (3.78 %)",
+      "frequency": "3.78%"
+    },
+    {
+      "trait": "Cute Hat",
+      "weight": "8",
+      "occurrence": "66 in 820 editions (8.05 %)",
+      "frequency": "8.05%"
+    },
+    {
+      "trait": "Fedora",
+      "weight": "6",
+      "occurrence": "44 in 820 editions (5.37 %)",
+      "frequency": "5.37%"
+    },
+    {
+      "trait": "Green Beanie",
+      "weight": "8",
+      "occurrence": "70 in 820 editions (8.54 %)",
+      "frequency": "8.54%"
+    },
+    {
+      "trait": "Halo",
+      "weight": "3",
+      "occurrence": "17 in 820 editions (2.07 %)",
+      "frequency": "2.07%"
+    },
+    {
+      "trait": "Ice Cream",
+      "weight": "5",
+      "occurrence": "26 in 820 editions (3.17 %)",
+      "frequency": "3.17%"
+    },
+    {
+      "trait": "Orange Beanie",
+      "weight": "6",
+      "occurrence": "45 in 820 editions (5.49 %)",
+      "frequency": "5.49%"
+    },
+    {
+      "trait": "Red Cap",
+      "weight": "7",
+      "occurrence": "57 in 820 editions (6.95 %)",
+      "frequency": "6.95%"
+    },
+    {
+      "trait": "Samurai Hat",
+      "weight": "9",
+      "occurrence": "75 in 820 editions (9.15 %)",
+      "frequency": "9.15%"
+    },
+    {
+      "trait": "Sweatband",
+      "weight": "10",
+      "occurrence": "84 in 820 editions (10.24 %)",
+      "frequency": "10.24%"
+    },
+    {
+      "trait": "Watermelon",
+      "weight": "5",
+      "occurrence": "47 in 820 editions (5.73 %)",
+      "frequency": "5.73%"
+    }
+  ]
+}
