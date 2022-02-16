@@ -342,8 +342,7 @@ function get_all_nfts(){
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 8-Bit Cat costs {CONFIG.DISPLAY_COST}{" "}
-                  {CONFIG.NETWORK.SYMBOL}.
+                  1 8-Bit Cat ONLY 4 FTM.
                 </s.TextTitle>
                 <s.SpacerXSmall />
                 <s.TextDescription
