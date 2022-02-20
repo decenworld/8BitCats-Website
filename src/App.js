@@ -160,9 +160,11 @@ function get_all_nfts(){
         return response.json();
       })
       .then(function(myJson) {
-        let image_url = "https://ipfs.io/ipfs/" + myJson.image;
-        let image_result = image_url.replace("ipfs://", "");
+       /* let image_url = "https://ipfs.io/ipfs/" + myJson.image;
+        let image_result = image_url.replace("ipfs://", ""); */
      /*   document.getElementById("output").innerHTML += myJson.name + "<br />"; */
+        let image_url = "/config/cats/" + myJson.image;
+        let image_result = image_url.replace("ipfs://QmRJWYg2zmuHPwvaBsXE3jt48XTC3nyTJKrDtKffWrute7", "");
         var new_nft = document.getElementById("image");
         new_nft.appendChild(document.createElement('img')).src = image_result;
         sleep(200);
