@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 html,
 body,
 div,
@@ -130,8 +131,9 @@ table {
 
 body {
   margin: 0;
-  font-family: "coder", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
-    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Press Start 2P", cursive;
+
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -157,6 +159,7 @@ body {
 }
 
 html {
+  
   background-color: "#4C4C4C";
 }
 
@@ -170,4 +173,61 @@ div {
 
 img {
   width: 220px;
+}
+
+mintButton {
+background: #92CD41;
+display: inline-block;
+position: relative;
+text-align: center;
+font-size: 30px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+text-decoration: none;
+color: white;
+box-shadow: inset -4px -4px 0px 0px #4AA52E;
+box-sizing: border-box;
+left: -6px;
+top: 0;
+border-left: 6px black solid;
+border-right: 6px black solid;
+top: -6px;
+left: 0;
+border-top: 6px black solid;
+border-bottom: 6px black solid;
+box-sizing: content-box;
+content: "";
+font-family: "Press Start 2P", cursive;
+}
+
+
+viewCollection {
+background: #317CDD;
+display: inline-block;
+position: relative;
+text-align: center;
+font-size: 30px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+text-decoration: none;
+color: white;
+box-shadow: inset -4px -4px 0px 0px #1e4d8a;
+box-sizing: border-box;
+left: -6px;
+top: 0;
+border-left: 6px black solid;
+border-right: 6px black solid;
+top: 10px;
+margin-bottom: 15px;
+left: 0;
+border-top: 6px black solid;
+border-bottom: 6px black solid;
+box-sizing: content-box;
+content: "";
+font-family: "Press Start 2P", cursive;
+}
+
+spaceText {
+font-family: "Press Start 2P", cursive;
+  word-spacing: -40px;
 }
