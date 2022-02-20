@@ -436,7 +436,7 @@ function get_all_nfts(){
                     </s.TextDescription>
                     <s.SpacerMedium />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
-                      <StyledRoundButton
+                      <circleButton
                         style={{ lineHeight: 0.4 }}
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
@@ -445,7 +445,7 @@ function get_all_nfts(){
                         }}
                       >
                         -
-                      </StyledRoundButton>
+                      </circleButton>
                       <s.SpacerMedium />
                       <s.TextDescription
                         style={{
@@ -456,7 +456,7 @@ function get_all_nfts(){
                         {mintAmount}
                       </s.TextDescription>
                       <s.SpacerMedium />
-                      <StyledRoundButton
+                      <circleButtonleft
                         disabled={claimingNft ? 1 : 0}
                         onClick={(e) => {
                           e.preventDefault();
@@ -464,7 +464,7 @@ function get_all_nfts(){
                         }}
                       >
                         +
-                      </StyledRoundButton>
+                      </circleButtonleft>
                     </s.Container>
                     <s.SpacerSmall />
                     <s.Container ai={"center"} jc={"center"} fd={"row"}>
