@@ -200,6 +200,56 @@ content: "";
 font-family: "Press Start 2P", cursive;
 }
 
+circleButton {
+background: #c9870d;
+display: inline-block;
+position: relative;
+text-align: center;
+font-size: 20px;
+padding: 5px;
+padding-top: 10px;
+padding-bottom: 10px;
+font-family: "Press Start 2P", cursive;
+text-decoration: none;
+color: white;
+box-shadow: inset -4px -4px 0px 0px #6b4807;
+box-sizing: border-box;
+left: -6px;
+top: 0;
+border-left: 6px black solid;
+border-right: 6px black solid;
+left: 0;
+border-top: 6px black solid;
+border-bottom: 6px black solid;
+box-sizing: content-box;
+content: "";
+font-family: "Press Start 2P", cursive;
+}
+
+circleButtonleft {
+background: #c9870d;
+display: inline-block;
+position: relative;
+text-align: center;
+font-size: 20px;
+padding: 5px;
+font-family: "Press Start 2P", cursive;
+text-decoration: none;
+color: white;
+box-shadow: inset -4px -4px 0px 0px #6b4807;
+box-sizing: border-box;
+left: -6px;
+top: 0;
+border-left: 6px black solid;
+border-right: 6px black solid;
+left: 0;
+border-top: 6px black solid;
+border-bottom: 6px black solid;
+box-sizing: content-box;
+content: "";
+font-family: "Press Start 2P", cursive;
+}
+
 
 viewCollection {
 background: #317CDD;
