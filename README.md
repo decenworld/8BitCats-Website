@@ -2,7 +2,7 @@
 
 ![](https://www.8bitcats.com/config/images/example.gif)
 
-All the code in these repos was created and explained by HashLips on the main YouTube channel.
+8BitCats For The Metaverse.
 
 To find out more please visit:
 
