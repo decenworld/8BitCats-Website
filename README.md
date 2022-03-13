@@ -1,20 +1,16 @@
-# Welcome to The Stripes NFT 💎
+# 8BitCats💎
 
-![](https://github.com/The-Stripes-NFT/nft-minting-app/blob/main/logo-blob.png)
+![](https://www.8bitcats.com/config/images/example.gif)
 
 All the code in these repos was created and explained by HashLips on the main YouTube channel.
 
 To find out more please visit:
 
-[📺 YouTube](https://www.youtube.com/AliSolanki)
+[🐦 Twitter](https://twitter.com/8bitcatsftm)
 
-[💬 Telegram](https://t.me/studentsamaj)
+[ℹ️ Website](https://8bitcats.com/)
 
-[🐦 Twitter](https://twitter.com/thestripesnft)
-
-[ℹ️ Website](https://thestripesnft.com/)
-
-# The Stripes NFT minting dapp 🔥
+# 8BitCats.com 🔥
 
 This repo provides a nice and easy way for linking an existing NFT smart contract to this minting dapp. There are two ways of using this repo, you can go the simple route or the more complex one.
 
