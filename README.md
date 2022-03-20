@@ -11,11 +11,11 @@ To find out more please visit:
 [ℹ️ Website](https://8bitcats.com/)
 
 # Roadmap
-[ ] Release Token
-[ ] Token Staking
-[ ] New UI
+[] Release Token
+[] Token Staking
+[] New UI
 Next phase:
-[ ] Gaming
+[] Gaming
 
 # 8BitCats.com 🔥
 
