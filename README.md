@@ -10,6 +10,13 @@ To find out more please visit:
 
 [ℹ️ Website](https://8bitcats.com/)
 
+# Roadmap
+[ ] Release Token
+[ ] Token Staking
+[ ] New UI
+Next phase:
+[ ] Gaming
+
 # 8BitCats.com 🔥
 
 This repo provides a nice and easy way for linking an existing NFT smart contract to this minting dapp. There are two ways of using this repo, you can go the simple route or the more complex one.
