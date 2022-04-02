@@ -12,8 +12,10 @@ To find out more please visit:
 
 # Roadmap
 - [ ] Release Token [Developed | Testing]
-- [ ] Token Staking [Developed | Testing]
+- [ ] NFT Staking [Developed | Testing]
 - [ ] New UI [Developed | Testing]
+- [ ] Token Staking [Developing]
+
 ## Next phase:
 - [ ] Gaming
 
