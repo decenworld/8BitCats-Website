@@ -11,9 +11,9 @@ To find out more please visit:
 [ℹ️ Website](https://8bitcats.com/)
 
 # Roadmap
-[] Release Token
-[] Token Staking
-[] New UI
+[] Release Token [Developed | Testing]
+[] Token Staking [Developed | Testing]
+[] New UI [Developed | Testing]
 Next phase:
 [] Gaming
 
