@@ -143,7 +143,7 @@ const Nav = () => {
             </IconButton>
             <Typography variant="h6" noWrap>
             <a rel="noopener noreferrer" href="https://mvfinance.club/" className={classes.link}>
-              Miniverse Finance
+              8-Bit Cats
               </a>
             </Typography>
 
@@ -165,25 +165,6 @@ const Nav = () => {
               </div>
               <Divider />
               <List>
-                <ListItemLink primary="Home" to="/" />
-                <ListItemLink primary="Farms" to="/farms" />
-                <ListItemLink primary="Boardroom" to="/boardroom" />
-                <ListItem button target='_blank' component="a" href="https://linktr.ee/miniverseclub2">
-                  <ListItemText>Auto Compounder</ListItemText>
-                </ListItem>  
-                <ListItemLink primary="MiniChilla" to="/minichilla" />
-                <ListItemLink primary="MiniGuinea" to="/miniguinea" />
-                <ListItemLink primary="MiniLand" to="/miniland" />
-                <ListItem button target='_blank' component="a" href="https://slot.mvfinance.club/">
-                  <ListItemText>Slots</ListItemText>
-                </ListItem> 
-                <ListItemLink primary="Bonds" to="/bonds" />
-                <ListItemLink primary="Strategy" to="/strategies" />
-                <ListItemLink primary="Raffle" to="/raffle" />
-               
-                <ListItem button component="a" href="https://miniversefinance.gitbook.io/docs/">
-                  <ListItemText>Docs</ListItemText>
-                </ListItem>
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
                 </ListItem>
