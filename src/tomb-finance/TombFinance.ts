@@ -4,21 +4,18 @@ import { Fetcher, Route, Token } from '@spookyswap/sdk';
 import { Configuration } from './config';
 import { ContractName, TokenStat, AllocationTime, LPStat, Bank, PoolStats, TShareSwapperStat } from './types';
 import { BigNumber, Contract, ethers, EventFilter } from 'ethers';
-import { decimalToBalance, web3ProviderFrom } from './ether-utils';
+import { decimalToBalance } from './ether-utils';
 import { TransactionResponse } from '@ethersproject/providers';
 import ERC20 from './ERC20';
 import { getFullDisplayBalance, getDisplayBalance } from '../utils/formatBalance';
 import { getDefaultProvider } from '../utils/provider';
 import IUniswapV2PairABI from './IUniswapV2Pair.abi.json';
 import config, { bankDefinitions } from '../config';
-import mintExampleAbi from "./deployments/cat.json"
 
 
 import moment from 'moment';
 import { parseUnits } from 'ethers/lib/utils';
 import { FTM_TICKER, SPOOKY_ROUTER_ADDR, TOMB_TICKER } from '../utils/constants';
-import { stringify } from 'querystring';
-import Web3 from 'web3';
 /**
  * An API module of 2omb Finance contracts.
  * All contract-interacting domain logic should be defined in here.
@@ -43,14 +40,11 @@ export class TombFinance {
     const { deployments, externalTokens } = cfg;
     const provider = getDefaultProvider();
 
-
-
     // loads contracts from deployments
     this.contracts = {};
     for (const [name, deployment] of Object.entries(deployments)) {
       this.contracts[name] = new Contract(deployment.address, deployment.abi, provider);
     }
-
     this.externalTokens = {};
     for (const [symbol, [address, decimal]] of Object.entries(externalTokens)) {
       this.externalTokens[symbol] = new ERC20(address, provider, symbol, decimal);
@@ -95,41 +89,6 @@ export class TombFinance {
   get isUnlocked(): boolean {
     return !!this.myAccount;
   }
-
-  //===================================================================
-  //===================== MINTING PAGE=============================
-  //============================================
-  //=========================MINTING PAGE =============================
-  //===================================================================
-
-
-  /**
-   * @param provider From an unlocked wallet. (e.g. Metamask)
-   * @param account An address of unlocked wallet account.
-   */
-  async handleMint(provider: any, account: string){
-    const mintAmount = 1;
-    const mintExampleaddress = "0x6E4F9CC4d9c028CE18B8281B19666388598F22b9";
-    this.myAccount = account;
-        for (const [name, contract] of Object.entries(this.contracts)) {
-      this.contracts[name] = contract.connect(this.provider);
-    }
-    console.log("test");
-    const contract = new ethers.Contract(
-      mintExampleaddress,
-      mintExampleAbi,
-      this.signer
-    );
-    console.log(contract);
-    console.log("account", account)
-    try {
-      const response = await contract.mint(account, "100");
-      console.log("response: ", response);
-    } catch (err) {
-      console.log("error: ", err);
-    }
-    }
-;
 
   //===================================================================
   //===================== GET ASSET STATS =============================
@@ -306,11 +265,21 @@ export class TombFinance {
 
     const filterTo = tomb.filters.Transfer(account, raffleAddress);
 
-    const logsTo = await tomb.queryFilter(filterTo, -2048, currentBlockNumber);
+    const startBlock = currentBlockNumber-100000;
 
-    if (logsTo.length !== 0 && account !== null) {
-      for (let i = 0; i < logsTo.length; i++) {
-        total = total + Number(logsTo[i].args.value);
+    let allEvents : any = [];
+    
+    for(let i = startBlock; i < currentBlockNumber; i += 2000) {
+      const _startBlock = i;
+      const _endBlock = Math.min(currentBlockNumber, i + 1999);
+      const events = await tomb.queryFilter(filterTo, _startBlock, _endBlock);
+      allEvents = [...allEvents, ...events]
+    }
+
+
+    if (allEvents.length !== 0 && account !== null) {
+      for (let i = 0; i < allEvents.length; i++) {
+        total = total + Number(allEvents[i].args.value);
       }
       total = total / 1e18;
     } else {
@@ -675,8 +644,8 @@ export class TombFinance {
 
     const { WFTM } = this.externalTokens;
 
-    const wftm = new TokenSpirit(250, WFTM.address, WFTM.decimal);
-    const token = new TokenSpirit(250, tokenContract.address, tokenContract.decimal, tokenContract.symbol);
+    const wftm = new TokenSpirit(chainId, WFTM.address, WFTM.decimal);
+    const token = new TokenSpirit(chainId, tokenContract.address, tokenContract.decimal, tokenContract.symbol);
     try {
       const wftmToToken = await FetcherSpirit.fetchPairData(wftm, token, this.provider);
       const liquidityToken = wftmToToken.liquidityToken;
@@ -996,6 +965,9 @@ export class TombFinance {
     return events;
   }
 
+
+  
+
   /**
    * Helper method
    * @param filter applied on the query to the treasury events
@@ -1168,8 +1140,6 @@ export class TombFinance {
       await this.contracts[contract].withdraw([tokenId]);
     }
   
-
-
     /**
      * Cliam rewards for nft items
      * @param address account address
@@ -1200,14 +1170,12 @@ export class TombFinance {
       await this.contracts[nftContract].setApprovalForAll(stakingAddress, true);
     }
   
-
-        /**
+   /**
      * mint account for ERC20 and ERC721
      * @param address account address
      */
      async mint(account: string, mintAmount: string): Promise<void> {
       let totalCostWei = String(parseFloat(mintAmount) * 4000000000000000000);
-      let contract_address = String("0x6E4F9CC4d9c028CE18B8281B19666388598F22b9");
       try {
       await this.contracts['MiniGuineasWalletNFT'].mint(account, mintAmount,
               {
@@ -1218,35 +1186,17 @@ export class TombFinance {
       )
       } catch(err) {
         console.log("user declined")
-      }
-      ;
+      }};
+    
 
 
-      
-
-
-      /*
-
-      {
-        gasLimit: String("285000"),
-        to: contract_,
-        from: account,
-        value: totalCostWei,
-      }
-
-
-
-      */
-      /*await this.contracts['MiniGuineasWalletNFT'].mint(stakingAddress, BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff')); */
-    }
-  
 
     /**
      * Approve landing staking contract on ERC721
      */
     async landStakingApprove(): Promise<void> {
       const stakingAddress: string = this.config.deployments['LandStakingv1'].address;
-      this.contracts['LandWalletNFT'].setApprovalForAll()
+  
       await this.contracts['LandWalletNFT'].setApprovalForAll(stakingAddress, true);
     }
   

@@ -7,7 +7,7 @@ const configurations: { [env: string]: Configuration } = {
 
   production: {
     chainId: ChainId.MAINNET,
-    networkName: 'Fantom Opera',
+    networkName: 'Fantom Opera Mainnet',
     ftmscanUrl: 'https://ftmscan.com',
     defaultProvider: 'https://rpc.ftm.tools/',
     deployments: require('./tomb-finance/deployments/deployments.mainnet.json'),
@@ -15,12 +15,12 @@ const configurations: { [env: string]: Configuration } = {
       WFTM: ['0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83', 18],
       FUSDT: ['0x04068DA6C83AFCFA0e13ba15A6696662335D5B75', 6], // This is actually usdc on mainnet not fusdt
       WETH: ['0x74b23882a30290451A17c44f4F05243b6b58C76d', 18], // BOO: 0x841FAD6EAe12c286d1Fd18d1d525DFfA75C7EFFE 18
-      TOMB: ['0x6c021ae822bea943b2e66552bde1d2696a53fbb7', 0], // ZOO: 0x09e145a1d53c0045f41aeef25d8ff982ae74dd56 0
-      USDC: ['0x04068da6c83afcfa0e13ba15a6696662335d5b75', 9], // SHIBA: 0x9ba3e4f84a34df4e08c112e1a0ff148b81655615 9
+      TOMB: ['0x6c021ae822bea943b2e66552bde1d2696a53fbb7', 18], // ZOO: 0x09e145a1d53c0045f41aeef25d8ff982ae74dd56 0
+      USDC: ['0x04068da6c83afcfa0e13ba15a6696662335d5b75', 6], // SHIBA: 0x9ba3e4f84a34df4e08c112e1a0ff148b81655615 9
       FANG: ['0x49894fcc07233957c35462cfc3418ef0cc26129f', 18],
-      MvDOLLAR: ['0x8CcD162E5997363Dc2101371B3B09f316D012306', 18],
+      MvDOLLAR: ['0x57976c467608983513c9355238dc6de1B1aBbcCA', 18],
       'USDT-FTM-LP': ['0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c', 18],
-      'MVDOLLAR-USDC-LP': ['0x20f1F2F12ca4F4B241aB9745EE61745ECC97c60a', 18],
+      'MVDOLLAR-USDC-LP': ['0x35bED1E2f3033395a05CD0b1b5900209ECe42774', 18],
       'MSHARE-USDC-LP': ['0x92A7b2A9ca7D70573E3a0B0BF9e5232c70db8a89', 18],
       'MVDOLLAR-MSHARE-LP': ['0x85E8DcBc11eF5C5F98277B20A041C8ab90E0e2f7', 18]
     },

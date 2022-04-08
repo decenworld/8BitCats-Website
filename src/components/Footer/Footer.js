@@ -44,13 +44,13 @@ const Footer = () => {
           <Grid item xs={6}>
             <Typography variant="body2" color="textSecondary" align="left">
               <Link color="inherit" href="/">
-                8-Bit Cats 2022
+                8-BitCats.com 2022
               </Link>
             </Typography>
           </Grid>
           <Grid item xs={6} style={{ textAlign: 'right' }}>
             <a
-              href="https://twitter.com/8bitcatsftm"
+              href="https://twitter.com/miniverse_fin"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}
@@ -66,7 +66,9 @@ const Footer = () => {
             >
               <img alt="github" src={GithubImage} className={classes.img} />
             </a>
-         
+            <a href="https://discord.com/invite/CxRWUGSyRv" rel="noopener noreferrer" target="_blank" className={classes.link}>
+              <img alt="discord" src={DiscordImage} className={classes.img} />
+            </a>
           </Grid>
         </Grid>
       </Container>

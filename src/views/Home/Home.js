@@ -15,26 +15,8 @@ import useTombFinance from '../../hooks/useTombFinance';
 
 import PitImage from '../../assets/img/background.png';
 
-
-// Minting import
-import {ethers, BigNumber} from "ethers";
-
 // Import custom css
 import "./style.css";
-
-export const StyledImg = createGlobalStyle`
-  box-shadow: 0px 5px 11px 2px rgba(0, 0, 0, 0.7);
-  border:  1px black solid;;
-  background-color: var(--accent);
-  width: 200px;
-  @media (min-width: 900px) {
-    width: 250px;
-  }
-  @media (min-width: 1000px) {
-    width: 300px;
-  }
-  transition: width 0.5s;
-`;
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -80,14 +62,6 @@ const Home = () => {
 // Minting process
 const [mintAmount, setMintAmount] = useState(1);
 
-async function connectAccounts(){
-  if (window.ethereum) {
-    const accounts = await window.ethereum.request({})
-  }
-}
-
-
-
   const reloadNfts = async () => {
     if (account) {
       let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'MiniGuineasWalletNFT');
@@ -95,7 +69,6 @@ async function connectAccounts(){
         nftsInWalletWithJSON.map(async nft => {
           return {
             tokenId: nft.tokenId,
-            
             ...await getImageFromJSON(nft.metaDataJson)
           }
         })
@@ -163,7 +136,7 @@ async function connectAccounts(){
     await tombFinance.approve('MiniGuineasWalletNFT', 'MiniGuineasStakingNFT');
   }
 
-const mint = async (amount) => {
+  const mint = async (amount) => {
     console.log(account);
     await tombFinance.mint(account, amount);
 
@@ -186,20 +159,14 @@ const mint = async (amount) => {
     setMintAmount(newMintAmount);
   };
 
-
   return (
     <Switch>
       <Page>
         <Route exact path={path}>
           <BackgroundImage />
           <div style={{ textAlign: 'center', color: 'white' }}>
-          <h2 style={{ fontSize: '30px', textAlign:'center', marginBottom: '20px'  }}>8-BitCats NFT Staking</h2>
-          <Grid container justify="center" spacing={0} style={{marginTop: '20px', marginBottom: '20px'}}>
-               </Grid>
-                                       <img style={{width: '200px',  border: '1px black solid'}} src={require('./example.gif')} />
-
-
-                          <Grid container justify="center" spacing={0} style={{marginTop: '20px', marginBottom: '20px'}}>
+          <h2 style={{ fontSize: '80px', textAlign:'center', marginBottom: '20px'  }}>8-BitCats NFT Staking</h2>
+                             <Grid container justify="center" spacing={0} style={{marginTop: '20px', marginBottom: '20px'}}>
                                        
  <span>
 
@@ -211,7 +178,16 @@ const mint = async (amount) => {
 {nftTotalSupply}/820
 </span>
 </Grid>
-<span>
+          <Grid container justify="center" spacing={0} style={{marginTop: '20px', marginBottom: '20px'}}>
+                                                    <img style={{width: '200px',  border: '1px black solid'}} src={require('./example.gif')} />
+
+          </Grid>
+
+
+
+
+
+          <span>
                       <circleButton
                         style={{ lineHeight: 0.4 }}
                         onClick={(e) => {
@@ -249,9 +225,10 @@ const mint = async (amount) => {
 
 <br></br>
 </span>
-      
-            <span style={{ fontSize: '36px'}}>
-              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % 8-Bit Cats STAKED
+
+          
+            <span style={{ fontSize: '36px' }}>
+              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % MiniGuineas STAKED
             </span>
             <BorderLinearProgress variant="determinate" value={nftStakedTotalSupply * 100 / nftTotalSupply} />
             <br/>

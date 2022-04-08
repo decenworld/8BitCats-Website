@@ -98,7 +98,7 @@ const Nav = () => {
         {matches ? (
           <>
             <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>     
-            <a rel="noopener noreferrer" href="https://mvfinance.club/" className={classes.link}>
+            <a rel="noopener noreferrer" href="https://8bitcats.com" className={classes.link}>
               <img alt="MiniVerse" src={mvLogo} height="50px" style={{marginTop: '15px'}} />
               </a> 
             </Typography>
@@ -107,41 +107,7 @@ const Nav = () => {
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
-              <Link color="textPrimary" to="/farms" className={classes.link}>
-                Farms
-              </Link>
-              <Link color="textPrimary" to="/boardroom" className={classes.link}>
-                Boardroom
-              </Link>
-              <a rel="noopener noreferrer" target='_blank' href="https://linktr.ee/miniverseclub2" className={classes.link}>
-              Compounder
-              </a>  
-              <a rel="noopener noreferrer" target='_blank' href="https://slot.mvfinance.club/" className={classes.link}>
-              Slots
-              </a>  
-              <div className={'dropdown'}>
-                <button className={'dropbtn'}>NFT STAKING</button>
-                  <div className={'dropdown-content'}>
-                    <Link color="textPrimary" to="/minichilla" className={classes.link}>
-                      Minichilla
-                    </Link>
-                    <Link color="textPrimary" to="/miniguinea" className={classes.link}>
-                      Miniguinea
-                    </Link>
-                    <Link color="textPrimary" to="/miniland" className={classes.link}>
-                      Miniland
-                    </Link>
-                  </div>
-              </div>
-              <Link color="textPrimary" to="/bonds" className={classes.link}>
-                Bonds
-              </Link>
-              <Link color="textPrimary" to="/strategies" className={classes.link}>
-                Strategy
-              </Link>
-              <Link color="textPrimary" to="/raffle" className={classes.link}>
-                Raffle
-              </Link>
+            
 
               {/* <Link color="textPrimary" to="/dividends" className={classes.link}>
                 Dividends
@@ -159,9 +125,7 @@ const Nav = () => {
               {/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}
-              <a target="_blank" href="https://miniversefinance.gitbook.io/docs/" className={classes.link}>
-                Docs
-              </a>
+        
 
             </Box>
             <AccountButton text="Connect" />
