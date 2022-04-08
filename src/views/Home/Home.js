@@ -228,7 +228,7 @@ const [mintAmount, setMintAmount] = useState(1);
 
           
             <span style={{ fontSize: '36px' }}>
-              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % MiniGuineas STAKED
+              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Cats STAKED
             </span>
             <BorderLinearProgress variant="determinate" value={nftStakedTotalSupply * 100 / nftTotalSupply} />
             <br/>
