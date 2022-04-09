@@ -30,10 +30,10 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
           <TokenSymbol symbol="2OMB" />
           <StyledBalance>
             <StyledValue>{displayTombBalance}</StyledValue>
-            <Label text="MvDOLLAR Available" color='primary' />
+            <Label text="Cat Coins Available" color='primary' />
           </StyledBalance>
         </StyledBalanceWrapper>
-
+{/*
         <StyledBalanceWrapper>
           <TokenSymbol symbol="TSHAREPNG" />
           <StyledBalance>
@@ -49,6 +49,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
             <Label text="MvBOND Available" color='primary' />
           </StyledBalance>
         </StyledBalanceWrapper>
+  */}
       </Balances>
     </Modal>
   );

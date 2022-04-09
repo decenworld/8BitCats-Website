@@ -165,29 +165,23 @@ const [mintAmount, setMintAmount] = useState(1);
         <Route exact path={path}>
           <BackgroundImage />
           <div style={{ textAlign: 'center', color: 'white' }}>
-          <h2 style={{ fontSize: '80px', textAlign:'center', marginBottom: '20px'  }}>8-BitCats NFT Staking</h2>
-                             <Grid container justify="center" spacing={0} style={{marginTop: '20px', marginBottom: '20px'}}>
-                                       
- <span>
+          <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>8-Bit Cats</h2>
+          <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
+                                      
+            <span>
+             <span style={{fontSize: '20px'}}>Total Minted
+             </span>
+               <br></br>{nftTotalSupply}/820
+             </span>
+                 </Grid>
+                     <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
+                     <img style={{width: '200px', height:'200px', border: '1px black solid'}} src={require('./example.gif')} />
+          <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
 
- 
-
-<span style={{fontSize: '20px'}}>Total Minted
-</span>
-<br></br>
-{nftTotalSupply}/820
-</span>
-</Grid>
-          <Grid container justify="center" spacing={0} style={{marginTop: '20px', marginBottom: '20px'}}>
-                                                    <img style={{width: '200px',  border: '1px black solid'}} src={require('./example.gif')} />
-
-          </Grid>
-
-
-
-
-
-          <span>
+                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 8-Bit Cat Only 4 FTM</h4>
+                  </Grid>
+                 </Grid>
+              <span>
                       <circleButton
                         style={{ lineHeight: 0.4 }}
                         onClick={(e) => {
@@ -208,7 +202,7 @@ const [mintAmount, setMintAmount] = useState(1);
                       >
                         +
                       </circleButtonleft>
-<br></br>
+                      <br></br>
 
                       <mintButton style={{marginTop: '10px', marginBottom: '10px' }}
     
@@ -223,12 +217,12 @@ const [mintAmount, setMintAmount] = useState(1);
                         Mint
                       </mintButton>
 
-<br></br>
-</span>
+                    <br></br>
+                    </span>
 
           
             <span style={{ fontSize: '36px' }}>
-              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % MiniGuineas STAKED
+              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Cats STAKED
             </span>
             <BorderLinearProgress variant="determinate" value={nftStakedTotalSupply * 100 / nftTotalSupply} />
             <br/>

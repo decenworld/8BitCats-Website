@@ -50,7 +50,7 @@ const Footer = () => {
           </Grid>
           <Grid item xs={6} style={{ textAlign: 'right' }}>
             <a
-              href="https://twitter.com/miniverse_fin"
+              href="https://twitter.com/8bitcatsftm"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}
@@ -59,16 +59,14 @@ const Footer = () => {
             </a>
            
             <a
-              href="https://github.com/miniversefinance"
+              href="https://github.com/decenworld"
               rel="noopener noreferrer"
               target="_blank"
               className={classes.link}
             >
               <img alt="github" src={GithubImage} className={classes.img} />
             </a>
-            <a href="https://discord.com/invite/CxRWUGSyRv" rel="noopener noreferrer" target="_blank" className={classes.link}>
-              <img alt="discord" src={DiscordImage} className={classes.img} />
-            </a>
+        
           </Grid>
         </Grid>
       </Container>

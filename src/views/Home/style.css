@@ -7,6 +7,11 @@ body {
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+       @media screen and (max-width: 600px) {
+    font-size: 10px;
+      font-weight: 500;
+  }
+   
 }
 
 * {
@@ -17,8 +22,17 @@ body {
 
 h2 {
    font-family: "Press Start 2P", cursive;
-   
 }
+
+
+h3 {
+   font-family: "Press Start 2P", cursive;
+}
+
+h4 {
+   font-family: "Press Start 2P", cursive;
+}
+
 
 mintButton {
 background: #92CD41;
