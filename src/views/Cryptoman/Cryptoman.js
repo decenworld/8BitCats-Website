@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const Home = () => {
+const Cryptoman = () => {
 //  const [banks] = useBanks();
   const { path } = useRouteMatch();
   const { account, /*ethereum*/ } = useWallet();
@@ -65,7 +65,7 @@ const [mintAmount, setMintAmount] = useState(1);
 
   const reloadNfts = async () => {
     if (account) {
-      let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'MiniGuineasWalletNFT');
+      let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'CryptomanWalletNFT');
       setNftsInWallet(await Promise.all(
         nftsInWalletWithJSON.map(async nft => {
           return {
@@ -75,7 +75,7 @@ const [mintAmount, setMintAmount] = useState(1);
         })
       ));
 
-      let nftsStakedWithJSON = await tombFinance.getNFTsStaked(account, 'MiniGuineasWalletNFT', 'MiniGuineasStakingNFT');
+      let nftsStakedWithJSON = await tombFinance.getNFTsStaked(account, 'CryptomanWalletNFT', 'CryptomanStakingNFT');
       setNftsStaked(await Promise.all(
         nftsStakedWithJSON.map(async nft => {
           return {
@@ -85,8 +85,8 @@ const [mintAmount, setMintAmount] = useState(1);
         })
       ));
 
-      setNftTotalSupply(await tombFinance.nftTotalSupply('MiniGuineasWalletNFT'));
-      setNftStakedTotalSupply(await tombFinance.nftStakedTotalSupply('MiniGuineasWalletNFT', 'MiniGuineasStakingNFT'));
+      setNftTotalSupply(await tombFinance.nftTotalSupply('CryptomanWalletNFT'));
+      setNftStakedTotalSupply(await tombFinance.nftStakedTotalSupply('CryptomanWalletNFT', 'CryptomanStakingNFT'));
     }
   }
 
@@ -110,7 +110,7 @@ const [mintAmount, setMintAmount] = useState(1);
   const selectNftStaked = async (index) => {
     setIndexOfselectedNft(index);
     setIndexOfselectedNftInWallet(-1);
-    setReward(await tombFinance.calculateRewards(account, [nftsStaked[index].tokenId], 'MiniGuineasStakingNFT'));
+    setReward(await tombFinance.calculateRewards(account, [nftsStaked[index].tokenId], 'CryptomanStakingNFT'));
   }
 
   const selectNftInWallet = async (index) => {
@@ -119,27 +119,27 @@ const [mintAmount, setMintAmount] = useState(1);
   }
 
   const stake = async () => {
-    await tombFinance.stakeNfts([nftsInWallet[indexOfSelectedNftInWallet].tokenId], 'MiniGuineasStakingNFT');
+    await tombFinance.stakeNfts([nftsInWallet[indexOfSelectedNftInWallet].tokenId], 'CryptomanStakingNFT');
     reloadNfts();
   }
 
   const unStake = async () => {
-    await tombFinance.unStake(nftsStaked[indexOfSelectedNft].tokenId, 'MiniGuineasStakingNFT');
+    await tombFinance.unStake(nftsStaked[indexOfSelectedNft].tokenId, 'CryptomanStakingNFT');
     reloadNfts();
   }
 
   const claim = async () => {
-    await tombFinance.claim(nftsStaked[indexOfSelectedNft].tokenId, 'MiniGuineasStakingNFT');
-    setReward(await tombFinance.calculateRewards(account, [nftsStaked[indexOfSelectedNft].tokenId], 'MiniGuineasStakingNFT'));
+    await tombFinance.claim(nftsStaked[indexOfSelectedNft].tokenId, 'CryptomanStakingNFT');
+    setReward(await tombFinance.calculateRewards(account, [nftsStaked[indexOfSelectedNft].tokenId], 'CryptomanStakingNFT'));
   }
 
   const approve = async () => {
-    await tombFinance.approve('MiniGuineasWalletNFT', 'MiniGuineasStakingNFT');
+    await tombFinance.approve('CryptomanWalletNFT', 'CryptomanStakingNFT');
   }
 
   const mint = async (amount) => {
     console.log(account);
-    await tombFinance.mint(account, amount);
+    await tombFinance.mintNFT(account, amount);
 
 
 }
@@ -166,20 +166,20 @@ const [mintAmount, setMintAmount] = useState(1);
         <Route exact path={path}>
           <BackgroundImage />
           <div style={{ textAlign: 'center', color: 'white' }}>
-          <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>8-Bit Cats</h2>
+          <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>Cryptoman</h2>
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
                                       
             <span>
              <span style={{fontSize: '20px'}}>Total Minted
              </span>
-               <br></br>{nftTotalSupply}/820
+               <br></br>{nftTotalSupply}/3333
              </span>
                  </Grid>
                      <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
                      <img style={{width: '200px', height:'200px', border: '1px black solid'}} src={require('./example.gif')} />
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
 
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 8-Bit Cat Only 4 FTM</h4>
+                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Cryptoman Only 2 FTM</h4>
                   </Grid>
                  </Grid>
               <span>
@@ -223,7 +223,7 @@ const [mintAmount, setMintAmount] = useState(1);
 
           
             <span style={{ fontSize: '36px' }}>
-              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Cats STAKED
+              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Cryptoman STAKED
             </span>
             <BorderLinearProgress variant="determinate" value={nftStakedTotalSupply * 100 / nftTotalSupply} />
             <br/>
@@ -455,4 +455,4 @@ const [mintAmount, setMintAmount] = useState(1);
   );
 };
 
-export default Home;
+export default Cryptoman;

@@ -1188,8 +1188,41 @@ export class TombFinance {
         console.log("user declined")
       }};
     
+     /**
+     * mint account for ERC20 and ERC721
+     * @param address account address
+     */
+     async mintNFT(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 2000000000000000000);
+      try {
+      await this.contracts['CryptomanWalletNFT'].mint(account, mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+        value: totalCostWei,
+      }
+      )
+      } catch(err) {
+        console.log("user declined")
+      }};
 
-
+     /**
+     * mint account for ERC20 and ERC721
+     * @param address account address
+     */
+     async mintFantomllamaNFT(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 2000000000000000000);
+      try {
+      await this.contracts['FantomllamaWalletNFT'].mint(account, mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+        value: totalCostWei,
+      }
+      )
+      } catch(err) {
+        console.log("user declined")
+      }};
 
     /**
      * Approve landing staking contract on ERC721

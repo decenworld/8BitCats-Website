@@ -28,6 +28,7 @@ const Raffle = lazy(() => import('./views/Raffle'));
 const Minichilla = lazy(() => import('./views/Minichilla'));
 const Miniguinea = lazy(() => import('./views/Miniguinea'));
 const Miniland = lazy(() => import('./views/Miniland'));
+const Cryptoman = lazy(() => import('./views/Cryptoman'));
 
 
 const NoMatch = () => (
@@ -78,7 +79,9 @@ const App: React.FC = () => {
             <Route path="/strategies">
               <Strategies />
             </Route>
- 
+             <Route path="/cryptoman">
+              <Cryptoman />
+            </Route>
             <Route path="*">
               <NoMatch />
             </Route>

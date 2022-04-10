@@ -107,6 +107,9 @@ const Nav = () => {
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
+              <Link color="textPrimary" to="/cryptoman" className={classes.link}>
+                Cryptoman
+              </Link>
             
 
               {/* <Link color="textPrimary" to="/dividends" className={classes.link}>
@@ -142,7 +145,7 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-            <a rel="noopener noreferrer" href="https://mvfinance.club/" className={classes.link}>
+            <a rel="noopener noreferrer" href="https://8bitcats.com/" className={classes.link}>
               8-Bit Cats
               </a>
             </Typography>
@@ -165,10 +168,14 @@ const Nav = () => {
               </div>
               <Divider />
               <List>
+                <ListItemLink primary="HOME" to="/" />
+                <ListItemLink primary="CRYPTOMAN" to="/cryptoman" />
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
                 </ListItem>
+                
               </List>
+
             </Drawer>
           </>
         )}
