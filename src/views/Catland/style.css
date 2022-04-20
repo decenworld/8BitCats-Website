@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  font-family: "Press Start 2P", cursive;
+
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+       @media screen and (max-width: 600px) {
+      font-weight: 500;
+
+      
+      
+  }
+   
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+   font-family: "Press Start 2P", cursive;
+}
+
+
+h3 {
+   font-family: "Press Start 2P", cursive;
+}
+
+h4 {
+   font-family: "Press Start 2P", cursive;
+}
+
+
+mintButton {
+background: #92CD41;
+display: inline-block;
+position: relative;
+text-align: center;
+font-size: 30px;
+padding: 20px;
+font-family: "Press Start 2P", cursive;
+text-decoration: none;
+color: white;
+box-shadow: inset -4px -4px 0px 0px #4AA52E;
+box-sizing: border-box;
+left: -6px;
+top: 0;
+border-left: 6px black solid;
+border-right: 6px black solid;
+top: 10x;
+left: 0;
+border-top: 6px black solid;
+border-bottom: 6px black solid;
+box-sizing: content-box;
+content: "";
+font-family: "Press Start 2P", cursive;
+}
+
+circleButton {
+background: #c9870d;
+display: inline-block;
+position: relative;
+text-align: center;
+font-size: 20px;
+padding: 5px;
+padding-top: 12px;
+padding-bottom: 12px;
+font-family: "Press Start 2P", cursive;
+text-decoration: none;
+color: white;
+box-shadow: inset -4px -4px 0px 0px #6b4807;
+box-sizing: border-box;
+left: -6px;
+top: 0;
+border-left: 6px black solid;
+border-right: 6px black solid;
+left: 0;
+border-top: 6px black solid;
+border-bottom: 6px black solid;
+box-sizing: content-box;
+content: "";
+font-family: "Press Start 2P", cursive;
+}
+
+circleButtonleft {
+background: #c9870d;
+display: inline-block;
+position: relative;
+text-align: center;
+font-size: 20px;
+padding: 5px;
+font-family: "Press Start 2P", cursive;
+text-decoration: none;
+color: white;
+box-shadow: inset -4px -4px 0px 0px #6b4807;
+box-sizing: border-box;
+left: -6px;
+top: 0;
+border-left: 6px black solid;
+border-right: 6px black solid;
+left: 0;
+border-top: 6px black solid;
+border-bottom: 6px black solid;
+box-sizing: content-box;
+content: "";
+font-family: "Press Start 2P", cursive;
+}
+
+
+spaceText {
+font-family: "Press Start 2P", cursive;
+word-spacing: -10%;
+word-spacing: revert;
+}
+
+
+TextSupply {
+  color: var(--primary-text);
+  font-size: 12px;
+
+  font-weight: 500;
+  line-height: 1.6;
+  @media screen and (max-width: 600px) {
+    font-size: 62px;
+      font-weight: 500;
+  }
+}
+

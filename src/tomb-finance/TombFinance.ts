@@ -1206,6 +1206,84 @@ export class TombFinance {
         console.log("user declined")
       }};
 
+         /**
+     * mint CatLand for USDC
+     * @param address account address
+     */
+     async mintLandNFT(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 2000000000000000000);
+      try {
+      await this.USDC.approve("0x35A9BA8FA975525E23f038f8f9EDD43518827dB5", BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
+      await this.contracts['LandWalletNFT'].mintBronze(mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+      }
+      )
+      } catch(err) {
+        console.log(err)
+      }};
+
+               /**
+     * mint CatLand for USDC
+     * @param address account address
+     */
+     async mintSilverLandNFT(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 2000000000000000000);
+      try {
+      await this.USDC.approve("0x35A9BA8FA975525E23f038f8f9EDD43518827dB5", BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
+      await this.contracts['LandWalletNFT'].mintSilver(mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+      }
+      )
+      } catch(err) {
+        console.log(err)
+      }};
+
+
+               /**
+     * mint CatLand for USDC
+     * @param address account address
+     */
+     async mintGoldLandNFT(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 2000000000000000000);
+      try {
+      await this.USDC.approve("0x35A9BA8FA975525E23f038f8f9EDD43518827dB5", BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
+      await this.contracts['LandWalletNFT'].mintGold(mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+      }
+      )
+      } catch(err) {
+        console.log(err)
+      }};
+
+
+               /**
+     * mint CatLand for USDC
+     * @param address account address
+     */
+     async mintDiamondLandNFT(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 2000000000000000000);
+      try {
+      await this.USDC.approve("0x35A9BA8FA975525E23f038f8f9EDD43518827dB5", BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
+      await this.contracts['LandWalletNFT'].mintDiamond(mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+      }
+      )
+      } catch(err) {
+        console.log(err)
+      }};
+
+
+
+
+
      /**
      * mint account for ERC20 and ERC721
      * @param address account address

@@ -12,27 +12,12 @@ import { createGlobalStyle } from 'styled-components';
 
 //import useBanks from '../../hooks/useBanks';
 import useTombFinance from '../../hooks/useTombFinance';
-
 import PitImage from '../../assets/img/background.png';
-
-// Import custom css
-import "./style.css";
-import { BorderLeft } from '@material-ui/icons';
 
 const BackgroundImage = createGlobalStyle`
   body {
     background: url(${PitImage}) no-repeat !important;
     background-size: cover !important;
-           @media screen and (max-width: 600px) {
-      font-weight: 500;
-
-    }
-  .content {
-  flex-wrap: nowrap;
-             @media screen and (max-width: 600px) {
-  flex-wrap: wrap;
-
-    }
   }
 `;
 
@@ -60,7 +45,7 @@ const Cemetery = () => {
 //  const [banks] = useBanks();
   const { path } = useRouteMatch();
   const { account, /*ethereum*/ } = useWallet();
-//  const activeBanks = banks.filter((bank) => !bank.finished);
+  //const activeBanks = banks.filter((bank) => !bank.finished);
   const classes = useStyles();
   const tombFinance = useTombFinance();
   const [nftsInWallet, setNftsInWallet] = useState([]);
@@ -71,12 +56,9 @@ const Cemetery = () => {
   const [indexOfSelectedNftInWallet, setIndexOfselectedNftInWallet] = useState(-1);
   const [reward, setReward] = useState(0);
 
-  // Minting process
-const [mintAmount, setMintAmount] = useState(1);
-
   const reloadNfts = async () => {
     if (account) {
-      let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'LandWalletNFT');
+      let nftsInWalletWithJSON = await tombFinance.getLandNFTsInWallet(account);
       setNftsInWallet(await Promise.all(
         nftsInWalletWithJSON.map(async nft => {
           return {
@@ -86,7 +68,7 @@ const [mintAmount, setMintAmount] = useState(1);
         })
       ));
 
-      let nftsStakedWithJSON = await tombFinance.getNFTsStaked(account, 'LandWalletNFT', 'LandStakingv1');
+      let nftsStakedWithJSON = await tombFinance.getNFTsLandStaked(account);
       setNftsStaked(await Promise.all(
         nftsStakedWithJSON.map(async nft => {
           return {
@@ -104,7 +86,6 @@ const [mintAmount, setMintAmount] = useState(1);
   useEffect(() => {
     reloadNfts();
   }, [tombFinance, account]);
-
   
   const getImageFromJSON = async (json) => {
     try {
@@ -141,56 +122,22 @@ const [mintAmount, setMintAmount] = useState(1);
 
   const claim = async () => {
     await tombFinance.claim(nftsStaked[indexOfSelectedNft].tokenId, 'LandStakingv1');
-    setReward(await tombFinance.calculateRewards(account, [nftsStaked[indexOfSelectedNft].tokenId], 'LandStakingv1'));
+    setReward(await tombFinance.calculateRewards(account, [nftsStaked[indexOfSelectedNft].tokenId],  'LandStakingv1'));
+  }
+
+  const claim1 = async () => {
+    await tombFinance.landStakingClaim1();
+  }
+
+  const claim2 = async () => {
+    await tombFinance.landStakingClaim2();
   }
 
   const approve = async () => {
-    await tombFinance.approve('LandWalletNFT', 'LandStakingv1');
+    await tombFinance.landStakingApprove();
   }
 
-  const mint = async (amount) => {
-    console.log(account);
-    await tombFinance.mintLandNFT(account, amount);
-
-
-}
-
-  const mintSilver = async (amount) => {
-    console.log(account);
-    await tombFinance.mintSilverLandNFT(account, amount);
-
-
-}
-
-  const mintGold = async (amount) => {
-    console.log(account);
-    await tombFinance.mintGoldLandNFT(account, amount);
-
-
-}
-
-  const mintDiamond = async (amount) => {
-    console.log(account);
-    await tombFinance.mintDiamondLandNFT(account, amount);
-
-
-}
-
-  const decrementMintAmount = () => {
-    let newMintAmount = mintAmount - 1;
-    if (newMintAmount < 1) {
-      newMintAmount = 1;
-    }
-    setMintAmount(newMintAmount);
-  };
-
-  const incrementMintAmount = () => {
-    let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 50) {
-      newMintAmount = 50;
-    }
-    setMintAmount(newMintAmount);
-  };
+  console.log(nftTotalSupply, nftStakedTotalSupply);
 
   return (
     <Switch>
@@ -198,230 +145,17 @@ const [mintAmount, setMintAmount] = useState(1);
         <Route exact path={path}>
           <BackgroundImage />
           <div style={{ textAlign: 'center', color: 'white' }}>
-          <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>CatLand</h2>
-          <Grid container className='content' justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-                                      
-            <span>
-             <span style={{fontSize: '20px'}}>Total Minted
-             </span>
-               <br></br>{nftTotalSupply}/555
-             </span>
-
-
-
-                 </Grid>
-
-                     <Grid container className='content' justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'
-                    
-                    
-                    }}>
-
-
-                     <Grid container  justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-                     <img style={{width: '200px', height:'200px', border: '0px black solid'}} src={require('./bronze.png')} />
-          <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Bronze Land <p></p>285 USDC</h4>
-                  </Grid>
-
-              <span>
-                
-                      <circleButton
-                        style={{ lineHeight: 0.4 }}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}
-                      >
-                        -
-                      </circleButton>
-                  
-                        &nbsp;{mintAmount}&nbsp; 
-           
-                      <circleButtonleft
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}
-                      >
-                        +
-                      </circleButtonleft>
-                      <br></br>
-
-                      <mintButton style={{marginTop: '10px', marginBottom: '10px' }}
-    
-                        onClick={(e) => {
-                          console.log("mintamount", {mintAmount})
-                       
-                          mint(Object.values({mintAmount}))
-                    
-
-                        }}
-                      >
-                        Mint
-                      </mintButton>
-
-                    <br></br>
-                    </span>
-
-</Grid>
-
-
-
-
-                     <Grid container  justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-                     <img style={{width: '200px', height:'200px', border: '0px black solid'}} src={require('./silver.png')} />
-          <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Silver Land <p></p>1350 USDC</h4>
-                  </Grid>
-
-              <span>
-                
-                      <circleButton
-                        style={{ lineHeight: 0.4 }}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}
-                      >
-                        -
-                      </circleButton>
-                  
-                        &nbsp;{mintAmount}&nbsp; 
-           
-                      <circleButtonleft
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}
-                      >
-                        +
-                      </circleButtonleft>
-                      <br></br>
-
-                      <mintButton style={{marginTop: '10px', marginBottom: '10px' }}
-    
-                        onClick={(e) => {
-                          console.log("mintamount", {mintAmount})
-                       
-                          mintSilver(Object.values({mintAmount}))
-                    
-
-                        }}
-                      >
-                        Mint
-                      </mintButton>
-
-                    <br></br>
-                    </span>
-
-</Grid>
-
-
-                     <Grid container  justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-                     <img style={{width: '200px', height:'200px', border: '0px black solid'}} src={require('./gold.png')} />
-          <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Gold Land<p></p> 2700 USDC</h4>
-                  </Grid>
-
-              <span>
-                
-                      <circleButton
-                        style={{ lineHeight: 0.4 }}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}
-                      >
-                        -
-                      </circleButton>
-                  
-                        &nbsp;{mintAmount}&nbsp; 
-           
-                      <circleButtonleft
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}
-                      >
-                        +
-                      </circleButtonleft>
-                      <br></br>
-
-                      <mintButton style={{marginTop: '10px', marginBottom: '10px' }}
-    
-                        onClick={(e) => {
-                          console.log("mintamount", {mintAmount})
-                       
-                          mintGold(Object.values({mintAmount}))
-                    
-
-                        }}
-                      >
-                        Mint
-                      </mintButton>
-
-                    <br></br>
-                    </span>
-
-</Grid>
-
-
-                     <Grid container  justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-                     <img style={{width: '200px', height:'200px', border: '0px black solid'}} src={require('./diamond.png')} />
-          <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Diamond Land <p></p>5400 USDC</h4>
-                  </Grid>
-
-              <span>
-                
-                      <circleButton
-                        style={{ lineHeight: 0.4 }}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}
-                      >
-                        -
-                      </circleButton>
-                  
-                        &nbsp;{mintAmount}&nbsp; 
-           
-                      <circleButtonleft
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}
-                      >
-                        +
-                      </circleButtonleft>
-                      <br></br>
-
-                      <mintButton style={{marginTop: '10px', marginBottom: '10px' }}
-    
-                        onClick={(e) => {
-                          console.log("mintamount", {mintAmount})
-                       
-                          mintDiamond(Object.values({mintAmount}))
-                    
-
-                        }}
-                      >
-                        Mint
-                      </mintButton>
-
-                    <br></br>
-                    </span>
-
-</Grid>
-                </Grid>
-
-          
+          <h2 style={{ fontSize: '80px', textAlign:'center', marginBottom: '50px' }}>Miniland NFT Staking</h2>
+          <Grid container justify="center" spacing={0} style={{marginTop: '40px', marginBottom: '40px'}}>
+              <Button color="primary" target="_blank" href="https://nftkey.app/collections/miniland/" variant="contained" className={'shinyButton ' + classes.button} style={{ marginRight: '10px' }}>
+                Buy on NFTKey
+              </Button>
+              <Button color="primary" target="_blank" href="https://paintswap.finance/marketplace/collections/0xc1e87be1055509081ea73a0fd5d3d70f6573dc99" variant="contained" className={'shinyButton ' + classes.button} style={{ marginRight: '10px' }}>
+                Buy on Paintswap
+              </Button>
+          </Grid>
             <span style={{ fontSize: '36px' }}>
-              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % CATLAND STAKED
+              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Miniland STAKED
             </span>
             <BorderLinearProgress variant="determinate" value={nftStakedTotalSupply * 100 / nftTotalSupply} />
             <br/>
@@ -432,11 +166,6 @@ const [mintAmount, setMintAmount] = useState(1);
                   minHeight: '500px',
                   padding: '1rem',
                   borderRadius: '4px',
-                  borderTop: '6px black solid',
-                  borderBottom: '6px black solid',
-                  borderRight: '6px black solid',
-                  borderLeft: '6px black solid',
-                  boxShadow: 'inset -4px -4px 0px 0px #292929',
                 }}>
                   <p>
                     {nftsInWallet.length} NFT(s) in your wallet
@@ -469,19 +198,37 @@ const [mintAmount, setMintAmount] = useState(1);
               </Grid>
               <Grid xs={6} item>
                 <Box style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '1rem',
+                }}>
+                    <Button
+                      variant='contained'
+                      color="primary"
+                      onClick={claim1}
+                      classes={{
+                        root: classes.stakeButtons,
+                      }}
+                    >
+                      Claim Emission1
+                    </Button>
+                    <Button
+                      variant='contained'
+                      color="primary"
+                      onClick={claim2}
+                      classes={{
+                        root: classes.stakeButtons,
+                      }}
+                    >
+                      Claim Emission2
+                    </Button>
+                </Box>
+                <Box style={{
                   background: 'gray',
                   padding: '1rem',
                   borderRadius: '4px',
                   visibility: indexOfSelectedNft === -1 && indexOfSelectedNftInWallet === -1 ? 'hidden' : 'visible',
                   height: '100px',
-                  borderTop: '6px black solid',
-                  borderBottom: '6px black solid',
-                  borderRight: '6px black solid',
-                  borderLeft: '6px black solid',
-                  display: 'inline-block',
-                  boxShadow: 'inset -4px -4px 0px 0px #292929',
-                  boxSizing: 'content-box',
-                  position: 'relative',
                 }}>
                   {
                     indexOfSelectedNft > -1 && <>
@@ -512,20 +259,19 @@ const [mintAmount, setMintAmount] = useState(1);
                             Claim
                           </Button>
                         </div>
-                        <p style={{maxWidth: '50%'}}>Claimable: { reward / 1e18 } Cat Coins</p>
+                        <p style={{maxWidth: '50%'}}>Claimable: { reward / 1e18 } MvDOLLAR</p>
                       </Box>
                     </>
                   }
                   {
                     indexOfSelectedNftInWallet > -1 && <>
-                     <p style={{fontSize: '18px', fontWeight: 'bold'}}>
+                      <p style={{fontSize: '18px', fontWeight: 'bold'}}>
                         { nftsInWallet[indexOfSelectedNftInWallet].name }
                       </p>
                       <Box style={{
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between'
-                        
                       }}>
                         <div>
                         <Button
@@ -559,13 +305,6 @@ const [mintAmount, setMintAmount] = useState(1);
                   padding: '1rem',
                   borderRadius: '4px',
                   marginTop: '2rem',
-                  borderTop: '6px black solid',
-                  borderBottom: '6px black solid',
-                  borderRight: '6px black solid',
-                  borderLeft: '6px black solid',
-                  boxShadow: 'inset -4px -4px 0px 0px #292929',
-                  boxSizing: 'content-box',
-                  position: 'relative',
                 }}>
                   <p>
                     { nftsStaked.length } NFT(s) staked
@@ -594,11 +333,8 @@ const [mintAmount, setMintAmount] = useState(1);
                         </Box>
                       )
                     }
-
-                    
                   </Box>
                 </Box>
-                <span style={{fontSize:"8px"}}>You can first unstake 5 May</span>
               </Grid>
             </Grid>
           </div>

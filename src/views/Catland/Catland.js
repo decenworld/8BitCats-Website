@@ -417,9 +417,14 @@ const [mintAmount, setMintAmount] = useState(1);
                     </span>
 
 </Grid>
-                </Grid>
 
-          
+                </Grid>
+                            <div style={{ fontSize: '10px', marginBottom: '8px'}}>
+                              
+
+Max 3 mints per wallet
+</div>
+          <p></p>
             <span style={{ fontSize: '36px' }}>
               { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % CATLAND STAKED
             </span>

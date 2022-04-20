@@ -28,6 +28,7 @@ const Raffle = lazy(() => import('./views/Raffle'));
 const Minichilla = lazy(() => import('./views/Minichilla'));
 const Miniguinea = lazy(() => import('./views/Miniguinea'));
 const Miniland = lazy(() => import('./views/Miniland'));
+const Catland = lazy(() => import('./views/Catland'));
 const Cryptoman = lazy(() => import('./views/Cryptoman'));
 
 
@@ -66,6 +67,9 @@ const App: React.FC = () => {
             </Route>
             <Route path="/miniland">
               <Miniland />
+            </Route>
+              <Route path="/catland">
+              <Catland />
             </Route>
             <Route path="/boardroom">
               <Masonry />
