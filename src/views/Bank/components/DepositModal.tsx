@@ -27,7 +27,18 @@ const DepositModal: React.FC<DepositModalProps> = ({ max, decimals, onConfirm, o
       return getFullDisplayBalance(max, decimals, false);
     }
   }, [max, decimals]);
-
+  if (tokenName == "MvDOLLAR"){
+    tokenName = "CatCoin";
+  }
+  else if (tokenName == "MVDOLLAR-USDC-LP"){
+    tokenName = "CatCoin-USDC-LP";
+  }
+  else if (tokenName == "MSHARE-USDC-LP"){
+    tokenName = "CATSHARE-USDC-LP";
+  }
+  else {
+    //pass
+  }
   const handleChange = useCallback(
     (e: React.FormEvent<HTMLInputElement>) => {
       setVal(e.currentTarget.value);

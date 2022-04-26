@@ -18,10 +18,10 @@ const configurations: { [env: string]: Configuration } = {
       TOMB: ['0x6c021ae822bea943b2e66552bde1d2696a53fbb7', 18], // ZOO: 0x09e145a1d53c0045f41aeef25d8ff982ae74dd56 0
       USDC: ['0x04068da6c83afcfa0e13ba15a6696662335d5b75', 6], // SHIBA: 0x9ba3e4f84a34df4e08c112e1a0ff148b81655615 9
       FANG: ['0x49894fcc07233957c35462cfc3418ef0cc26129f', 18],
-      MvDOLLAR: ['0x57976c467608983513c9355238dc6de1B1aBbcCA', 18],
+      MvDOLLAR: ['0x8CcD162E5997363Dc2101371B3B09f316D012306', 18],
       'USDT-FTM-LP': ['0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c', 18],
-      'MVDOLLAR-USDC-LP': ['0x35bED1E2f3033395a05CD0b1b5900209ECe42774', 18],
-      'MSHARE-USDC-LP': ['0x92A7b2A9ca7D70573E3a0B0BF9e5232c70db8a89', 18],
+      'MVDOLLAR-USDC-LP': ['0x20f1F2F12ca4F4B241aB9745EE61745ECC97c60a', 18],
+      'MSHARE-USDC-LP': ['0xAE3439d64f1fC15188F660Fa35cfb16d7257c0eb', 18],
       'MVDOLLAR-MSHARE-LP': ['0x85E8DcBc11eF5C5F98277B20A041C8ab90E0e2f7', 18]
     },
     baseLaunchDate: new Date('2021-06-02 13:00:00Z'),
@@ -48,6 +48,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   finished: will disable the pool on the UI if set to true
   sort: the order of the pool
   */
+ /*
   TombFtmRewardPool: {
     name: 'Stake WFTM, earn MvDOLLAR',
     poolId: 1,
@@ -96,27 +97,29 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     sort: 4,
     closedForStaking: true,
   },
-
+*/
   /*shares*/
   LPRewardPool1ShareRewardPool: {
-    name: 'Stake MvDOLLAR-USDC LP, earn MSHARE',
-    poolId: 2,
+    name: 'CATCOINS-USDC LP',
+    poolId: 1,
     sectionInUI: 2,
     contract: 'LPRewardPool1ShareRewardPool',
     depositTokenName: 'MVDOLLAR-USDC-LP',
     earnTokenName: 'MSHARE',
+    earnTokenName2: 'CATSHARE',
     multiplier: "100x",
     finished: false,
     sort: 1,
     closedForStaking: false,
   },
   LPRewardPool2ShareRewardPool: {
-    name: 'Stake MSHARE-USDC LP, earn MSHARE',
+    name: 'CATSHARE-USDC LP',
     poolId: 0,
     sectionInUI: 2,
     contract: 'LPRewardPool2ShareRewardPool',
     depositTokenName: 'MSHARE-USDC-LP',
     earnTokenName: 'MSHARE',
+    earnTokenName2: 'CATSHARE',
     multiplier: "100x",
     finished: false,
     sort: 2,
@@ -124,26 +127,28 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   LPRewardPool3ShareRewardPool: {
     name: 'Stake MvDOLLAR-MSHARE LP, earn MSHARE',
-    poolId: 1,
+    poolId: 3,
     sectionInUI: 2,
     contract: 'LPRewardPool3ShareRewardPool',
     depositTokenName: 'MVDOLLAR-MSHARE-LP',
     earnTokenName: 'MSHARE',
+    earnTokenName2: 'CATSHARE',
     multiplier: "100x",
-    finished: false,
+    finished: true,
     sort: 3,
     closedForStaking: false,
   },
   mvdollarShareRewardPool: {
-    name: 'Stake MvDOLLAR, earn MSHARE',
-    poolId: 3,
+    name: 'CATCOINS',
+    poolId: 2,
     sectionInUI: 2,
     contract: 'mvdollarShareRewardPool',
     depositTokenName: 'MvDOLLAR',
     earnTokenName: 'MSHARE',
+    earnTokenName2: 'CATSHARE',
     multiplier: "100x",
     finished: false,
-    sort: 4,
+    sort: 3,
     closedForStaking: false,
   },
 

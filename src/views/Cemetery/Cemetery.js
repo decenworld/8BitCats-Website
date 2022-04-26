@@ -43,11 +43,14 @@ const Cemetery = () => {
               <Box mt={5}>
                 <div hidden={activeBanks.filter((bank) => bank.sectionInUI === 2).length === 0}>
                   <Typography color="textPrimary" variant="h4" gutterBottom>
-                    MSHARE Rewards Pools
+                    CATSHARE Rewards Pools
                   </Typography>
-                  <Alert variant="filled" severity="warning">
+                  {/**                   
+                   <Alert variant="filled" severity="warning">
                   Follow the <a href="https://app.mvfinance.club/strategies" >Strategies guide here</a>. Sticking to the current strategy helps support the protocol which in turn helps you to continue to earn rewards!
                   </Alert>
+ */}
+
                   <Grid container spacing={3} style={{ marginTop: '20px' }}>
                     {activeBanks
                       .filter((bank) => bank.sectionInUI === 2)

@@ -45,7 +45,8 @@ const Harvest: React.FC<HarvestProps> = ({ bank }) => {
             </CardIcon>
             <Value value={getDisplayBalance(earnings)} />
            <Label text={`≈ $${earnedInDollars}`} />
-            <Label text={`${tokenName} Earned`} />
+            <Label text={`${bank.earnTokenName2} Earned`} />
+          
           </StyledCardHeader>
           <StyledCardActions>
             <Button onClick={onReward} disabled={earnings.eq(0)} color="primary" variant="contained">

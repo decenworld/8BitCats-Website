@@ -97,7 +97,7 @@ export class TombFinance {
   //===================================================================
 
   async getTombStat(): Promise<TokenStat> {
-    const { LPRewardPool} = this.contracts;
+    const { LPRewardPool } = this.contracts;
     const supply = await this.TOMB.totalSupply();
     const tombRewardPoolSupply = await this.TOMB.balanceOf(LPRewardPool.address); 
     const tombRewardPoolSupply2 = await this.TOMB.balanceOf('0xda2a4abc17a87f6f7b532a37ab8b707343a97334');
@@ -201,7 +201,7 @@ export class TombFinance {
     
     const tombRewardPoolSupply = await this.TSHARE.balanceOf(LPRewardPool1ShareRewardPool.address);
     
-    const tShareRewardPoolSupply1 = await this.TSHARE.balanceOf('0x78ee91ea69132e5838699c42f0c07fa98da90161');
+    const tShareRewardPoolSupply1 = await this.TSHARE.balanceOf('0x0105175251Fd65ec63fBA1BA4078f2d44332171c');
     const tShareCirculatingSupply = supply
       .sub(tShareRewardPoolSupply1)
       .sub(tombRewardPoolSupply)

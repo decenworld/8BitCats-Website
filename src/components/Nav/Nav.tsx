@@ -107,6 +107,15 @@ const Nav = () => {
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
+                                <Link color="textPrimary" to="/boardroom" className={classes.link}>
+                Boardroom
+              </Link>
+                                <Link color="textPrimary" to="/farms" className={classes.link}>
+                Farms
+              </Link>
+                            <Link color="textPrimary" to="/cats" className={classes.link}>
+                8-Bit Cats
+              </Link>
               <Link color="textPrimary" to="/cryptoman" className={classes.link}>
                 Cryptoman
               </Link>
@@ -171,7 +180,13 @@ const Nav = () => {
               <Divider />
               <List>
                 <ListItemLink primary="HOME" to="/" />
+                <ListItemLink primary="BOARDROOM" to="/boardroom" />
+                <ListItemLink primary="FARMS" to="/farms" />
+                <ListItemLink primary="8-BIT CATS" to="/cats" />
                 <ListItemLink primary="CRYPTOMAN" to="/cryptoman" />
+                <ListItemLink primary="CAT LAND" to="/catland" />
+
+
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
                 </ListItem>

@@ -102,7 +102,7 @@ const Stake: React.FC<StakeProps> = ({ bank }) => {
             </CardIcon>
            {bank.depositTokenName === 'MVDOLLAR-USDC-LP'|| bank.depositTokenName === 'MSHARE-USDC-LP' || bank.depositTokenName === 'MDOLLAR-MSHARE-LP' ? <Value value={getDisplayBalance1(stakedBalance, bank.depositToken.decimal)} /> : <Value value={getDisplayBalance(stakedBalance, bank.depositToken.decimal)} />}
            {bank.depositTokenName === 'USDC' ?<Label text={`≈ $${(Number(earnedInDollars)/1e6).toFixed(2)}`} /> : <Label text={`≈ $${(Number(earnedInDollars)/1e18).toFixed(2)}`} />}
-            <Label text={`${bank.depositTokenName} Staked`} />
+            <Label text={`${bank.name} Staked`} />
           </StyledCardHeader>
           <StyledCardActions>
             {approveStatus !== ApprovalState.APPROVED ? (
@@ -117,7 +117,7 @@ const Stake: React.FC<StakeProps> = ({ bank }) => {
                 variant="contained"
                 style={{ marginTop: '20px' }}
               >
-                {`Approve ${bank.depositTokenName}`}
+                {`Approve ${bank.name}`}
               </Button>
             ) : (
               <>

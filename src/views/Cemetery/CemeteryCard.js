@@ -47,11 +47,12 @@ const CemeteryCard = ({ bank }) => {
               <TokenSymbol size={32} symbol={bank.depositTokenName} />
             </Box>
             <Typography variant="h5" component="h2">
-              {bank.depositTokenName}
+              {/* changed to bank name */}
+              {bank.name}
             </Typography>
             <Typography color="textSecondary">
               {/* {bank.name} */}
-              Earn {bank.earnTokenName}
+              Earn {bank.earnTokenName2}
             </Typography>
             <Typography color="textSecondary">
             <b>Daily APR:</b> {bank.closedForStaking ? '0.00' : statsOnPool?.dailyAPR}%<br></br>

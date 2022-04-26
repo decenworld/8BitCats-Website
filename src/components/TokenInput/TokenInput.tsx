@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import { Button } from '@material-ui/core';
 import Input, { InputProps } from '../Input';
+import { PassThrough } from 'stream';
+
 
 interface TokenInputProps extends InputProps {
   max: number | string;
@@ -11,6 +13,22 @@ interface TokenInputProps extends InputProps {
 }
 
 const TokenInput: React.FC<TokenInputProps> = ({ max, symbol, onChange, onSelectMax, value }) => {
+  if (symbol == "MvDOLLAR"){
+    symbol = "CatCoin";
+  }
+  else if (symbol == "MSHARE"){
+    symbol = "CATSHARE";
+  }
+  else if (symbol == "MVDOLLAR-USDC-LP"){
+    symbol = "CatCoin-USDC-LP";
+  }
+  else if (symbol == "MSHARE-USDC-LP"){
+    symbol = "CATSHARE-USDC-LP";
+  }
+  else {
+    //pass
+  }
+
   return (
     <StyledTokenInput>
       <StyledMaxText>

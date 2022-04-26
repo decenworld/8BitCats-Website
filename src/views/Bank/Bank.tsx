@@ -114,11 +114,11 @@ const LPTokenHelpText: React.FC<{ bank: BankEntity }> = ({ bank }) => {
   let pairName: string;
   let uniswapUrl: string;
   if (bank.depositTokenName.startsWith("MVDOLLAR-USDC")) {
-    pairName = 'MVDOLLAR-USDC pair';
-    uniswapUrl = 'https://spookyswap.finance/add/0x04068da6c83afcfa0e13ba15a6696662335d5b75/0x57976c467608983513c9355238dc6de1B1aBbcCA';
+    pairName = 'CATCOIN-USDC pair';
+    uniswapUrl = 'https://spookyswap.finance/add/0x04068da6c83afcfa0e13ba15a6696662335d5b75/0x8CcD162E5997363Dc2101371B3B09f316D012306';
   } else if (bank.depositTokenName.startsWith("MSHARE-USDC")) {
-    pairName = 'MSHARE-USDC pair';
-    uniswapUrl = 'https://spookyswap.finance/add/0x04068da6c83afcfa0e13ba15a6696662335d5b75/0xb011EC534d9175cD7a69aFBfc1bcc9990862c462';
+    pairName = 'CATSHARE-USDC pair';
+    uniswapUrl = 'https://spookyswap.finance/add/0x04068da6c83afcfa0e13ba15a6696662335d5b75/0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e';
   } else {
     pairName = "MVDOLLAR-MSHARE pair";
     uniswapUrl = 'https://spookyswap.finance/add/0x57976c467608983513c9355238dc6de1B1aBbcCA/0xb011EC534d9175cD7a69aFBfc1bcc9990862c462';

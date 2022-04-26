@@ -32,6 +32,7 @@ import PitImage from '../../assets/img/background.png';
 import usebShareStats from '../../hooks/usetShareStats';
 import useTombFinance from '../../hooks/useTombFinance';
 
+
 const BackgroundImage = createGlobalStyle`
   body {
     background: url(${PitImage}) no-repeat !important;
@@ -119,7 +120,7 @@ const Masonry = () => {
               <Grid item xs={12} md={2} lg={2}>
                 <Card className={classes.gridItem}>
                   <CardContent align="center">
-                    <Typography>MSHARE Staked</Typography>
+                    <Typography>CATSHARE Staked</Typography>
                     <Typography>{getDisplayBalance(totalStaked)}</Typography>
                   </CardContent>
                 </Card>
@@ -147,7 +148,7 @@ const Masonry = () => {
             <Grid container justify="center">
               <Box mt={3} style={{ width: '600px' }}>
                 <Alert variant="filled" severity="warning">
-                  Staked MSHARE can only be withdrawn after 4 epochs (24hrs) since deposit and claims made every 2 epochs (12hrs). Any time tokens are harvested, deposited, or withdrawn, the lockup timer gets reset.
+                  Staked CATSHARE can only be withdrawn after 4 epochs (24hrs) since deposit and claims made every 2 epochs (12hrs). Any time tokens are harvested, deposited, or withdrawn, the lockup timer gets reset.
                 </Alert>
               </Box>
             </Grid>

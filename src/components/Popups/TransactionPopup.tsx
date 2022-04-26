@@ -22,6 +22,7 @@ export default function TransactionPopup({
 
   return (
     <RowNoFlex>
+      {/*
       <div style={{ paddingRight: 16 }}>
         {success ? <CheckCircle color={theme.color.teal[200]} size={24} /> : <AlertCircle color="#FF6871" size={24} />}
       </div>
@@ -33,6 +34,7 @@ export default function TransactionPopup({
           </StyledLink>
         )}
       </div>
+        */}
     </RowNoFlex>
   );
 }

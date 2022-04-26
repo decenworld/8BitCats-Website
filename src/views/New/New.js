@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import Page from '../../components/Page';
 
-import CashImage from '../../assets/img/example.gif';
+import CashImage from '../../assets/img/MV.png';
 import Image from 'material-ui-image';
 import styled from 'styled-components';
 import { Alert } from '@material-ui/lab';
@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Home = () => {
+const New = () => {
   const classes = useStyles();
   const TVL = useTotalValueLocked();
   const tombFtmLpStats = useLpStats('MVDOLLAR-USDC-LP');
@@ -401,4 +401,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default New;
