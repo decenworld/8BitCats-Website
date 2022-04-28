@@ -202,12 +202,28 @@ const Home = () => {
         {/* Wallet */}
         <Grid item xs={12} sm={8}>
           <Card style={{ height: '100%' }}>
-            <CardContent align="center" style={{ }}>   
-              <Button color="primary" href="/farms" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
-                Farm
+            <CardContent align="center" style={{ }}>
+              <h3>Staking</h3>   
+               <Button color="primary" href="/farms" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
+                 Farms
               </Button>
               <Button color="primary" href="/boardroom" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
-                Stake
+                Boardroom
+              </Button>
+                            <Button color="primary" href="/cats" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
+                8-Bit Cats
+              </Button>
+                            <Button color="primary" href="/catland" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
+                CATLAND
+              </Button>
+              <p></p>
+              <h3>SpookySwap</h3>
+
+              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
+                Buy CATSHARE
+              </Button>
+              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
+              Buy CATSHARE
               </Button>
               {/*
               <Button
@@ -253,9 +269,25 @@ const Home = () => {
                 </span>
               </Box>
               <span style={{ fontSize: '17px' }}>
-                Market Cap: ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
-                Circulating Supply: {tombCirculatingSupply} <br />
-                Total Supply: {tombTotalSupply}
+                Market Cap:<p></p>
+                 <span style={{ fontSize: '27px' }}>
+                 ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
+                 </span>
+                Circulating Supply:<p></p>
+                <span style={{ fontSize: '27px' }}>
+                 {tombCirculatingSupply} <br />
+                </span>
+                Total Supply:<p></p> 
+                <span style={{ fontSize: '27px' }}>
+
+                {tombTotalSupply}
+              </span>
+              <p></p>
+              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
+                <h3>Buy CATCOIN</h3>
+              </Button>
+
+
               </span>
             </CardContent>
           </Card>
@@ -301,9 +333,25 @@ const Home = () => {
                 <span style={{ fontSize: '30px', color: '#BBA14F' }}>${tSharePriceInDollars ? tSharePriceInDollars : '-.--'}</span>
               </Box>
               <span style={{ fontSize: '17px' }}>
-                Market Cap: ${(tShareCirculatingSupply * tSharePriceInDollars).toFixed(2)} <br />
-                Circulating Supply: {tShareCirculatingSupply} <br />
-                Total Supply: {tShareTotalSupply} 
+                Market Cap: 
+                <p></p> 
+                <span style={{ fontSize: '27px' }}>
+                ${(tShareCirculatingSupply * tSharePriceInDollars).toFixed(2)} <br />
+                </span>
+                Circulating Supply:
+                <p></p> 
+                <span style={{ fontSize: '27px' }}>
+                 {tShareCirculatingSupply} <br />
+                 </span>
+                Total Supply:
+                <p></p> 
+                <span style={{ fontSize: '27px' }}>
+                 {tShareTotalSupply} 
+                 </span>
+                 <p></p>
+                              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
+                <h3>Buy CATSHARE</h3>
+              </Button>
       </span>
             </CardContent>
           </Card>
@@ -324,9 +372,23 @@ const Home = () => {
                 <span style={{ fontSize: '30px', color: '#BBA14F' }}>${tBondPriceInDollars ? tBondPriceInDollars : '-.--'}</span>
               </Box>
               <span style={{ fontSize: '17px' }}>
-              Market Cap: ${/*(tBondCirculatingSupply * tBondPriceInDollars).toFixed(2)*/} 0<br />
-                Circulating Supply: {/*tBondCirculatingSupply*/} 0<br />
-                Total Supply: {/*tBondTotalSupply*/}0
+                
+              Market Cap:
+                <p></p> 
+                <span style={{ fontSize: '27px' }}>
+               ${/*(tBondCirculatingSupply * tBondPriceInDollars).toFixed(2)*/}0<br />
+               </span>
+                Circulating Supply:
+                                <p></p> 
+                <span style={{ fontSize: '27px' }}>
+                 {/*tBondCirculatingSupply*/} 0<br />
+                 </span>
+
+                Total Supply:
+                                <p></p> 
+                <span style={{ fontSize: '27px' }}>
+                 {/*tBondTotalSupply*/}0
+                 </span>
               </span>
 
             </CardContent>
