@@ -219,8 +219,8 @@ const Home = () => {
               <p></p>
               <h3>SpookySwap</h3>
 
-              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
-                Buy CATSHARE
+              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
+                Buy CATCOIN
               </Button>
               <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
               Buy CATSHARE
