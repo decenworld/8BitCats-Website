@@ -22,6 +22,8 @@ body {
 
 h2 {
    font-family: "Press Start 2P", cursive;
+
+
 }
 
 
@@ -33,6 +35,16 @@ h4 {
    font-family: "Press Start 2P", cursive;
 }
 
+  @media (max-width: 767.98px) {
+      h1 {
+    font-size: 30px;
+      font-weight: 500;
+  } 
+  h2 {
+    font-size: 20px;
+      font-weight: 500;
+  } 
+}
 
 mintButton {
 background: #92CD41;

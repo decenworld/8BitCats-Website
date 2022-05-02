@@ -100,9 +100,9 @@ export class TombFinance {
     const { LPRewardPool } = this.contracts;
     const supply = await this.TOMB.totalSupply();
     const tombRewardPoolSupply = await this.TOMB.balanceOf(LPRewardPool.address); 
-    const tombRewardPoolSupply2 = await this.TOMB.balanceOf('0xda2a4abc17a87f6f7b532a37ab8b707343a97334');
-    const tombRewardPoolSupply3 = await this.TOMB.balanceOf('0x4c5b4f27bc268594ecacc3dfce68ad70bd21487c');
-    const tombRewardPoolSupply4 = await this.TOMB.balanceOf('0x78ee91ea69132e5838699c42f0c07fa98da90161');
+    const tombRewardPoolSupply2 = await this.TOMB.balanceOf('0x9729E4162170DfaEA7f53287d4E49E61E727978b');
+    const tombRewardPoolSupply3 = await this.TOMB.balanceOf('0x039149f9C427736F3Ad627Edb69ba2e879D5e5Bd');
+    const tombRewardPoolSupply4 = await this.TOMB.balanceOf('0x0105175251Fd65ec63fBA1BA4078f2d44332171c');
     const tombCirculatingSupply = supply
       .sub(tombRewardPoolSupply)
       .sub(tombRewardPoolSupply2)

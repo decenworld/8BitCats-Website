@@ -32,6 +32,8 @@ import PitImage from '../../assets/img/background.png';
 import usebShareStats from '../../hooks/usetShareStats';
 import useTombFinance from '../../hooks/useTombFinance';
 
+// Import custom css
+import "../../assets/style.css";
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -86,7 +88,7 @@ const Masonry = () => {
       <BackgroundImage />
       {!!account ? (
         <>
-          <h2 style={{textAlign: 'center', fontSize: '80px'}}>
+          <h2 style={{textAlign: 'center'}}>
                 Boardroom
               </h2>
           <Box mt={5}>
