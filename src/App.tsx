@@ -32,6 +32,7 @@ const Catland = lazy(() => import('./views/Catland'));
 const Cryptoman = lazy(() => import('./views/Cryptoman'));
 const New = lazy(() => import('./views/New'));
 const Cats = lazy(() => import('./views/Cats'));
+const Feeple = lazy(() => import('./views/Feeple'));
 
 
 const NoMatch = () => (
@@ -93,6 +94,9 @@ const App: React.FC = () => {
             </Route>
               <Route path="/cats">
               <Cats />
+            </Route>
+              <Route path="/feeple">
+              <Feeple />
             </Route>
             <Route path="*">
               <NoMatch />

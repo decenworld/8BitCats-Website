@@ -122,6 +122,9 @@ const Nav = () => {
                           <Link color="textPrimary" to="/catland" className={classes.link}>
                 CatLand
               </Link>
+                    <Link color="textPrimary" to="/feeple" className={classes.link}>
+                Feeple
+              </Link>
 
               {/* <Link color="textPrimary" to="/dividends" className={classes.link}>
                 Dividends
@@ -185,6 +188,7 @@ const Nav = () => {
                 <ListItemLink primary="8-BIT CATS" to="/cats" />
                 <ListItemLink primary="CRYPTOMAN" to="/cryptoman" />
                 <ListItemLink primary="CAT LAND" to="/catland" />
+                <ListItemLink primary="FEEPLE" to="/feeple" />
 
 
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
