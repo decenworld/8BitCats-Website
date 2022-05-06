@@ -33,6 +33,8 @@ const Cryptoman = lazy(() => import('./views/Cryptoman'));
 const New = lazy(() => import('./views/New'));
 const Cats = lazy(() => import('./views/Cats'));
 const Feeple = lazy(() => import('./views/Feeple'));
+const Cryptowormz = lazy(() => import('./views/Cryptowormz'));
+
 
 
 const NoMatch = () => (
@@ -97,6 +99,9 @@ const App: React.FC = () => {
             </Route>
               <Route path="/feeple">
               <Feeple />
+            </Route>
+              <Route path="/cryptowormz">
+              <Cryptowormz />
             </Route>
             <Route path="*">
               <NoMatch />
