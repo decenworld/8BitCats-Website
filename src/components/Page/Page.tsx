@@ -9,11 +9,9 @@ const Page: React.FC = ({ children }) => {
   useEagerConnect();
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
-      <Nav />
-      <Container maxWidth="lg" style={{ paddingBottom: '5rem' }}>
+       <Container maxWidth={false} style={{ paddingRight: '0rem', paddingLeft: '0rem' }}>
         {children}
       </Container>
-      <Footer />
     </div>
   );
 };

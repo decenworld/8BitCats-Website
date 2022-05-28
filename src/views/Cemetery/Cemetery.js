@@ -15,6 +15,7 @@ import CemeteryImage from '../../assets/img/background.png';
 import { createGlobalStyle } from 'styled-components';
 import PitImage from '../../assets/img/background.png';
 import useBanks from '../../hooks/useBanks';
+import Nav from '../../components/Nav/Nav';
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -32,6 +33,8 @@ const Cemetery = () => {
   return (
     <Switch>
       <Page>
+                <Nav></Nav>
+
         <Route exact path={path}>
           <BackgroundImage />
           {!!account ? (

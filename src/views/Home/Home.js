@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, {useRef, useEffect, useMemo, Component } from 'react';
 import Page from '../../components/Page';
 
 import CashImage from '../../assets/img/example.gif';
@@ -21,20 +21,48 @@ import { tomb as tombProd, tShare as tShareProd } from '../../tomb-finance/deplo
 import kyc from '../../assets/img/kyc.png';
 import audit from '../../assets/img/audit.jpg';
 import MetamaskFox from '../../assets/img/metamask-fox.svg';
-import PitImage from '../../assets/img/background.png';
+
+// Images
+import PitImage from '../../assets/img/map.png';
+import House from '../../assets/img/house.png';
+import HouseRed from '../../assets/img/housered.png';
+import Boardroom from '../../assets/img/boardroom.png';
+import Farm from '../../assets/img/farm.png';
+import Cats from '../../assets/img/cats.gif';
+import Cryptoman from '../../assets/img/cryptoman.gif';
+
 import { Box, Button, Card, CardContent, Grid, Paper } from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
 
 import { makeStyles } from '@material-ui/core/styles';
 import useTombFinance from '../../hooks/useTombFinance';
+import ScrollContainer from 'react-indiana-drag-scroll';
+import Npc from '../../assets/img/npc.gif';
+import Man from '../../assets/img/man.gif';
+import Sign from '../../assets/img/buildings/sign.png';
+import Smoke from '../../assets/img/buildings/smoke.gif';
+import Wallsign from '../../assets/img/wall-sign.png';
+
+
+import { Section, useScrollIntoView } from "../../hooks/useScrollIntoView";
+
+import mapMovement from "../../hooks/mapMovement";
+import AccountButton from '../../components/Nav/AccountButton';
+import AccountModal from '../../components/Nav/AccountModal';
+
+//Menu
+import { useDetectOutsideClick } from "./useDetectOutsideClick";
+
 
 // Import custom css
-import "./style.css";
+import "./styless.css";
+
 
 const BackgroundImage = createGlobalStyle`
   body {
-    background: url(${PitImage}) no-repeat !important;
-    background-size: cover !important;
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+   font-family: "Press Start 2P", cursive;
+
   }
 `;
 
@@ -52,6 +80,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
+
 const Home = () => {
   const classes = useStyles();
   const TVL = useTotalValueLocked();
@@ -62,6 +92,16 @@ const Home = () => {
   const tBondStats = useBondStats();
   const tombFinance = useTombFinance();
   //const { balance } = useBurned2SHARES();
+  const container = useRef(null);
+  const [scrollIntoView] = useScrollIntoView();
+
+// Menu
+  const dropdownRef = useRef(null);
+  const [isActive, setIsActive] = useDetectOutsideClick(dropdownRef, false);
+  const onClick = () => setIsActive(!isActive);
+
+
+
 
   let tomb;
   let tShare;
@@ -69,6 +109,20 @@ const Home = () => {
   tomb = tombProd;
   tShare = tShareProd;
   
+
+    useEffect(() => {
+    mapMovement.addListeners(container.current);
+    return () => {
+      mapMovement.removeListeners();
+    };
+  }, [container]);
+
+    useEffect(() => {
+    // Start with crops centered
+    // if (showGame) {
+    scrollIntoView(Section.Man, "auto");
+    // }
+  }, [scrollIntoView], []);
 
   const buyTombAddress = 'https://spookyswap.finance/swap?outputCurrency=0x7a6e4e3cc2ac9924605dca4ba31d1831c84b44ae'
   const buyTShareAddress = 'https://spookyswap.finance/swap?outputCurrency=' + tShare.address;
@@ -112,9 +166,102 @@ const Home = () => {
   const tombLpZap = useZap({ depositTokenName: '2OMB-FTM-LP' });
   const tshareLpZap = useZap({ depositTokenName: '2SHARE-FTM-LP' });
 
+  
+
   const StyledLink = styled.a`
-    font-weight: 700;
-    text-decoration: none;
+     @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+   font-family: "Press Start 2P", cursive;
+   a {
+
+   }
+.menu-container {
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-trigger {
+
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px;
+  border: none;
+  vertical-align: middle;
+  transition: box-shadow 0.4s ease;
+  margin-left: auto; /* Strictly for positioning */
+}
+
+.menu-trigger:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-trigger span {
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.menu-trigger img {
+  border-radius: 90px;
+}
+
+.menu {
+  border: 3px solid;
+    border-image: url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 1 / 0 repeat;
+image-rendering: pixelated;
+border-color: currentcolor;
+border-style: solid;
+  background: #b0734a;
+  border-radius: 8px;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  right: 0;
+  width: 150px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu ul {
+  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  font-size: 10px;
+  border-image: url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 1 / 0 repeat;
+image-rendering: pixelated;
+border-color: currentcolor;
+border-style: solid;
+  border-bottom: 3px solid #000000;
+}
+
+.menu li a {
+  
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 10px 15px;
+  display: block;
+}
+ 
+
+
   `;
 
   const [onPresentTombZap, onDissmissTombZap] = useModal(
@@ -141,326 +288,231 @@ const Home = () => {
     />,
   );
 
-  return (
-    <Page>
-      <BackgroundImage />
-      <Grid container spacing={3}>
-        {/* Logo */}
-        <Grid
-          item
-          xs={12}
-          sm={4}
-          style={{display: 'flex', justifyContent: 'center', verticalAlign: 'middle', overflow: 'hidden'}}
-        >
-          <img src={CashImage} style={{maxHeight: '250px', marginTop: '40px'}} />
-        </Grid>
-        {/* Explanation text */}
-        <Grid item xs={12} sm={8}>
-          <Paper>
-            <Box p={4} style={{textAlign: 'center'}}>
-            <h2>Welcome to 8-Bit Cats</h2>
-              <p style={{fontSize: '17px'}}>
-                <b>CATCOIN is an algorithmic stable coin designed to maintain a 1:1 peg to USDC</b>
-              </p>
-              <p style={{fontSize: '17px'}}>
-              The protocol incentivizes the peg through high daily yields normally only found with volatile risk assets but with CATCOIN you get this by staking a USD pegged coin instead! Through utilizing CATCOIN in our NFT GameFi, holders will be able to earn rewards/prizes, breed the next generation, and much more!
-
-              </p>
-              <p>
-                Join our{' '}
-                <a href="https://discord.com/invite/gXZq9TsrGx" rel="noopener noreferrer" target="_blank" style={{color: '#BBA14F'}}>
-                  Discord
-                </a>{' '}
-              
-              </p>
-            </Box>
-          </Paper>
-
-
-
-        </Grid>
-
-        {/*<Grid container justify="center">
-            <Box mt={3} style={{ width: '1000px' }}>
-            <Alert variant="filled" severity="warning">
-                Do your own research before investing. Investing is risky and may result in monetary loss. MiniVerse is beta software and may contain bugs. By using MiniVerse, you agree that the MiniVerse team is not responsible for any financial losses from investing in MiniVerse.
-            </Alert>
-            </Box>
-  </Grid>*/}
-
-        {/* TVL */}
-        <Grid item xs={12} sm={4}>
-          <Card style={{paddingBottom: '20px' }}>
-            <CardContent align="center">
-              <h2 style={{marginTop: '10px' }}>Total Value Locked</h2>
-             
-              <CountUp style={{ fontSize: '25px'}} end={TVL} separator="," prefix="$" />
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* Wallet */}
-        <Grid item xs={12} sm={8}>
-          <Card style={{ height: '100%' }}>
-            <CardContent align="center" style={{ }}>
-              <h3>Staking</h3>   
-               <Button color="primary" href="/farms" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
-                 Farms
-              </Button>
-              <Button color="primary" href="/boardroom" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
-                Boardroom
-              </Button>
-                            <Button color="primary" href="/cats" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
-                8-Bit Cats
-              </Button>
-                            <Button color="primary" href="/catland" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
-                CATLAND
-              </Button>
-              <p></p>
-              <h3>SpookySwap</h3>
-
-              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
-                Buy CATCOIN
-              </Button>
-              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
-              Buy CATSHARE
-              </Button>
-              {/*
-              <Button
-                color="primary"
-                target="_blank"
-                href="https://spookyswap.finance/swap?outputCurrency=0x57976c467608983513c9355238dc6de1B1aBbcCA&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75"
-                variant="contained"
-                style={{ marginRight: '10px' }}
-                className={'shinyButton ' + classes.button}
-              >
-                Buy MvDOLLAR
-              </Button>
-    
-              <Button color="primary" target="_blank" href="https://spookyswap.finance/swap?outputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75&inputCurrency=0xb011EC534d9175cD7a69aFBfc1bcc9990862c462" variant="contained" className={'shinyButton ' + classes.button} style={{ marginRight: '10px' }}>
-                Buy MSHARE
-              </Button>
-              <Button color="primary" target="_blank" href="https://dexscreener.com/fantom/0x35bed1e2f3033395a05cd0b1b5900209ece42774" variant="contained" className={'shinyButton ' + classes.button} style={{ marginRight: '5px', fontSize: '1px !important' }}>
-              MvDOLLAR Chart
-              </Button>
-              <Button color="primary" target="_blank" href="https://dexscreener.com/fantom/0x92a7b2a9ca7d70573e3a0b0bf9e5232c70db8a89" variant="contained" className={'shinyButton ' + classes.button} style={{ marginRight: '5px' }}>
-              MSHARE Chart
-            </Button>
-            <Button color="primary" target="_blank" href="https://linktr.ee/miniverseclub3" variant="contained" className={'shinyButton ' + classes.button} style={{ marginRight: '5px' }}>
-              Buy NFT's
-            </Button>
-*/}
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* TOMB */}
-        <Grid item xs={12} sm={4}>
-          <Card>
-            <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>CATCOIN</h2>
-              <Box mt={2}>
-                <CardIcon>
-                  <TokenSymbol symbol="MvDOLLAR" />
-                </CardIcon>
-
-                <span style={{ fontSize: '30px', color: '#BBA14F' }}>
-                  ${tombPriceInDollars ? tombPriceInDollars : '-.--'}
-                </span>
-              </Box>
-              <span style={{ fontSize: '17px' }}>
-                Market Cap:<p></p>
-                 <span style={{ fontSize: '27px' }}>
-                 ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
-                 </span>
-                Circulating Supply:<p></p>
-                <span style={{ fontSize: '27px' }}>
-                 {tombCirculatingSupply} <br />
-                </span>
-                Total Supply:<p></p> 
-                <span style={{ fontSize: '27px' }}>
-
-                {tombTotalSupply}
-              </span>
-              <p></p>
-              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
-                <h3>Buy CATCOIN</h3>
-              </Button>
-
-
-              </span>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* <Grid item xs={12} sm={3}>
-          <Card>
-            <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>2OMBp</h2>
-              <Box mt={2}>
-                <CardIcon>
-                  <TokenSymbol symbol="TOMB" />
-                </CardIcon>
-              </Box>
-              Current Price
-              <Box>
-                <span style={{ fontSize: '30px' }}>{tombPriceInFTM ? tombPriceInFTM : '-.----'} FTM</span>
-              </Box>
-              <Box>
-                <span style={{ fontSize: '16px', alignContent: 'flex-start' }}>
-                  ${tombPriceInDollars ? tombPriceInDollars : '-.--'}
-                </span>
-              </Box>
-              <span style={{ fontSize: '12px' }}>
-                Market Cap: ${(tombCirculatingSupply * tombPriceInDollars).toFixed(2)} <br />
-                Circulating Supply: {tombCirculatingSupply} <br />
-                Total Supply: {tombTotalSupply-140000}
-              </span>
-            </CardContent>
-          </Card>
-        </Grid> */}
-
-        {/* TSHARE */}
-        <Grid item xs={12} sm={4}>
-          <Card>
-            <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>CATSHARE</h2>
-              <Box mt={2}>
-                <CardIcon>
-                  <TokenSymbol symbol="MSHARE" />
-                </CardIcon>
-
-                <span style={{ fontSize: '30px', color: '#BBA14F' }}>${tSharePriceInDollars ? tSharePriceInDollars : '-.--'}</span>
-              </Box>
-              <span style={{ fontSize: '17px' }}>
-                Market Cap: 
-                <p></p> 
-                <span style={{ fontSize: '27px' }}>
-                ${(tShareCirculatingSupply * tSharePriceInDollars).toFixed(2)} <br />
-                </span>
-                Circulating Supply:
-                <p></p> 
-                <span style={{ fontSize: '27px' }}>
-                 {tShareCirculatingSupply} <br />
-                 </span>
-                Total Supply:
-                <p></p> 
-                <span style={{ fontSize: '27px' }}>
-                 {tShareTotalSupply} 
-                 </span>
-                 <p></p>
-                              <Button color="primary" href="https://spookyswap.finance/swap?outputCurrency=0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
-                <h3>Buy CATSHARE</h3>
-              </Button>
-      </span>
-            </CardContent>
-          </Card>
-        </Grid>
-
-        {/* TBOND */}
-       
-         <Grid item xs={12} sm={4}>
-          <Card>
-            <CardContent align="center" style={{ position: 'relative' }}>
-              <h2>CATBOND</h2>
-              <Box mt={2}>
-                <CardIcon>
-                  <TokenSymbol symbol="MvBOND" />
-                </CardIcon>
   
-   
-                <span style={{ fontSize: '30px', color: '#BBA14F' }}>${tBondPriceInDollars ? tBondPriceInDollars : '-.--'}</span>
-              </Box>
-              <span style={{ fontSize: '17px' }}>
+  return (
+    
+    <Page>
+      <Grid container spacing={3}>
+
+      <ScrollContainer
+          style={{height:"1800px"}}
+          vertical={true}
+          horizontal={true}
+          hideScrollbars={true}
+          innerRef={container}
+     
+        >
+                      <StyledLink>
+
+          <div
+            className="relative h-gameboard w-gameboard" 
+            // TODO dynamic game board size based on tile dimensions
+          >
+        
+            <img src={PitImage} className="absolute inset-0 w-full h-full" style={{imageRendering: "pixelated"}}/>
+      <div className='w-5/12 sm:w-60 fixed top-2 left-2 z-50 shadow-lg'
+              // Menu
+              style={{position: 'fixed', width: "40px", height: "50px", marginTop:"50px"}}
+              >
+
+
                 
-              Market Cap:
-                <p></p> 
-                <span style={{ fontSize: '27px' }}>
-               ${/*(tBondCirculatingSupply * tBondPriceInDollars).toFixed(2)*/}0<br />
-               </span>
-                Circulating Supply:
-                                <p></p> 
-                <span style={{ fontSize: '27px' }}>
-                 {/*tBondCirculatingSupply*/} 0<br />
-                 </span>
 
-                Total Supply:
-                                <p></p> 
-                <span style={{ fontSize: '27px' }}>
-                 {/*tBondTotalSupply*/}0
-                 </span>
-              </span>
 
-            </CardContent>
-          </Card>
-        </Grid>
-      
-        <Grid item xs={12} sm={6}>
-          <Card>
-            <CardContent align="center">
-              <h2>CATCOIN-USDC LP</h2>
-              <Box mt={2}>
-                <CardIcon>
-                  <TokenSymbol symbol="MVDOLLAR-USDC-LP" />
-                </CardIcon>
-              </Box>
-             {/* <Box mt={2}>
-                <Button color="primary" disabled={false} onClick={onPresentTombZap} variant="contained">
-                  Zap In!
-                </Button>
-            </Box>*/}
-            {/*
-              <Box mt={2}>
-                <span style={{ fontSize: '26px', color: '#BBA14F'  }}>
-                  {tombLPStats?.tokenAmount ? tombLPStats?.tokenAmount : '-.--'} CATCOIN /{' '}
-                  {tombLPStats?.ftmAmount ? tombLPStats?.ftmAmount : '-.--'} USDC
-                </span>
-              </Box>
-               <Box>${tombLPStats?.priceOfOne ? tombLPStats.priceOfOne : '-.--'}</Box>
-                        */}
 
-              <span style={{ fontSize: '17px' }}>
-                Liquidity: ${tombLPStats?.totalLiquidity ? tombLPStats.totalLiquidity : '-.--'} <br />
-                Total supply: {tombLPStats?.totalSupply ? tombLPStats.totalSupply : '-.--'}
-              </span>
-            </CardContent>
-          </Card>
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <Card>
-            <CardContent align="center">
-              <h2>CATSHARE-USDC LP</h2>
-              <Box mt={2}>
-                <CardIcon>
-                  <TokenSymbol symbol="MSHARE-USDC-LP" />
-                </CardIcon>
-              </Box>
-             {/* <Box mt={2}>
-                <Button color="primary" onClick={onPresentTshareZap} variant="contained">
-                  Zap In!
-                </Button>
-          </Box>*/}
-                      {/*
 
-              <Box mt={2}>
-                <span style={{ fontSize: '26px', color: '#BBA14F'  }}>
-                  {tshareLPStats?.tokenAmount ? tshareLPStats?.tokenAmount : '-.--'} CATSHARE /{' '}
-                  {tshareLPStats?.ftmAmount ? tshareLPStats?.ftmAmount : '-.--'} USDC
-                </span>
-              </Box>
-              <Box>${tshareLPStats?.priceOfOne ? tshareLPStats.priceOfOne : '-.--'}</Box>
-        */}
-              <span style={{ fontSize: '17px' }}>
-                Liquidity: ${tshareLPStats?.totalLiquidity ? tshareLPStats.totalLiquidity : '-.--'}
-                <br />
-                Total supply: {tshareLPStats?.totalSupply ? tshareLPStats.totalSupply : '-.--'}
-              </span>
-            </CardContent>
-          </Card>
-        </Grid>
+
+
+
+
+
+
+
+
+
+
+        <button onClick={onClick} className="menu-trigger">
+
+                <div className='bg-brown-600 p-0.5 text-white shadow-lg' style={{border: 'solid', borderWidth: "6px", imageRendering: "pixelated", borderRadius: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 1 / 0 repeat'}}>
+
+                  <div className='flex justify-center p-1'>
+                    MENU
+                  </div>
+
+                </div>
+                </button>
+        <nav
+          ref={dropdownRef}
+          className={`menu ${isActive ? "active" : "inactive"}`}
+        >
+          <ul>
+            <li>
+              <a href="/boardroom">Boardroom</a>
+            </li>
+            <li>
+              <a href="/farms">Farms</a>
+            </li>
+            <li>
+              <a href="/cats">8-Bit Cats</a>
+            </li>
+                       <li>
+              <a href="/cryptoman">Cryptoman</a>
+            </li>
+                       <li>
+              <a href="/catland">CatLand</a>
+            </li>
+                       <li>
+              <a href="/feeple">Feeple</a>
+            </li>
+                       <li>
+              <a href="/cryptowormz">Cryptowormz</a>
+            </li>
+                       <li>
+              <a href="/cryptowormzhd">Cryptowormz HD</a>
+            </li>
+                                  <li>
+              <a href="/coolpenguin">CoolPenguin</a>
+            </li>
+                                  <li>
+              <a href="/info">Info</a>
+            </li>
+          </ul>
+        </nav>
+
+              </div>
+ <a href='https://spooky.fi/#/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75'>
+            <span className='bg-brown-200 p-1 fixed top-2 right-2 z-50 flex items-center shadow-lg cursor-pointer'
+            style={{border: "solid", borderWidth: "3px", marginRight: "10px",  
+            imageRendering: "pixelated", borderRadius: "10px", width: "140px", height: "50px"}}
+
+            >
+
+              <AccountModal>                       
+</AccountModal>
+
+
+            </span>
+            </a>
+                        <span className='bg-brown-200 p-1 fixed top-2 right-2 z-50 flex items-center shadow-lg cursor-pointer'
+            style={{border: "solid", borderWidth: "3px", marginRight: "150px",  
+            imageRendering: "pixelated", borderRadius: "10px"}}
+
+            >
+                          <AccountButton text="Connect" />
+                          </span>
+
+
+
+            <span id="house" className='house' style={{position: "absolute", top: "1450px", left: "1600px", imageRendering: "pixelated"}}>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px", imageRendering: "pixelated"}} />
+                <img src={"https://ipfs.infura-ipfs.io/ipfs/QmUabyMYjEaYiYf32FXWiXNpQAgoRfheHZ5FzpRahV5b7k/1380.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./cryptowormzhd'>
+            <img src={House} width="134" height="165" className="inset-0"  />
+                <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>STAKING</span></div>
+            </a>
+            </span>
+
+                        <span id="house2" className='house2' style={{position: "absolute", top: "1150px", left: "1650px", imageRendering: "pixelated"}}>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={"https://cryptowormz.fi/config/images/worm2.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./cryptowormz'>
+            <img src={House} width="134" height="165" className="inset-0"  />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>STAKING</span></div>
+            </a>
+            </span>
+
+                <span id="house3" className='house3' style={{position: "absolute", top: "1150px", left: "1950px", imageRendering: "pixelated"}}>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={"https://ipfs.infura-ipfs.io/ipfs/QmW8xmsfRKaWeNmzqPrKEzgFGVNzN36J3SRx8SFRANAyHE/1611.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./coolpenguin'>
+            <img src={House} width="134" height="165" className="inset-0"  />
+                            <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>STAKING</span></div>
+            </a>
+            </span>
+
+                <span id="npc" className='npc' style={{position: "absolute", top: "1400px", left: "1890px", imageRendering: "pixelated"}}>
+            <img src={Npc} width="50" height="64" className="inset-0"  />
+            </span>    
+
+
+
+
+
+<span id="housered" className='housered' style={{position: "absolute", top: "850px", left: "3100px", imageRendering: "pixelated"}}
+// catcoin/red house starts here
+>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={Cats} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./cats'>
+            <img src={HouseRed} width="134" height="165" className="inset-0"  />
+                            <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>STAKING</span></div>
+            </a>
+            </span>
+
+
+          <span id="housered" className='housered' style={{position: "absolute", top: "850px", left: "3400px", imageRendering: "pixelated"}}
+// catcoin/red house starts here
+>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={Cryptoman} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./cryptoman'>
+            <img src={HouseRed} width="134" height="165" className="inset-0"  />
+                            <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>STAKING</span></div>
+            </a>
+            </span>
+                      <span id="boardroom" className='boardroom' style={{position: "absolute", top: "1010px", left: "3145px", imageRendering: "pixelated"}}
+// catcoin/red house starts here
+>
+
+            <a href='./boardroom'>
+            <img src={Boardroom} width="190" height="165" className="inset-0"  />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "122px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "80px", left: "35px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>BOARDROOM</span></div>
+            </a>
+            </span>
+                      <span id="farm" className='farm' style={{position: "absolute", top: "1190px", left: "3100px", imageRendering: "pixelated"}}
+// catcoin/red house starts here
+>
+
+            <a href='./farms'>
+            <img src={Farm} width="134" height="165" className="inset-0"  />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "75px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "60px", left: "30px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>FARMS</span></div>
+            </a>
+            </span>
+
+
+              <span id="man" className='man' style={{position: "absolute", top: "1500px", left: "3200px", imageRendering: "pixelated"}}>
+              
+            <img src={Man} width="40" height="44" className="inset-0"  />
+            </span> 
+
+          </div>
+
+                      </StyledLink>
+
+        </ScrollContainer>
+
       </Grid>
+
     </Page>
+    
   );
+  
 };
 
 export default Home;

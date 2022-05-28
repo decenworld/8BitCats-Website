@@ -36,6 +36,7 @@ const Feeple = lazy(() => import('./views/Feeple'));
 const Cryptowormz = lazy(() => import('./views/Cryptowormz'));
 const Cryptowormzhd = lazy(() => import('./views/Cryptowormzhd'));
 const Coolpenguin = lazy(() => import('./views/Coolpenguin'));
+const Info = lazy(() => import('./views/Info'));
 
 
 
@@ -113,6 +114,9 @@ const App: React.FC = () => {
                           <Route path="/coolpenguin">
               <Coolpenguin />
             </Route>
+                              <Route path="/info">
+              <Info />
+            </Route>
             <Route path="*">
               <NoMatch />
             </Route>
@@ -140,7 +144,6 @@ const Providers: React.FC = ({ children }) => {
         >
           <Provider store={store}>
             <Updaters />
-            <RefreshContextProvider>
               <TombFinanceProvider>
                 <ModalsProvider>
                   <BanksProvider>
@@ -151,7 +154,6 @@ const Providers: React.FC = ({ children }) => {
                   </BanksProvider>
                 </ModalsProvider>
               </TombFinanceProvider>
-            </RefreshContextProvider>
           </Provider>
         </UseWalletProvider>
       </TP>

@@ -59,6 +59,7 @@ const Pit: React.FC = () => {
   return (
     <Switch>
       <Page>
+
         <BackgroundImage />
         {!!account ? (
           <>

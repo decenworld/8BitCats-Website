@@ -9,6 +9,7 @@ import { withStyles, makeStyles } from '@material-ui/styles';
 
 import Page from '../../components/Page';
 import { createGlobalStyle } from 'styled-components';
+import Nav from '../../components/Nav/Nav';
 
 //import useBanks from '../../hooks/useBanks';
 import useTombFinance from '../../hooks/useTombFinance';
@@ -163,6 +164,8 @@ const [mintAmount, setMintAmount] = useState(1);
   return (
     <Switch>
       <Page>
+                <Nav></Nav>
+
         <Route exact path={path}>
           <BackgroundImage />
           <div style={{ textAlign: 'center', color: 'white' }}>

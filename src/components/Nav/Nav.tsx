@@ -134,6 +134,9 @@ const Nav = () => {
                     <Link color="textPrimary" to="/coolpenguin" className={classes.link}>
                 Coolpenguin
               </Link>
+                      <Link color="textPrimary" to="/info" className={classes.link}>
+                Info
+              </Link>
 
 
 
@@ -204,6 +207,7 @@ const Nav = () => {
                 <ListItemLink primary="CRYPTO WORMZ" to="/cryptowormz" />
                 <ListItemLink primary="CRYPTO WORMZ HD" to="/cryptowormzhd" />
                 <ListItemLink primary="COOL PENGUIN" to="/coolpenguin" />
+                <ListItemLink primary="INFO" to="/info" />
 
 
 

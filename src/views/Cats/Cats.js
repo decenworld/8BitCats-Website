@@ -14,6 +14,8 @@ import { createGlobalStyle } from 'styled-components';
 import useTombFinance from '../../hooks/useTombFinance';
 
 import PitImage from '../../assets/img/background.png';
+import Nav from '../../components/Nav/Nav';
+
 
 // Import custom css
 import "./style.css";
@@ -162,7 +164,10 @@ const [mintAmount, setMintAmount] = useState(1);
 
   return (
     <Switch>
+
       <Page>
+        <Nav></Nav>
+
         <Route exact path={path}>
           <BackgroundImage />
           <div style={{ textAlign: 'center', color: 'white' }}>

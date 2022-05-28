@@ -31,6 +31,7 @@ import { createGlobalStyle } from 'styled-components';
 import PitImage from '../../assets/img/background.png';
 import usebShareStats from '../../hooks/usetShareStats';
 import useTombFinance from '../../hooks/useTombFinance';
+import Nav from '../../components/Nav/Nav';
 
 // Import custom css
 import "../../assets/style.css";
@@ -85,6 +86,7 @@ const Masonry = () => {
 
   return (
     <Page>
+      <Nav></Nav>
       <BackgroundImage />
       {!!account ? (
         <>

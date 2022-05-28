@@ -19,6 +19,7 @@ import { Bank as BankEntity } from '../../tomb-finance';
 import useTombFinance from '../../hooks/useTombFinance';
 
 import { Alert } from '@material-ui/lab';
+import Nav from '../../components/Nav/Nav';
 
 const useStyles = makeStyles((theme) => ({
   gridItem: {
@@ -41,6 +42,8 @@ const Bank: React.FC = () => {
 
   return account && bank ? (
     <>
+            <Nav></Nav>
+
       <PageHeader
         icon="🏦"
         // subtitle={`Deposit ${bank?.depositTokenName} and earn ${bank?.earnTokenName}`}

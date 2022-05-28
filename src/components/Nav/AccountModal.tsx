@@ -22,17 +22,11 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
   const displayTbondBalance = useMemo(() => getDisplayBalance(tbondBalance), [tbondBalance]);
 
   return (
-    <Modal>
-      <ModalTitle text="My Wallet" />
 
       <Balances>
-        <StyledBalanceWrapper>
           <TokenSymbol symbol="2OMB" />
-          <StyledBalance>
-            <StyledValue>{displayTombBalance}</StyledValue>
-            <Label text="Cat Coins Available" color='primary' />
-          </StyledBalance>
-        </StyledBalanceWrapper>
+
+            <StyledValue>{displayTombBalance.substring(0, 4)}</StyledValue>
 {/*
         <StyledBalanceWrapper>
           <TokenSymbol symbol="TSHAREPNG" />
@@ -51,15 +45,16 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
         </StyledBalanceWrapper>
   */}
       </Balances>
-    </Modal>
   );
 };
 
 const StyledValue = styled.div`
-  //color: ${(props) => props.theme.color.grey[300]};
-  font-size: 30px;
+  font-size: 15px;
   font-weight: 700;
+  text-align: center;
 `;
+
+
 
 const StyledBalance = styled.div`
   align-items: center;
@@ -72,6 +67,10 @@ const Balances = styled.div`
   flex-direction: row;
   justify-content: center;
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
+  height: 25px;
+  width: 25px;
+    margin: auto;
+
 `;
 
 const StyledBalanceWrapper = styled.div`
