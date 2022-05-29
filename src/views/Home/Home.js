@@ -31,6 +31,10 @@ import Farm from '../../assets/img/farm.png';
 import Cats from '../../assets/img/cats.gif';
 import Cryptoman from '../../assets/img/cryptoman.gif';
 import CatStatue from '../../assets/img/catstatue.png';
+import GoblingAxe from '../../assets/img/goblings/spr_axe.gif';
+import GoblingCarry from '../../assets/img/goblings/spr_carry.gif';
+import GoblingDig from '../../assets/img/goblings/spr_dig.gif';
+import GoblingHammer from '../../assets/img/goblings/spr_hammering.gif';
 
 import { Box, Button, Card, CardContent, Grid, Paper } from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
@@ -514,6 +518,17 @@ border-style: solid;
   <span style={{marginLeft: "3px"}}>MINT NOW</span></div>
             </span> 
                         </a>
+
+                                  <span id="npc" className='npc' style={{position: "absolute", top: "1510px", left: "1450px", imageRendering: "pixelated"}}>
+            <img src={GoblingAxe} width="250" height="64" className="inset-0"  />
+            </span>    
+              
+                      <span id="npc" className='npc' style={{position: "absolute", top: "1130px", left: "1690px", imageRendering: "pixelated"}}>
+            <img src={GoblingDig} width="250" height="64" className="inset-0"  />
+            </span>    
+                      <span id="npc" className='npc' style={{position: "absolute", top: "1200px", left: "2120px", imageRendering: "pixelated", transform: "scaleX(-1)"}}>
+            <img src={GoblingHammer} width="250" height="64" className="inset-0"  />
+            </span>    
 
           </div>
           
