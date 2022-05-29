@@ -519,11 +519,11 @@ border-style: solid;
             </span> 
                         </a>
 
-                                  <span id="npc" className='npc' style={{position: "absolute", top: "1510px", left: "1450px", imageRendering: "pixelated"}}>
+                                  <span id="npc" className='npc' style={{position: "absolute", top: "1510px", left: "1750px", imageRendering: "pixelated", transform: "scaleX(-1)"}}>
             <img src={GoblingAxe} width="250" height="64" className="inset-0"  />
             </span>    
               
-                      <span id="npc" className='npc' style={{position: "absolute", top: "1130px", left: "1690px", imageRendering: "pixelated"}}>
+                      <span id="npc" className='npc' style={{position: "absolute", top: "1300px", left: "1820px", imageRendering: "pixelated"}}>
             <img src={GoblingDig} width="250" height="64" className="inset-0"  />
             </span>    
                       <span id="npc" className='npc' style={{position: "absolute", top: "1200px", left: "2120px", imageRendering: "pixelated", transform: "scaleX(-1)"}}>
