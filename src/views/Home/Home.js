@@ -30,6 +30,7 @@ import Boardroom from '../../assets/img/boardroom.png';
 import Farm from '../../assets/img/farm.png';
 import Cats from '../../assets/img/cats.gif';
 import Cryptoman from '../../assets/img/cryptoman.gif';
+import CatStatue from '../../assets/img/catstatue.png';
 
 import { Box, Button, Card, CardContent, Grid, Paper } from '@material-ui/core';
 import ZapModal from '../Bank/components/ZapModal';
@@ -358,6 +359,9 @@ border-style: solid;
                        <li>
               <a href="/cryptoman">Cryptoman</a>
             </li>
+                                   <li>
+              <a href="/catstatue">CatStatue</a>
+            </li>
                        <li>
               <a href="/catland">CatLand</a>
             </li>
@@ -499,9 +503,20 @@ border-style: solid;
               <span id="man" className='man' style={{position: "absolute", top: "1500px", left: "3200px", imageRendering: "pixelated"}}>
               
             <img src={Man} width="40" height="44" className="inset-0"  />
+
             </span> 
+                        <a href='./catstatue'>
+
+      <span id="catstatue" className='catstatue' style={{position: "absolute", top: "1599px", left: "3192px", imageRendering: "pixelated"}}>
+              
+            <img src={CatStatue} width="92" height="150" className="inset-0"  />
+            <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "110px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "130px", left: "-10px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>MINT NOW</span></div>
+            </span> 
+                        </a>
 
           </div>
+          
 
                       </StyledLink>
 

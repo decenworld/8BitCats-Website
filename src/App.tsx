@@ -36,6 +36,8 @@ const Feeple = lazy(() => import('./views/Feeple'));
 const Cryptowormz = lazy(() => import('./views/Cryptowormz'));
 const Cryptowormzhd = lazy(() => import('./views/Cryptowormzhd'));
 const Coolpenguin = lazy(() => import('./views/Coolpenguin'));
+const Catstatue = lazy(() => import('./views/Catstatue'));
+
 const Info = lazy(() => import('./views/Info'));
 
 
@@ -95,6 +97,9 @@ const App: React.FC = () => {
             </Route>
              <Route path="/cryptoman">
               <Cryptoman />
+            </Route>
+                          <Route path="/catstatue">
+              <Catstatue />
             </Route>
             <Route path="/new">
               <New />

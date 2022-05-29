@@ -1188,6 +1188,24 @@ export class TombFinance {
         console.log("user declined")
       }};
     
+         /**
+     * mint account for ERC20 and ERC721
+     * @param address account address
+     */
+     async mintStatue(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 75000000000000000000);
+      try {
+      await this.contracts['catstatueNFT'].mint(account, mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+        value: totalCostWei,
+      }
+      )
+      } catch(err) {
+        console.log("user declined")
+      }};
+    
      /**
      * mint account for ERC20 and ERC721
      * @param address account address
