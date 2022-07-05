@@ -102,7 +102,7 @@ const Nav = () => {
               <img alt="MiniVerse" src={mvLogo} height="50px" style={{marginTop: '15px'}} />
               </a> 
             </Typography>
-            
+             <AccountButton text="Connect" />
             <Box mr={5}>
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
@@ -163,7 +163,7 @@ const Nav = () => {
         
 
             </Box>
-            <AccountButton text="Connect" />
+           
           </>
         ) : (
           <>
