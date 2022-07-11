@@ -15,6 +15,8 @@ import useTombFinance from '../../hooks/useTombFinance';
 
 import PitImage from '../../assets/img/background.png';
 
+import Nav from '../../components/Nav/Nav';
+
 // Import custom css
 import "./style.css";
 import { BorderLeft } from '@material-ui/icons';
@@ -61,11 +63,11 @@ const Fantomllama = () => {
   const [indexOfSelectedNftInWallet, setIndexOfselectedNftInWallet] = useState(-1);
   const [reward, setReward] = useState(0);
 // Minting process
-const [mintAmount, setMintAmount] = useState(1);
+const [mintAmount, setMintAmount] = useState(3);
 
   const reloadNfts = async () => {
     if (account) {
-      let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'CryptomanWalletNFT');
+      let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'LlamaWalletNFT');
       setNftsInWallet(await Promise.all(
         nftsInWalletWithJSON.map(async nft => {
           return {
@@ -75,7 +77,7 @@ const [mintAmount, setMintAmount] = useState(1);
         })
       ));
 
-      let nftsStakedWithJSON = await tombFinance.getNFTsStaked(account, 'CryptomanWalletNFT', 'CryptomanStakingNFT');
+      let nftsStakedWithJSON = await tombFinance.getNFTsStaked(account, 'LlamaWalletNFT', 'LlamaStakingNFT');
       setNftsStaked(await Promise.all(
         nftsStakedWithJSON.map(async nft => {
           return {
@@ -85,8 +87,8 @@ const [mintAmount, setMintAmount] = useState(1);
         })
       ));
 
-      setNftTotalSupply(await tombFinance.nftTotalSupply('CryptomanWalletNFT'));
-      setNftStakedTotalSupply(await tombFinance.nftStakedTotalSupply('CryptomanWalletNFT', 'CryptomanStakingNFT'));
+      setNftTotalSupply(await tombFinance.nftTotalSupply('LlamaWalletNFT'));
+      setNftStakedTotalSupply(await tombFinance.nftStakedTotalSupply('LlamaWalletNFT', 'LlamaStakingNFT'));
     }
   }
 
@@ -110,7 +112,7 @@ const [mintAmount, setMintAmount] = useState(1);
   const selectNftStaked = async (index) => {
     setIndexOfselectedNft(index);
     setIndexOfselectedNftInWallet(-1);
-    setReward(await tombFinance.calculateRewards(account, [nftsStaked[index].tokenId], 'CryptomanStakingNFT'));
+    setReward(await tombFinance.calculateRewards(account, [nftsStaked[index].tokenId], 'LlamaStakingNFT'));
   }
 
   const selectNftInWallet = async (index) => {
@@ -119,27 +121,36 @@ const [mintAmount, setMintAmount] = useState(1);
   }
 
   const stake = async () => {
-    await tombFinance.stakeNfts([nftsInWallet[indexOfSelectedNftInWallet].tokenId], 'CryptomanStakingNFT');
+    await tombFinance.stakeNfts([nftsInWallet[indexOfSelectedNftInWallet].tokenId], 'LlamaStakingNFT');
+    reloadNfts();
+  }
+
+    const stakeAll = async () => {
+    let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'LlamaWalletNFT');
+      for (const nft of nftsInWalletWithJSON){
+        await tombFinance.stakeNfts([nft.tokenId], 'LlamaStakingNFT');
+      }
+    console.log(nftsInWalletWithJSON)
     reloadNfts();
   }
 
   const unStake = async () => {
-    await tombFinance.unStake(nftsStaked[indexOfSelectedNft].tokenId, 'CryptomanStakingNFT');
+    await tombFinance.unStake(nftsStaked[indexOfSelectedNft].tokenId, 'LlamaStakingNFT');
     reloadNfts();
   }
 
   const claim = async () => {
-    await tombFinance.claim(nftsStaked[indexOfSelectedNft].tokenId, 'CryptomanStakingNFT');
-    setReward(await tombFinance.calculateRewards(account, [nftsStaked[indexOfSelectedNft].tokenId], 'CryptomanStakingNFT'));
+    await tombFinance.claim(nftsStaked[indexOfSelectedNft].tokenId, 'LlamaStakingNFT');
+    setReward(await tombFinance.calculateRewards(account, [nftsStaked[indexOfSelectedNft].tokenId], 'LlamaStakingNFT'));
   }
 
   const approve = async () => {
-    await tombFinance.approve('CryptomanWalletNFT', 'CryptomanStakingNFT');
+    await tombFinance.approve('LlamaWalletNFT', 'LlamaStakingNFT');
   }
 
   const mint = async (amount) => {
     console.log(account);
-    await tombFinance.mintNFT(account, amount);
+    await tombFinance.mintllamasNFT(account, amount);
 
 
 }
@@ -165,21 +176,22 @@ const [mintAmount, setMintAmount] = useState(1);
       <Page>
         <Route exact path={path}>
           <BackgroundImage />
+          <Nav></Nav>
           <div style={{ textAlign: 'center', color: 'white' }}>
-          <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>Cryptoman</h2>
+          <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>Llamas</h2>
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
                                       
             <span>
              <span style={{fontSize: '20px'}}>Total Minted
              </span>
-               <br></br>{nftTotalSupply}/3333
+               <br></br>{nftTotalSupply}/5000
              </span>
                  </Grid>
                      <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
                      <img style={{width: '200px', height:'200px', border: '1px black solid'}} src={require('./example.gif')} />
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
 
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Cryptoman Only 2 FTM</h4>
+                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Llama Only 2 FTM</h4>
                   </Grid>
                  </Grid>
               <span>
@@ -223,7 +235,7 @@ const [mintAmount, setMintAmount] = useState(1);
 
           
             <span style={{ fontSize: '36px' }}>
-              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Cryptoman STAKED
+              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Llamas STAKED
             </span>
             <BorderLinearProgress variant="determinate" value={nftStakedTotalSupply * 100 / nftTotalSupply} />
             <br/>
@@ -349,6 +361,18 @@ const [mintAmount, setMintAmount] = useState(1);
                             onClick={stake}
                           >
                             Stake
+                          </Button>
+
+
+                                                    <Button
+                            variant='contained' 
+                            color="primary" 
+                            classes={{
+                              root: classes.stakeButtons,
+                            }}
+                            onClick={stakeAll}
+                          >
+                            Stake All
                           </Button>
                         </div>
                       </Box>

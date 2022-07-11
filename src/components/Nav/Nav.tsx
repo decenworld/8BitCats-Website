@@ -122,6 +122,9 @@ const Nav = () => {
                             <Link color="textPrimary" to="/catstatue" className={classes.link}>
                 Catstatue
               </Link>
+                <Link color="textPrimary" to="/fantomllama" className={classes.link}>
+                Fantom Llama
+              </Link>
                           <Link color="textPrimary" to="/catland" className={classes.link}>
                 CatLand
               </Link>

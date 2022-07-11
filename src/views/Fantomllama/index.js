@@ -1,1 +1,1 @@
-export { default } from './Cryptoman';
+export { default } from './Fantomllama';

@@ -55,6 +55,7 @@ import mapMovement from "../../hooks/mapMovement";
 import AccountButton from '../../components/Nav/AccountButton';
 import AccountModal from '../../components/Nav/AccountModal';
 
+
 //Menu
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 
@@ -366,7 +367,11 @@ border-style: solid;
                                    <li>
               <a href="/catstatue">CatStatue</a>
             </li>
+                                          <li>
+              <a href="/fantomllama">Fantom Llama</a>
+            </li>
                        <li>
+                      
               <a href="/catland">CatLand</a>
             </li>
                        <li>
@@ -452,6 +457,17 @@ border-style: solid;
 
 
 
+
+                        <span id="llamahouse" className='llamahouse' style={{position: "absolute", top: "740px", left: "1700px", imageRendering: "pixelated"}}>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={"https://fantomllama.netlify.app/config/images/example.gif"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./fantomllama'>
+            <img src={Farm} width="134" height="165" className="inset-0"  />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "80px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>STAKING</span></div>
+            </a>
+            </span>
 
 
 <span id="housered" className='housered' style={{position: "absolute", top: "850px", left: "3100px", imageRendering: "pixelated"}}

@@ -175,7 +175,7 @@ const [mintAmount, setMintAmount] = useState(1);
             <span>
              <span style={{fontSize: '20px'}}>Total Minted
              </span>
-               <br></br>{nftTotalSupply}/3333
+               <br></br>{nftTotalSupply}/3000
              </span>
                  </Grid>
                      <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
