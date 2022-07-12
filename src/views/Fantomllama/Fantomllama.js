@@ -63,7 +63,7 @@ const Fantomllama = () => {
   const [indexOfSelectedNftInWallet, setIndexOfselectedNftInWallet] = useState(-1);
   const [reward, setReward] = useState(0);
 // Minting process
-const [mintAmount, setMintAmount] = useState(3);
+const [mintAmount, setMintAmount] = useState(10);
 
   const reloadNfts = async () => {
     if (account) {
