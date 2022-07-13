@@ -47,6 +47,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",
+    "react-helmet": "^6.1.0",
     "react-indiana-drag-scroll": "^2.1.0",
     "redux-localstorage-simple": "^2.3.1",
     "styled-components": "^5.1.1",

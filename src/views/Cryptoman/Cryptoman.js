@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useWallet } from 'use-wallet';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { Helmet } from 'react-helmet'
 
 import Bank from '../Bank';
 
@@ -19,6 +20,8 @@ import PitImage from '../../assets/img/background.png';
 // Import custom css
 import "./style.css";
 import { BorderLeft } from '@material-ui/icons';
+
+
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -62,7 +65,7 @@ const Cryptoman = () => {
   const [indexOfSelectedNftInWallet, setIndexOfselectedNftInWallet] = useState(-1);
   const [reward, setReward] = useState(0);
 // Minting process
-const [mintAmount, setMintAmount] = useState(10);
+const [mintAmount, setMintAmount] = useState(3);
 
   const reloadNfts = async () => {
     if (account) {
@@ -162,8 +165,17 @@ const [mintAmount, setMintAmount] = useState(10);
   };
 
   return (
+    
     <Switch>
       <Page>
+                <Helmet>
+          <title>8bitcats.com - Mint/Stake Cryptoman</title>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@8bitcatsftm" />
+    <meta name="twitter:title" content="8bitcats.com - Mint/Stake Cryptoman" />
+    <meta name="twitter:description" content="The wildest NFT and Defi hub on the blockchain! Earn CATCOINS through yield farming and NFT Staking!" />
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/decenworld/cryptoman-website/main/public/config/cryptoman/100.png" />
+        </Helmet>
                 <Nav></Nav>
 
         <Route exact path={path}>
