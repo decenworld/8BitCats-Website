@@ -1206,6 +1206,63 @@ export class TombFinance {
         console.log("user declined")
       }};
     
+
+               /**
+     * mint account for ERC20 and ERC721
+     * @param address account address
+     */
+     async mintDiamondstone(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 150000000000000000000);
+      try {
+      await this.contracts['diamondstoneNFT'].mint(account, mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+        value: totalCostWei,
+      }
+      )
+      } catch(err) {
+        console.log("user declined")
+      }};
+    
+           /**
+     * mint account for ERC20 and ERC721 FantomLlama
+     * @param address account address
+     */
+     async mintPenguin(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 45000000000000000000);
+      try {
+      await this.contracts['penguinNFT'].mint(account, mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+        value: totalCostWei,
+      }
+      )
+      } catch(err) {
+        console.log("user declined")
+      }};
+
+
+           /**
+     * mint account for ERC20 and ERC721 FantomLlama
+     * @param address account address
+     */
+     async mintOwl(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 45000000000000000000);
+      try {
+      await this.contracts['owlNFT'].mint(account, mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+        value: totalCostWei,
+      }
+      )
+      } catch(err) {
+        console.log("user declined")
+      }};
+
+
      /**
      * mint account for ERC20 and ERC721
      * @param address account address

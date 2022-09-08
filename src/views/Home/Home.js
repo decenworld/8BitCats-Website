@@ -31,6 +31,10 @@ import Farm from '../../assets/img/farm.png';
 import Cats from '../../assets/img/cats.gif';
 import Cryptoman from '../../assets/img/cryptoman.gif';
 import CatStatue from '../../assets/img/catstatue.png';
+import DiamondStatue from '../../assets/img/diamondstone.png';
+import Owlimage from '../../assets/img/Owl.gif';
+import Penguinimage from '../../assets/img/Penguin.gif';
+
 import GoblingAxe from '../../assets/img/goblings/spr_axe.gif';
 import GoblingCarry from '../../assets/img/goblings/spr_carry.gif';
 import GoblingDig from '../../assets/img/goblings/spr_dig.gif';
@@ -358,15 +362,27 @@ border-style: solid;
             <li>
               <a href="/farms">Farms</a>
             </li>
-            <li>
-              <a href="/cats">8-Bit Cats</a>
+                                <li>
+              <a href="/catstatue">Golden Statue</a>
             </li>
-                       <li>
+                                               <li>
+              <a href="/diamondstone">Diamond Stone</a>
+            </li>
+
+       
+               
+                                               <li>
+              <a href="/owl">Owls</a>
+            </li>
+
+                                                    <li>
+              <a href="/penguin">Penguins</a>
+            </li>
+
+            <li>
               <a href="/cryptoman">Cryptoman</a>
             </li>
-                                   <li>
-              <a href="/catstatue">CatStatue</a>
-            </li>
+                    
                                           <li>
               <a href="/fantomllama">Fantom Llama</a>
             </li>
@@ -374,18 +390,10 @@ border-style: solid;
                       
               <a href="/catland">CatLand</a>
             </li>
-                       <li>
-              <a href="/feeple">Feeple</a>
+                        <li>
+              <a href="/cats">8-Bit Cats</a>
             </li>
-                       <li>
-              <a href="/cryptowormz">Cryptowormz</a>
-            </li>
-                       <li>
-              <a href="/cryptowormzhd">Cryptowormz HD</a>
-            </li>
-                                  <li>
-              <a href="/coolpenguin">CoolPenguin</a>
-            </li>
+        
                                   <li>
               <a href="/info">Info</a>
             </li>
@@ -419,8 +427,8 @@ border-style: solid;
             <span id="house" className='house' style={{position: "absolute", top: "1450px", left: "1600px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px", imageRendering: "pixelated"}} />
-                <img src={"https://ipfs.infura-ipfs.io/ipfs/QmUabyMYjEaYiYf32FXWiXNpQAgoRfheHZ5FzpRahV5b7k/1380.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./cryptowormzhd'>
+                <img src={Penguinimage} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./penguin'>
             <img src={House} width="134" height="165" className="inset-0"  />
                 <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
@@ -431,8 +439,13 @@ border-style: solid;
                         <span id="house2" className='house2' style={{position: "absolute", top: "1150px", left: "1650px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-                <img src={"https://cryptowormz.fi/config/images/worm2.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./cryptowormz'>
+                <img src={Owlimage} width="50" height="50 " className="inset-0" 
+
+                style={{position: "absolute", top: "90px", left: "195px"
+              }} />
+
+  
+            <a href='./owl'>
             <img src={House} width="134" height="165" className="inset-0"  />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
   <span style={{marginLeft: "3px"}}>STAKING</span></div>
@@ -442,13 +455,14 @@ border-style: solid;
                 <span id="house3" className='house3' style={{position: "absolute", top: "1150px", left: "1950px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-                <img src={"https://ipfs.infura-ipfs.io/ipfs/QmW8xmsfRKaWeNmzqPrKEzgFGVNzN36J3SRx8SFRANAyHE/1611.png"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./coolpenguin'>
+
+
             <img src={House} width="134" height="165" className="inset-0"  />
                             <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>STAKING</span></div>
-            </a>
+  <span style={{marginLeft: "10px"}}>CLOSED</span></div>
+
+
             </span>
 
                 <span id="npc" className='npc' style={{position: "absolute", top: "1400px", left: "1890px", imageRendering: "pixelated"}}>
@@ -525,7 +539,7 @@ border-style: solid;
             <img src={Man} width="40" height="44" className="inset-0"  />
 
             </span> 
-                        <a href='./catstatue'>
+                       <a href='./catstatue'>
 
       <span id="catstatue" className='catstatue' style={{position: "absolute", top: "1599px", left: "3192px", imageRendering: "pixelated"}}>
               
@@ -534,6 +548,17 @@ border-style: solid;
   <span style={{marginLeft: "3px"}}>MINT NOW</span></div>
             </span> 
                         </a>
+
+                <a href='./diamondstone'>
+
+      <span id="catstatue" className='catstatue' style={{position: "absolute", top: "1599px", left: "3392px", imageRendering: "pixelated"}}>
+              
+            <img src={DiamondStatue} width="92" height="150" className="inset-0"  />
+            <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "110px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "130px", left: "-10px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>MINT NOW</span></div>
+            </span> 
+                        </a>
+
 
                                   <span id="npc" className='npc' style={{position: "absolute", top: "1510px", left: "1750px", imageRendering: "pixelated", transform: "scaleX(-1)"}}>
             <img src={GoblingAxe} width="250" height="64" className="inset-0"  />

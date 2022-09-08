@@ -38,6 +38,10 @@ const Cryptowormzhd = lazy(() => import('./views/Cryptowormzhd'));
 const Coolpenguin = lazy(() => import('./views/Coolpenguin'));
 const Catstatue = lazy(() => import('./views/Catstatue'));
 const Fantomllama = lazy(() => import('./views/Fantomllama'));
+const Diamondstone = lazy(() => import('./views/Diamondstone'));
+const Owl = lazy(() => import('./views/Owl'));
+const Penguin = lazy(() => import('./views/Penguin'));
+
 
 
 const Info = lazy(() => import('./views/Info'));
@@ -112,9 +116,7 @@ const App: React.FC = () => {
               <Route path="/cats">
               <Cats />
             </Route>
-              <Route path="/feeple">
-              <Feeple />
-            </Route>
+
               <Route path="/cryptowormz">
               <Cryptowormz />
             </Route>
@@ -123,6 +125,15 @@ const App: React.FC = () => {
             </Route>
                           <Route path="/coolpenguin">
               <Coolpenguin />
+            </Route>
+            <Route path="/diamondstone">
+              <Diamondstone />
+            </Route>
+            <Route path="/owl">
+              <Owl />
+            </Route>
+            <Route path="/penguin">
+              <Penguin />
             </Route>
                               <Route path="/info">
               <Info />
