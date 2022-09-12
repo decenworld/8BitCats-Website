@@ -132,6 +132,9 @@ const App: React.FC = () => {
             <Route path="/owl">
               <Owl />
             </Route>
+                        <Route path="/feeple">
+              <Feeple />
+            </Route>
             <Route path="/penguin">
               <Penguin />
             </Route>
