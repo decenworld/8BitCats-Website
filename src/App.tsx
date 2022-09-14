@@ -39,6 +39,7 @@ const Coolpenguin = lazy(() => import('./views/Coolpenguin'));
 const Catstatue = lazy(() => import('./views/Catstatue'));
 const Fantomllama = lazy(() => import('./views/Fantomllama'));
 const Diamondstone = lazy(() => import('./views/Diamondstone'));
+const Stone = lazy(() => import('./views/Stone'));
 const Owl = lazy(() => import('./views/Owl'));
 const Penguin = lazy(() => import('./views/Penguin'));
 
@@ -129,6 +130,10 @@ const App: React.FC = () => {
             <Route path="/diamondstone">
               <Diamondstone />
             </Route>
+            <Route path="/stone">
+              <Stone />
+            </Route>
+
             <Route path="/owl">
               <Owl />
             </Route>

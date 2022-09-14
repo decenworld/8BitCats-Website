@@ -16,6 +16,8 @@ import useTombFinance from '../../hooks/useTombFinance';
 import PitImage from '../../assets/img/background.png';
 import Nav from '../../components/Nav/Nav';
 import Diamondstone from '../../assets/img/diamondstone.png';
+import Stone from '../../assets/img/stone.png';
+
 
 // Import custom css
 import "./style.css";
@@ -48,6 +50,20 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const success = {
+  borderStyle: 'solid',
+  padding: '12px 16px',
+  borderRadius: '4px',
+  borderWidth: '1px',
+  marginBottom: '12px',
+  fontSize: '16px',
+  backgroundColor: 'rgba(48, 128, 73, 1)',
+  borderColor: 'rgba(38, 179, 3, 1)',
+  color: 'rgba(60, 118, 61, 1)',
+  
+};
+
+
 const Cats = () => {
 //  const [banks] = useBanks();
   const { path } = useRouteMatch();
@@ -67,7 +83,7 @@ const [mintAmount, setMintAmount] = useState(1);
 
   const reloadNfts = async () => {
     if (account) {
-      let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'diamondstoneNFT');
+      let nftsInWalletWithJSON = await tombFinance.getNFTsInWallet(account, 'StoneNFT');
       setNftsInWallet(await Promise.all(
         nftsInWalletWithJSON.map(async nft => {
           return {
@@ -77,7 +93,7 @@ const [mintAmount, setMintAmount] = useState(1);
         })
       ));
 
-      let nftsStakedWithJSON = await tombFinance.getNFTsStaked(account, 'diamondstoneNFT', 'DiamondStoneStakingNFT');
+      let nftsStakedWithJSON = await tombFinance.getNFTsStaked(account, 'StoneNFT', 'StoneStakingNFT');
       setNftsStaked(await Promise.all(
         nftsStakedWithJSON.map(async nft => {
           return {
@@ -87,8 +103,8 @@ const [mintAmount, setMintAmount] = useState(1);
         })
       ));
 
-      setNftTotalSupply(await tombFinance.nftTotalSupply('diamondstoneNFT'));
-      setNftStakedTotalSupply(await tombFinance.nftStakedTotalSupply('diamondstoneNFT', 'DiamondStoneStakingNFT'));
+      setNftTotalSupply(await tombFinance.nftTotalSupply('StoneNFT'));
+      setNftStakedTotalSupply(await tombFinance.nftStakedTotalSupply('StoneNFT', 'StoneStakingNFT'));
     }
   }
 
@@ -112,7 +128,7 @@ const [mintAmount, setMintAmount] = useState(1);
   const selectNftStaked = async (index) => {
     setIndexOfselectedNft(index);
     setIndexOfselectedNftInWallet(-1);
-    setReward(await tombFinance.calculateRewards(account, [nftsStaked[index].tokenId], 'DiamondStoneStakingNFT'));
+    setReward(await tombFinance.calculateRewards(account, [nftsStaked[index].tokenId], 'StoneStakingNFT'));
   }
 
   const selectNftInWallet = async (index) => {
@@ -121,22 +137,22 @@ const [mintAmount, setMintAmount] = useState(1);
   }
 
   const stake = async () => {
-    await tombFinance.stakeNfts([nftsInWallet[indexOfSelectedNftInWallet].tokenId], 'DiamondStoneStakingNFT');
+    await tombFinance.stakeNfts([nftsInWallet[indexOfSelectedNftInWallet].tokenId], 'StoneStakingNFT');
     reloadNfts();
   }
 
   const unStake = async () => {
-    await tombFinance.unStake(nftsStaked[indexOfSelectedNft].tokenId, 'DiamondStoneStakingNFT');
+    await tombFinance.unStake(nftsStaked[indexOfSelectedNft].tokenId, 'StoneStakingNFT');
     reloadNfts();
   }
 
   const claim = async () => {
-    await tombFinance.claim(nftsStaked[indexOfSelectedNft].tokenId, 'DiamondStoneStakingNFT');
-    setReward(await tombFinance.calculateRewards(account, [nftsStaked[indexOfSelectedNft].tokenId], 'DiamondStoneStakingNFT'));
+    await tombFinance.claim(nftsStaked[indexOfSelectedNft].tokenId, 'StoneStakingNFT');
+    setReward(await tombFinance.calculateRewards(account, [nftsStaked[indexOfSelectedNft].tokenId], 'StoneStakingNFT'));
   }
 
   const approve = async () => {
-    await tombFinance.approve('diamondstoneNFT', 'DiamondStoneStakingNFT');
+    await tombFinance.approve('StoneNFT', 'StoneStakingNFT');
   }
 
   const mint = async (amount) => {
@@ -171,64 +187,38 @@ const [mintAmount, setMintAmount] = useState(1);
         <Route exact path={path}>
           <BackgroundImage />
           <div style={{ textAlign: 'center', color: 'white' }}>
-          <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>DIAMOND STONE </h2>
+          <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>STONE </h2>
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
                                       
             <span>
-             <span style={{fontSize: '20px'}}>Total Minted
+             <span style={{fontSize: '20px'}}>Total Airdropped
              </span>
-               <br></br>{nftTotalSupply}/500
+               <br></br><div style={{marginTop: '10px'}}>{nftTotalSupply}/100000
+               </div>
              </span>
                  </Grid>
                      <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-                     <img style={{width: '140px', height:'210px', border: '0px black solid', imageRendering: "pixelated"}} src={Diamondstone} />
+                     <img style={{width: '140px', height:'210px', border: '0px black solid', imageRendering: "pixelated"}} src={Stone} />
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Diamond Stone - 150 FTM</h4>
+       <div>
+                      <h3 style={{ textAlign:'center', marginBottom: '2px', WebkitTextStroke: '2px', WebkitTextStrokeColor: 'black'  }}>Stake your STONES to Earn CATSHARES and NFTs!
+</h3> 
+                      <br />
+                      <div style={success}>
+                      <h4 style={{ textAlign:'center', marginBottom: '2px', color: 'white', textDecoration: 'none' }}><a 
+                      style = {{color: 'white', textDecoration: 'none', WebkitTextStroke: '1px', WebkitTextStrokeColor: 'black'}}
+                      href='./Diamondstone'>Click here to MINT Diamond Stone for better Catshares Reward </a></h4>
+                      </div>
+                      </div>
                   </Grid>
                  </Grid>
-              <span>
-                      <circleButton
-                        style={{ lineHeight: 0.4 }}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          decrementMintAmount();
-                        }}
-                      >
-                        -
-                      </circleButton>
-                  
-                        &nbsp;{mintAmount}&nbsp; 
            
-                      <circleButtonleft
-                        onClick={(e) => {
-                          e.preventDefault();
-                          incrementMintAmount();
-                        }}
-                      >
-                        +
-                      </circleButtonleft>
-                      <br></br>
-
-                      <mintButton style={{marginTop: '10px', marginBottom: '10px' }}
-    
-                        onClick={(e) => {
-                          console.log("mintamount", {mintAmount})
-                       
-                          mint(Object.values({mintAmount}))
-                    
-
-                        }}
-                      >
-                        Mint
-                      </mintButton>
-
-                    <br></br>
-                    </span>
 
           
             <span style={{ fontSize: '36px' }}>
-              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Statues STAKED
+              <div style={{marginBottom: '10px'}}>
+              { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % STONES STAKED
+              </div>
             </span>
             <BorderLinearProgress variant="determinate" value={nftStakedTotalSupply * 100 / nftTotalSupply} />
             <br/>
@@ -268,7 +258,7 @@ const [mintAmount, setMintAmount] = useState(1);
                             onClick={() => selectNftInWallet(index)}
                             alt="NFT"
                           />
-                          <p> { name } </p>
+                          <p> { name.replace("8Bitcats.com - ", "") } </p>
                         </Box>
                       )
                     }
@@ -399,7 +389,7 @@ const [mintAmount, setMintAmount] = useState(1);
                             onClick={() => selectNftStaked(index)}
                             alt="NFT"
                           />
-                          <p> { name } </p>
+                          <p> { name.replace('8Bitcats.com - ', '') } </p>
                         </Box>
                       )
                     }

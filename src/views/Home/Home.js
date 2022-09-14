@@ -32,6 +32,7 @@ import Cats from '../../assets/img/cats.gif';
 import Cryptoman from '../../assets/img/cryptoman.gif';
 import CatStatue from '../../assets/img/catstatue.png';
 import DiamondStatue from '../../assets/img/diamondstone.png';
+import Stone from '../../assets/img/stone.png';
 import Owlimage from '../../assets/img/Owl.gif';
 import Penguinimage from '../../assets/img/Penguin.gif';
 
@@ -558,6 +559,17 @@ border-style: solid;
   <span style={{marginLeft: "3px"}}>MINT NOW</span></div>
             </span> 
                         </a>
+
+                <a href='./stone'>
+
+      <span id="catstatue" className='catstatue' style={{position: "absolute", top: "1599px", left: "3592px", imageRendering: "pixelated"}}>
+              
+            <img src={Stone} width="92" height="150" className="inset-0"  />
+            <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "75px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "130px", left: "7px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>STAKE</span></div>
+            </span> 
+                        </a>
+
 
 
                                   <span id="npc" className='npc' style={{position: "absolute", top: "1510px", left: "1750px", imageRendering: "pixelated", transform: "scaleX(-1)"}}>
