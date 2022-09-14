@@ -201,7 +201,7 @@ const [mintAmount, setMintAmount] = useState(1);
                      <img style={{width: '140px', height:'210px', border: '0px black solid', imageRendering: "pixelated"}} src={Stone} />
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
        <div>
-                      <h3 style={{ textAlign:'center', marginBottom: '2px', WebkitTextStroke: '2px', WebkitTextStrokeColor: 'black'  }}>Stake your STONES to Earn CATSHARES and NFTs!
+                      <h3 style={{ textAlign:'center', marginBottom: '2px', WebkitTextStroke: '1px', WebkitTextStrokeColor: 'black'  }}>Stake your STONES to Earn CATSHARES and NFTs!
 </h3> 
                       <br />
                       <div style={success}>
