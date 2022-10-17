@@ -1,4 +1,4 @@
-# Contributing to MiniVerse Finance
+# Contributing to 8Bitcats.com
 
 🎉 First off all, thanks for taking the time to contribute! 🎉
 
@@ -52,5 +52,3 @@ Always write a clear log message for your commits. One-line messages are fine fo
 
 If you would like to read more about good quality commit titles, check this [article](https://chris.beams.io/posts/git-commit/)
 
-Thank you,
-OGBoogie
