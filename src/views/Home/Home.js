@@ -35,6 +35,8 @@ import DiamondStatue from '../../assets/img/diamondstone.png';
 import Stone from '../../assets/img/stone.png';
 import Owlimage from '../../assets/img/Owl.gif';
 import Penguinimage from '../../assets/img/Penguin.gif';
+import Sealsimage from '../../assets/img/seals.gif';
+
 
 import GoblingAxe from '../../assets/img/goblings/spr_axe.gif';
 import GoblingCarry from '../../assets/img/goblings/spr_carry.gif';
@@ -370,7 +372,9 @@ border-style: solid;
               <a href="/diamondstone">Diamond Stone</a>
             </li>
 
-       
+                                                 <li>
+              <a href="/seal">Seals</a>
+            </li>
                
                                                <li>
               <a href="/owl">Owls</a>
@@ -456,13 +460,14 @@ border-style: solid;
                 <span id="house3" className='house3' style={{position: "absolute", top: "1150px", left: "1950px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-
+             <img src={Sealsimage} width="50" height="50 " className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./seal'>
 
             <img src={House} width="134" height="165" className="inset-0"  />
                             <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "10px"}}>CLOSED</span></div>
-
+  <span style={{marginLeft: "10px"}}>STAKING</span></div>
+</a>
 
             </span>
 
