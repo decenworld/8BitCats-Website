@@ -1244,6 +1244,24 @@ export class TombFinance {
       }};
 
                  /**
+     * mint account for ERC20 and ERC721 Trippycats
+     * @param address account address
+     */
+     async mintTrippycat(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 20000000000000000000);
+      try {
+      await this.contracts['trippycatNFT'].mint(account, mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+        value: totalCostWei,
+      }
+      )
+      } catch(err) {
+        console.log("user declined")
+      }};
+
+                 /**
      * mint account for ERC20 and ERC721 FantomLlama
      * @param address account address
      */

@@ -43,6 +43,7 @@ const Stone = lazy(() => import('./views/Stone'));
 const Owl = lazy(() => import('./views/Owl'));
 const Penguin = lazy(() => import('./views/Penguin'));
 const Seal = lazy(() => import('./views/Seal'));
+const Trippycat = lazy(() => import('./views/Trippycat'));
 
 
 
@@ -137,6 +138,9 @@ const App: React.FC = () => {
 
             <Route path="/owl">
               <Owl />
+            </Route>
+                        <Route path="/trippycat">
+              <Trippycat />
             </Route>
                         <Route path="/feeple">
               <Feeple />
