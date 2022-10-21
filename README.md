@@ -21,12 +21,9 @@ To find out more please visit:
 
 
 # 8BitCats.com 🔥
-
-This repo provides a nice and easy way for linking an existing NFT smart contract to this minting dapp. There are two ways of using this repo, you can go the simple route or the more complex one.
-
-The simple route is so simple, all you need to do is download the build folder on the release page and change the configuration to fit your needs. (Follow the video for a walk through).
-
-The more complex route allows you to add additional functionality if you are comfortable with coding in react.js. (Follow the below instructions for a walk through).
+8-Bit Cats is a Metaverse build on Fantom, 8-Bit Cats does combine Gaming, NFT's and Metaverse. 
+Users can integrate with the platform and use their favorite tokens directly from their wallet to contribute to the 8-bit Metaverse, by doing things such as staking, gaming and much more with our default token CATCOIN.<p>
+We do not storage any user data/contract data on a private server we only read/write directly from the contracts/user-wallet, this makes the platform an automated market marker and being decentralized. We want as many possible users to join the Metaverse by just connecting their wallet and use as many ERC721 tokens as possible.
 
 ## Installation 🛠️
 
@@ -50,9 +47,4 @@ cd 8BitCats-Website/
 npm install
 npm run start
 ```
-
-## What is 8BitCats.com ℹ️
-
-8-Bit Cats is a Metaverse build on Fantom, 8-Bit Cats does combine Gaming, NFT's and Metaverse. Users can integrate with the platform and use their favorite tokens directly from their wallet to contribute to the 8-bit Metaverse, by doing things such as staking, gaming and much more with our default token CATCOIN.
-We do not storage any user data/contract data on a private server we only read/write directly from the contracts/user-wallet, this makes the platform an automated market marker and being decentralized. We want as many possible users to join the Metaverse by just connecting their wallet and use as many ERC721 tokens as possible.
 
