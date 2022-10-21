@@ -644,8 +644,8 @@ export class TombFinance {
 
     const { WFTM } = this.externalTokens;
 
-    const wftm = new TokenSpirit(chainId, WFTM.address, WFTM.decimal);
-    const token = new TokenSpirit(chainId, tokenContract.address, tokenContract.decimal, tokenContract.symbol);
+    const wftm = new TokenSpirit(250, WFTM.address, WFTM.decimal);
+    const token = new TokenSpirit(250, tokenContract.address, tokenContract.decimal, tokenContract.symbol);
     try {
       const wftmToToken = await FetcherSpirit.fetchPairData(wftm, token, this.provider);
       const liquidityToken = wftmToToken.liquidityToken;
