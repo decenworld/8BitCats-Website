@@ -233,10 +233,10 @@ border-style: solid;
   background: #b0734a;
   border-radius: 8px;
   position: absolute;
-  top: 60px;
+  top: 50px;
   left: 30px;
   right: 0;
-  width: 150px;
+  width: 180px;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
@@ -401,9 +401,13 @@ border-style: solid;
                         <li>
               <a href="/cats">8-Bit Cats</a>
             </li>
+     
         
                                   <li>
               <a href="/info">Info</a>
+            </li>
+            <li>
+              <a href="https://8bitcats.gitbook.io/whitepaper/">Whitepaper</a>
             </li>
           </ul>
         </nav>
