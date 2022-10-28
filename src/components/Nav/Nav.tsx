@@ -152,6 +152,9 @@ const Nav = () => {
                       <Link color="textPrimary" to="/info" className={classes.link}>
                 Info
               </Link>
+                                    <Link color="textPrimary" to={{ pathname:`https://8bitcats.gitbook.io/whitepaper/`}} target="_blank" className={classes.link}>
+                Whitepaper
+              </Link>
 
 
 
@@ -212,6 +215,10 @@ const Nav = () => {
               </div>
               <Divider />
               <List>
+
+                <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <AccountButton text="Connect" />
+                </ListItem>
                 <ListItemLink primary="HOME" to="/" />
                 <ListItemLink primary="BOARDROOM" to="/boardroom" />
                 <ListItemLink primary="FARMS" to="/farms" />
@@ -225,12 +232,13 @@ const Nav = () => {
                 <ListItemLink primary="CRYPTOMAN" to="/cryptoman" />
                 <ListItemLink primary="CAT LAND" to="/catland" />
                 <ListItemLink primary="INFO" to="/info" />
+                       <ListItem button component="a" href="https://8bitcats.gitbook.io/whitepaper/">
+    <ListItemText primary="WHITEPAPER" />
+  </ListItem>     
 
 
 
-                <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <AccountButton text="Connect" />
-                </ListItem>
+
                 
               </List>
 
