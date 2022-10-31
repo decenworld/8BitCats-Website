@@ -1364,7 +1364,7 @@ export class TombFinance {
       await this.TOMB.approve("0xC071FeC5CBA3a77fd00422A779E605277e7Ee59d", BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
       await this.contracts['DCatNFT'].mintBronze(mintAmount,
               {
-        gasLimit: String(parseFloat(mintAmount) * 285000),
+        gasLimit: String(parseFloat(mintAmount) * 485000),
         from: account,
       }
       )
