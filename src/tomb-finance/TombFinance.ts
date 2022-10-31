@@ -1355,6 +1355,24 @@ export class TombFinance {
       }};
 
                /**
+     * mint 3DCAT for CATCOIN
+     * @param address account address
+     */
+     async mintDCat(account: string, mintAmount: string): Promise<void> {
+      let totalCostWei = String(parseFloat(mintAmount) * 2000000000000000000);
+      try {
+      await this.TOMB.approve("0xC071FeC5CBA3a77fd00422A779E605277e7Ee59d", BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
+      await this.contracts['DCatNFT'].mintBronze(mintAmount,
+              {
+        gasLimit: String(parseFloat(mintAmount) * 285000),
+        from: account,
+      }
+      )
+      } catch(err) {
+        console.log(err)
+      }};
+
+               /**
      * mint CatLand for USDC
      * @param address account address
      */

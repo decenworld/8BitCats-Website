@@ -37,6 +37,7 @@ import Owlimage from '../../assets/img/Owl.gif';
 import Penguinimage from '../../assets/img/Penguin.gif';
 import Sealsimage from '../../assets/img/seals.gif';
 import Trippyimage from '../../assets/img/trippycat.gif';
+import DCAT from '../../assets/img/3dcat.gif';
 
 
 import GoblingAxe from '../../assets/img/goblings/spr_axe.gif';
@@ -374,6 +375,10 @@ border-style: solid;
             </li>
 
                                                  <li>
+                                                                        <li>
+                      
+              <a href="/3dcats">3D Cats</a>
+            </li>
               <a href="/seal">Seals</a>
             </li>
                                                               <li>
@@ -394,10 +399,7 @@ border-style: solid;
                                           <li>
               <a href="/fantomllama">Fantom Llama</a>
             </li>
-                       <li>
-                      
-              <a href="/catland">CatLand</a>
-            </li>
+ 
                         <li>
               <a href="/cats">8-Bit Cats</a>
             </li>
@@ -539,6 +541,21 @@ border-style: solid;
   <span style={{marginLeft: "3px"}}>STAKING</span></div>
             </a>
             </span>
+
+                     <span id="housered" className='housered' style={{position: "absolute", top: "1210px", left: "3400px", imageRendering: "pixelated"}}
+// 3d cat - catcoin/red house starts here
+>
+
+                <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
+                <img src={DCAT} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./3dcat'>
+            <img src={HouseRed} width="134" height="165" className="inset-0"  />
+                            <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "3px"}}>STAKING</span></div>
+            </a>
+            </span>
+
                       <span id="boardroom" className='boardroom' style={{position: "absolute", top: "1010px", left: "3145px", imageRendering: "pixelated"}}
 // catcoin/red house starts here
 >
