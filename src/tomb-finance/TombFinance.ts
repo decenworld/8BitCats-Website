@@ -1361,10 +1361,10 @@ export class TombFinance {
      async mintDCat(account: string, mintAmount: string): Promise<void> {
       let totalCostWei = String(parseFloat(mintAmount) * 2000000000000000000);
       try {
-      await this.TOMB.approve("0xC071FeC5CBA3a77fd00422A779E605277e7Ee59d", BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
-      await this.contracts['DCatNFT'].mintBronze(mintAmount,
+      await this.TOMB.approve("0xCF1167f041294dF1DfF8CA8d73373BC588F1188C", BigNumber.from('0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff'));
+      await this.contracts['DCatNFT'].mintNFT(mintAmount,
               {
-        gasLimit: String(parseFloat(mintAmount) * 485000),
+        gasLimit: String(parseFloat(mintAmount) * 285000),
         from: account,
       }
       )
