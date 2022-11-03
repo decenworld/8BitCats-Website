@@ -1,0 +1,102 @@
+/* Header */
+.header-logo {
+    width: 19%;
+}
+
+.header-nav {
+    width: 60%;
+}
+
+.header-wallet-amount {
+    width: 10%;
+}
+
+.header-wallet-amount img {
+    width: 18px;
+    height: 18px;
+    margin-right: 9px;
+}
+
+.header-wallet-amount .crHNnM {
+    height: auto;
+    width: auto;
+}
+
+.header-wallet-amount .crHNnM:hover img {
+    opacity: 40%;
+}
+
+.header-wallet-amount .crHNnM:hover .bjifrn{
+    color: #BBA14F;
+}
+
+.header-wallet-amount .bjifrn {
+    color: white;
+}
+
+.header-wallet-addr {
+    width: 11%;
+}
+
+.header-wallet-addr div {
+    float: right;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-label {
+    cursor: default;
+}
+
+.dropdown-label::after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    transform: rotate(135deg);
+    margin-left: 4px;
+    margin-bottom: 6px;
+}
+
+.dropdown:hover .dropdown-label {
+    color: #BBA14F;
+}
+
+.dropdown:hover .dropdown-label::after {
+    border-color: #BBA14F;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(44, 62, 80, 0.90);
+    min-width: 277px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 7px 0px 0px 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 11px 15px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    color: #BBA14F;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(44, 62, 80, 0.99);
+    text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
