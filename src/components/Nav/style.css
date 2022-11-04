@@ -94,9 +94,6 @@
 
 .dropdown-content a:hover {
     color: #BBA14F;
-}
-
-.dropdown-content a:hover {
     background-color: rgba(44, 62, 80, 0.99);
     text-decoration: underline;
 }
@@ -116,7 +113,7 @@
     cursor: pointer;
 }
 
-.Collapsible__trigger:hover {
+.Collapsible__trigger.is-open, .Collapsible__trigger:hover {
     background-color: black;
 }
 
@@ -139,6 +136,6 @@
     margin-bottom: 2px;
 }
 
-.Collapsible__contentInner li {
+.Collapsible__contentInner li a span {
     padding-left: 10px;
 }

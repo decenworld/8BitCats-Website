@@ -158,7 +158,7 @@ const Nav = () => {
               </Box>
             </div>
             <div className="header-wallet-amount">
-              <a title="$CATCOINS" target="_blank" href='https://spooky.fi/#/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75'>
+              <a title="BUY $CATCOINS" target="_blank" href='https://spooky.fi/#/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75'>
                 <AccountModal></AccountModal>
               </a>
             </div>
