@@ -102,7 +102,12 @@
     display: block;
 }
 
-/* Collapsable Menu for Mobile version */
+/* Mobile Menu Drawer */
+.MuiDrawer-paper {
+    background: rgba(44, 62, 80, 0.77);
+}
+
+/* Collapsable Sub Menu for Mobile */
 .Collapsible__trigger {
     display: block;
     width: 100%;
@@ -113,7 +118,8 @@
     cursor: pointer;
 }
 
-.Collapsible__trigger.is-open, .Collapsible__trigger:hover {
+.Collapsible__trigger.is-open,
+.Collapsible__trigger:hover {
     background-color: black;
 }
 
