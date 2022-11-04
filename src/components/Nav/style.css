@@ -11,6 +11,10 @@
     width: 10%;
 }
 
+.header-wallet-amount a {
+    text-decoration: none;
+}
+
 .header-wallet-amount img {
     width: 18px;
     height: 18px;
@@ -26,7 +30,7 @@
     opacity: 40%;
 }
 
-.header-wallet-amount .crHNnM:hover .bjifrn{
+.header-wallet-amount .crHNnM:hover .bjifrn {
     color: #BBA14F;
 }
 
@@ -99,4 +103,42 @@
 
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+/* Collapsable Menu for Mobile version */
+.Collapsible__trigger {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-family: "monospace", sans-serif;
+    font-weight: 400;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.Collapsible__trigger:hover {
+    background-color: black;
+}
+
+.Collapsible__trigger:after {
+    content: '';
+    display: inline-block;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 2px;
+    margin-bottom: 4px;
+    margin-left: 7px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transition: transform 300ms;
+}
+
+.Collapsible__trigger.is-open:after {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    margin-bottom: 2px;
+}
+
+.Collapsible__contentInner li {
+    padding-left: 10px;
 }

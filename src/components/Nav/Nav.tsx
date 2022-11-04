@@ -23,6 +23,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AccountButton from './AccountButton';
 import AccountModal from './AccountModal';
+import Collapsible from 'react-collapsible';
 // Import custom css
 import "./style.css";
 
@@ -117,7 +118,7 @@ const Nav = () => {
                   Farms
                 </Link>
                 <div className="dropdown">
-                  <p className="makeStyles-link-9 dropdown-label">NFTs</p>
+                  <p className="makeStyles-link-9 dropdown-label">NFTS</p>
                   <div className="dropdown-content">
                     <Link to="/catstatue">Golden Statue</Link>
                     <Link to="/diamondstone">Diamond Stone</Link>
@@ -206,17 +207,19 @@ const Nav = () => {
                 <ListItemLink primary="HOME" to="/" />
                 <ListItemLink primary="BOARDROOM" to="/boardroom" />
                 <ListItemLink primary="FARMS" to="/farms" />
-                <ListItemLink primary="DIAMOND STONE" to="/diamondstone" />
-                <ListItemLink primary="CAT STATUE" to="/catstatue" />
-                <ListItemLink primary="3D CAT" to="/3dcat" />
-                <ListItemLink primary="SEALS" to="/seal" />
-                <ListItemLink primary="TRIPPY CAT" to="/trippycat" />
-                <ListItemLink primary="PENGUINS" to="/penguin" />
-                <ListItemLink primary="OWLS" to="/owl" />
-                <ListItemLink primary="8-BIT CATS" to="/cats" />
-                <ListItemLink primary="CRYPTOMAN" to="/cryptoman" />
-                <ListItemLink primary="FANTOM LLAMA" to="/fantomllama" />
-                <ListItemLink primary="CAT LAND" to="/catland" />
+                <Collapsible trigger="NFTS">
+                  <ListItemLink primary="DIAMOND STONE" to="/diamondstone" />
+                  <ListItemLink primary="CAT STATUE" to="/catstatue" />
+                  <ListItemLink primary="3D CAT" to="/3dcat" />
+                  <ListItemLink primary="SEALS" to="/seal" />
+                  <ListItemLink primary="TRIPPY CAT" to="/trippycat" />
+                  <ListItemLink primary="PENGUINS" to="/penguin" />
+                  <ListItemLink primary="OWLS" to="/owl" />
+                  <ListItemLink primary="8-BIT CATS" to="/cats" />
+                  <ListItemLink primary="CRYPTOMAN" to="/cryptoman" />
+                  <ListItemLink primary="FANTOM LLAMA" to="/fantomllama" />
+                  <ListItemLink primary="CAT LAND" to="/catland" />
+                </Collapsible>
                 <ListItemLink primary="INFO" to="/info" />
                 <ListItem button component="a" href="https://8bitcats.gitbook.io/whitepaper/">
                   <ListItemText primary="WHITEPAPER" />
