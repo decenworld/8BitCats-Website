@@ -377,7 +377,7 @@ border-style: solid;
                                                  <li>
                                                                         <li>
                       
-              <a href="/3dcats">3D Cats</a>
+              <a href="/3dcat">3D Cats</a>
             </li>
               <a href="/seal">Seals</a>
             </li>
