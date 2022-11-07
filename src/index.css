@@ -242,4 +242,8 @@ code {
 .dropdown:hover .dropdown-content {display: block;}
 
 
-
+/* Override to remove horizontal scroll bar */
+.MuiGrid-spacing-xs-3 {
+  width: 100% !important;
+  margin: 0 !important;
+}
