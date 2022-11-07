@@ -22,6 +22,9 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AccountButton from './AccountButton';
+import AccountModal from './AccountModal';
+// Import custom css
+import "./style.css";
 
 const useStyles = makeStyles((theme) => ({
   '@global': {
@@ -90,82 +93,68 @@ const Nav = () => {
     setOpen(false);
   };
 
-
+  // Collapsable NFT sub menu for mobile version
+  const clickHandler = () => {
+    var col = document.getElementById("collapsible-toggle");
+    if (col.classList.contains("col-closed")) {
+      col.classList.remove("col-closed");
+      col.classList.add("col-open");
+    } else {
+      col.classList.remove("col-open");
+      col.classList.add("col-closed");
+    }
+  };
 
   return (
     <AppBar position="sticky" elevation={0} className={classes.appBar}>
       <Toolbar className={classes.toolbar}>
         {matches ? (
           <>
-            <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>     
-            <a rel="noopener noreferrer" href="https://8bitcats.com" className={classes.link}>
-              <img alt="MiniVerse" src={mvLogo} height="50px" style={{marginTop: '15px'}} />
-              </a> 
-            </Typography>
-             <AccountButton text="Connect" />
-            <Box mr={5}>
-              <Link color="textPrimary" to="/" className={classes.link}>
-                Home
-              </Link>
-                                <Link color="textPrimary" to="/boardroom" className={classes.link}>
-                Boardroom
-              </Link>
-                                <Link color="textPrimary" to="/farms" className={classes.link}>
-                Farms
-              </Link>
-                                            <Link color="textPrimary" to="/catstatue" className={classes.link}>
-                Golden Statue
-              </Link>
-                                    <Link color="textPrimary" to="/diamondstone" className={classes.link}>
-                Diamond Stone
-              </Link>
-                                                  <Link color="textPrimary" to="/3dcat" className={classes.link}>
-                3D Cats
-              </Link>
-                                    <Link color="textPrimary" to="/seal" className={classes.link}>
-                Seals
-              </Link>
-                      
-                      <Link color="textPrimary" to="/penguin" className={classes.link}>
-                Penguins
-              </Link>
-                    <Link color="textPrimary" to="/owl" className={classes.link}>
-                Owls
-              </Link>
-                                  <Link color="textPrimary" to="/trippycat" className={classes.link}>
-                Trippycat
-              </Link>
+            <div className="header-logo">
+              <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+                <a rel="noopener noreferrer" href="https://8bitcats.com" className={classes.link}>
+                  <img alt="MiniVerse" src={mvLogo} height="50px" style={{ marginTop: '15px' }} />
+                </a>
+              </Typography>
+            </div>
+            <div className="header-nav">
+              <Box mr={5}>
+                <Link color="textPrimary" to="/" className={classes.link}>
+                  Home
+                </Link>
+                <Link color="textPrimary" to="/boardroom" className={classes.link}>
+                  Boardroom
+                </Link>
+                <Link color="textPrimary" to="/farms" className={classes.link}>
+                  Farms
+                </Link>
+                <div className="dropdown">
+                  <p className="makeStyles-link-9 dropdown-label">NFTS</p>
+                  <div className="dropdown-content">
+                    <Link to="/catstatue">Golden Statue</Link>
+                    <Link to="/diamondstone">Diamond Stone</Link>
+                    <Link to="/3dcat">3D Cats</Link>
+                    <Link to="/seal">Seals</Link>
+                    <Link to="/penguin">Penguins</Link>
+                    <Link to="/owl">Owls</Link>
+                    <Link to="/trippycat">Trippycat</Link>
+                    <Link to="/cats">8-Bit Cats</Link>
+                    <Link to="/cryptoman">Cryptoman</Link>
+                    <Link to="/fantomllama">Fantom Llama</Link>
+                    <Link to="/catland">CatLand</Link>
+                  </div>
+                </div>
+                <Link color="textPrimary" to="/info" className={classes.link}>
+                  Info
+                </Link>
+                <Link color="textPrimary" to={{ pathname: `https://8bitcats.gitbook.io/whitepaper/` }} target="_blank" className={classes.link}>
+                  Whitepaper
+                </Link>
 
-                            <Link color="textPrimary" to="/cats" className={classes.link}>
-                8-Bit Cats
-              </Link>
-
-              <Link color="textPrimary" to="/cryptoman" className={classes.link}>
-                Cryptoman
-              </Link>
-               
-                <Link color="textPrimary" to="/fantomllama" className={classes.link}>
-                Fantom Llama
-              </Link>
-                          <Link color="textPrimary" to="/catland" className={classes.link}>
-                CatLand
-              </Link>
-           
-            
-                      <Link color="textPrimary" to="/info" className={classes.link}>
-                Info
-              </Link>
-                                    <Link color="textPrimary" to={{ pathname:`https://8bitcats.gitbook.io/whitepaper/`}} target="_blank" className={classes.link}>
-                Whitepaper
-              </Link>
-
-
-
-
-              {/* <Link color="textPrimary" to="/dividends" className={classes.link}>
+                {/* <Link color="textPrimary" to="/dividends" className={classes.link}>
                 Dividends
               </Link> */}
-              {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
+                {/* <Link color="textPrimary" to="/sbs" className={classes.link}>
                 SBS
               </Link>
               <Link color="textPrimary" to="/liquidity" className={classes.link}>
@@ -174,14 +163,19 @@ const Nav = () => {
               <Link color="textPrimary" to="/regulations" className={classes.link}>
                 Regulations
               </Link> */}
-             
-              {/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
+                {/* <a target="_blank" href="https://docs.2omb.finance/contracts/tokens" className={classes.link}>
                 Contracts
               </a> */}
-        
-
-            </Box>
-           
+              </Box>
+            </div>
+            <div className="header-wallet-amount">
+              <a title="BUY $CATCOINS" target="_blank" rel="noopener noreferrer" href='https://spooky.fi/#/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75'>
+                <AccountModal></AccountModal>
+              </a>
+            </div>
+            <div className="header-wallet-addr">
+              <AccountButton text="Connect" />
+            </div>
           </>
         ) : (
           <>
@@ -195,8 +189,8 @@ const Nav = () => {
               <MenuIcon />
             </IconButton>
             <Typography variant="h6" noWrap>
-            <a rel="noopener noreferrer" href="https://8bitcats.com/" className={classes.link}>
-              8-Bit Cats
+              <a rel="noopener noreferrer" href="https://8bitcats.com/" className={classes.link}>
+                8-Bit Cats
               </a>
             </Typography>
 
@@ -218,35 +212,33 @@ const Nav = () => {
               </div>
               <Divider />
               <List>
-
                 <ListItem style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <AccountButton text="Connect" />
                 </ListItem>
                 <ListItemLink primary="HOME" to="/" />
                 <ListItemLink primary="BOARDROOM" to="/boardroom" />
                 <ListItemLink primary="FARMS" to="/farms" />
-                <ListItemLink primary="DIAMOND STONE" to="/diamondstone" />
-                <ListItemLink primary="CAT STATUE" to="/catstatue" />
-                                <ListItemLink primary="3D CAT" to="/3dcat" />
-                <ListItemLink primary="SEALS" to="/seal" />
-                <ListItemLink primary="TRIPPY CAT" to="/trippycat" />
-                <ListItemLink primary="PENGUINS" to="/penguin" />
-                <ListItemLink primary="OWLS" to="/owl" />
-                <ListItemLink primary="8-BIT CATS" to="/cats" />
-                <ListItemLink primary="CRYPTOMAN" to="/cryptoman" />
-                <ListItemLink primary="CAT LAND" to="/catland" />
-            
+                <div id="collapsible-toggle" className="col-closed" onClick={clickHandler}>
+                  <p>NFTS</p>
+                  <div className="collapsible-content">
+                    <ListItemLink primary="DIAMOND STONE" to="/diamondstone" />
+                    <ListItemLink primary="CAT STATUE" to="/catstatue" />
+                    <ListItemLink primary="3D CAT" to="/3dcat" />
+                    <ListItemLink primary="SEALS" to="/seal" />
+                    <ListItemLink primary="TRIPPY CAT" to="/trippycat" />
+                    <ListItemLink primary="PENGUINS" to="/penguin" />
+                    <ListItemLink primary="OWLS" to="/owl" />
+                    <ListItemLink primary="8-BIT CATS" to="/cats" />
+                    <ListItemLink primary="CRYPTOMAN" to="/cryptoman" />
+                    <ListItemLink primary="FANTOM LLAMA" to="/fantomllama" />
+                    <ListItemLink primary="CAT LAND" to="/catland" />
+                  </div>
+                </div>
                 <ListItemLink primary="INFO" to="/info" />
-                       <ListItem button component="a" href="https://8bitcats.gitbook.io/whitepaper/">
-    <ListItemText primary="WHITEPAPER" />
-  </ListItem>     
-
-
-
-
-                
+                <ListItem button component="a" href="https://8bitcats.gitbook.io/whitepaper/">
+                  <ListItemText primary="WHITEPAPER" />
+                </ListItem>
               </List>
-
             </Drawer>
           </>
         )}
