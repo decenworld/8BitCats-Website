@@ -88,6 +88,7 @@ const Cemetery = () => {
   const [indexOfSelectedNft, setIndexOfselectedNft] = useState(-1);
   const [indexOfSelectedNftInWallet, setIndexOfselectedNftInWallet] = useState(-1);
   const [reward, setReward] = useState(0);
+  const [newminters, setminters] = useState(0);
 
 
 const all_events = async () => {
@@ -112,7 +113,7 @@ const events = contract.getPastEvents('AllEvents',
         }
                     console.log(minters[(minters.length -1).toString()])
 
-                    return[minters, Token_id]
+                    return[setminters(minters), Token_id]
 
     }
  })};
@@ -539,7 +540,7 @@ const [mintAmount, setMintAmount] = useState(1);
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -1).toString()]+'.png'} />
- <toplist> {minters[(minters.length -1).toString()]} </toplist>
+ <toplist> {newminters[(newminters.length -1).toString()]} </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
