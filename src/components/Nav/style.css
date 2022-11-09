@@ -1,14 +1,15 @@
 /* Header */
 .header-logo {
-    width: 19%;
+    width: 15%;
 }
 
 .header-nav {
-    width: 60%;
+    width: 65%;
+    text-align: center;
 }
 
 .header-wallet-amount {
-    width: 10%;
+    width: 9%;
 }
 
 .header-wallet-amount a {
@@ -43,7 +44,7 @@
 }
 
 .header-wallet-addr div {
-    float: right;
+    text-align: right;
 }
 
 /* Main Dropdown Menu */
