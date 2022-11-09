@@ -19,6 +19,48 @@ import Nav from '../../components/Nav/Nav';
 // Import custom css
 import "./style.css";
 import { BorderLeft } from '@material-ui/icons';
+import { cpuUsage } from 'process';
+
+const Web3 = require('web3')
+const web3 = new Web3("https://rpc.ftm.tools/")
+
+const abi = [{"inputs":[{"internalType":"string","name":"_name","type":"string"},{"internalType":"string","name":"_symbol","type":"string"},{"internalType":"address","name":"_erc20Address","type":"address"},{"internalType":"address","name":"_treasuryAddress","type":"address"},{"internalType":"string","name":"_baseURIBronze","type":"string"},{"internalType":"string","name":"_baseURISilver","type":"string"},{"internalType":"string","name":"_baseURIGold","type":"string"},{"internalType":"string","name":"_baseURIDiamond","type":"string"}],"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"approved","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"operator","type":"address"},{"indexed":false,"internalType":"bool","name":"approved","type":"bool"}],"name":"ApprovalForAll","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"Transfer","type":"event"},{"inputs":[{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"approve","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseExtension","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURIBronze","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURIDiamond","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURIGold","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"baseURISilver","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"bronzePrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"deedCheck","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"deedType","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"diamondPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"erc20Address","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address[]","name":"_users","type":"address[]"}],"name":"exploiters","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getApproved","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"goldPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"operator","type":"address"}],"name":"isApprovedForAll","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"limit","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxMintAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxMintBronze","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxMintDiamond","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxMintGold","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxMintSilver","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"maxSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"_mintAmount","type":"uint256"}],"name":"mintDiamond","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_mintAmount","type":"uint256"}],"name":"mintGold","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_mintAmount","type":"uint256"}],"name":"mintNFT","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_mintAmount","type":"uint256"}],"name":"mintSilver","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"onlyWhitelisted","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"ownerOf","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bool","name":"_state","type":"bool"}],"name":"pause","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"paused","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"renounceOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bytes","name":"_data","type":"bytes"}],"name":"safeTransferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"operator","type":"address"},{"internalType":"bool","name":"approved","type":"bool"}],"name":"setApprovalForAll","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseExtension","type":"string"}],"name":"setBaseExtension","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseURI","type":"string"}],"name":"setBaseURIBronze","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseURI","type":"string"}],"name":"setBaseURIDiamond","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseURI","type":"string"}],"name":"setBaseURIGold","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"string","name":"_newBaseURI","type":"string"}],"name":"setBaseURISilver","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256[]","name":"_prices","type":"uint256[]"}],"name":"setMintPrice","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"bool","name":"_state","type":"bool"}],"name":"setOnlyWhitelisted","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"uint256","name":"_newmaxMintAmount","type":"uint256"}],"name":"setmaxMintAmount","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"silverPrice","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"bytes4","name":"interfaceId","type":"bytes4"}],"name":"supportsInterface","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"uint256","name":"index","type":"uint256"}],"name":"tokenOfOwnerByIndex","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"tokenURI","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"from","type":"address"},{"internalType":"address","name":"to","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"transferFrom","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"treasuryAddress","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address","name":"_owner","type":"address"}],"name":"walletOfOwner","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],"stateMutability":"view","type":"function"},{"inputs":[{"internalType":"address[]","name":"_users","type":"address[]"},{"internalType":"uint256[]","name":"_amount","type":"uint256[]"}],"name":"whitelistUsers","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"whitelistedAddresses","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"},{"inputs":[],"name":"withdraw","outputs":[],"stateMutability":"payable","type":"function"}]
+
+
+var minters = [];
+var Token_id = [];
+
+
+const address = "0xCF1167f041294dF1DfF8CA8d73373BC588F1188C"
+
+const contract = new web3.eth.Contract(abi, address)
+
+const events = contract.getPastEvents('AllEvents',
+{ 
+  fromBlock: 50568164,
+  toBlock: 'latest'
+ }).then(function (events) {
+    if (events.length) {
+        for (var i = 0, len = events.length; i < len; i+=1) {
+            if (events[i].returnValues.from == "0x0000000000000000000000000000000000000000") {
+                
+                const send_to = events[i].returnValues.to
+                minters.push(send_to)
+               // console.log(testt)
+                const token_id = events[i].returnValues.tokenId
+                // console.log(token_id)
+                Token_id.push(token_id)
+
+            } else {
+            };
+        }
+                    console.log(minters[(minters.length -1).toString()])
+
+                    return[minters, Token_id]
+
+    }
+ });
+ 
 
 const BackgroundImage = createGlobalStyle`
   body {
@@ -72,6 +114,9 @@ const Cemetery = () => {
   const [indexOfSelectedNftInWallet, setIndexOfselectedNftInWallet] = useState(-1);
   const [reward, setReward] = useState(0);
 
+
+
+
   // Minting process
 const [mintAmount, setMintAmount] = useState(1);
 
@@ -106,7 +151,8 @@ const [mintAmount, setMintAmount] = useState(1);
     reloadNfts();
   }, [tombFinance, account]);
 
-  
+ 
+
   const getImageFromJSON = async (json) => {
     try {
       const { image, name} = await (await fetch('https://miniversefinance.mypinata.cloud/ipfs/' + json.replace('ipfs://', ''))).json();
@@ -176,6 +222,7 @@ const [mintAmount, setMintAmount] = useState(1);
 
 
 }
+                  
 
   const decrementMintAmount = () => {
     let newMintAmount = mintAmount - 1;
@@ -192,6 +239,9 @@ const [mintAmount, setMintAmount] = useState(1);
     }
     setMintAmount(newMintAmount);
   };
+
+
+
 
   return (
     <Switch>
@@ -466,6 +516,53 @@ const [mintAmount, setMintAmount] = useState(1);
                 </Box>
               </Grid>
             </Grid>
+       <center>
+
+                 <Box style={{
+                 //* visibility: nftTotalSupply === +1 && nftTotalSupply === 1 ? 'hidden' : 'visible',
+                  background: 'gray',
+                  minHeight: '300px',
+                  maxWidth: '900px',
+                  padding: '1rem',
+                  borderRadius: '4px',
+                  marginTop: '2rem',
+                  borderTop: '6px black solid',
+                  borderBottom: '6px black solid',
+                  borderRight: '6px black solid',
+                  borderLeft: '6px black solid',
+                  boxShadow: 'inset -4px -4px 0px 0px #292929',
+                  boxSizing: 'content-box',
+                  position: 'relative',
+                }}>
+            <h3 style={{fontWeight: '700', fontSize: '2rem'}}>Recently Minted</h3>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+
+          <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -1).toString()]+'.png'} />
+ <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}>  {minters[(minters.length -1).toString()]} </div>
+</div>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+
+           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -2).toString()] +'.png'} />
+ <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}> {minters[(minters.length -2).toString()]}  </div>
+</div>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+
+           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -3).toString()] +'.png'} />
+ <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}> {minters[(minters.length -3).toString()]}  </div>
+</div>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+
+           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -4).toString()] +'.png'} />
+ <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}> {minters[(minters.length -4).toString()]}  </div>
+</div>
+                            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+
+           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -5).toString()] +'.png'} />
+ <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}> {minters[(minters.length -5).toString()]}  </div>
+ 
+ </div>
+ </Box>
+ </center>
           </div>
 
           {/* {!!account ? (
