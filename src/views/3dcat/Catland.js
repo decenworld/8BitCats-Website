@@ -34,31 +34,7 @@ const address = "0xCF1167f041294dF1DfF8CA8d73373BC588F1188C"
 
 const contract = new web3.eth.Contract(abi, address)
 
-const events = contract.getPastEvents('AllEvents',
-{ 
-  fromBlock: 50568164,
-  toBlock: 'latest'
- }).then(function (events) {
-    if (events.length) {
-        for (var i = 0, len = events.length; i < len; i+=1) {
-            if (events[i].returnValues.from == "0x0000000000000000000000000000000000000000") {
-                
-                const send_to = events[i].returnValues.to
-                minters.push(send_to)
-               // console.log(testt)
-                const token_id = events[i].returnValues.tokenId
-                // console.log(token_id)
-                Token_id.push(token_id)
 
-            } else {
-            };
-        }
-                    console.log(minters[(minters.length -1).toString()])
-
-                    return[minters, Token_id]
-
-    }
- });
  
 
 const BackgroundImage = createGlobalStyle`
@@ -114,7 +90,32 @@ const Cemetery = () => {
   const [reward, setReward] = useState(0);
 
 
+const all_events = async () => {
+const events = contract.getPastEvents('AllEvents',
+{ 
+  fromBlock: 50568164,
+  toBlock: 'latest'
+ }).then(function (events) {
+    if (events.length) {
+        for (var i = 0, len = events.length; i < len; i+=1) {
+            if (events[i].returnValues.from == "0x0000000000000000000000000000000000000000") {
+                
+                const send_to = events[i].returnValues.to
+                minters.push(send_to)
+               // console.log(testt)
+                const token_id = events[i].returnValues.tokenId
+                // console.log(token_id)
+                Token_id.push(token_id)
 
+            } else {
+            };
+        }
+                    console.log(minters[(minters.length -1).toString()])
+
+                    return[minters, Token_id]
+
+    }
+ })};
 
   // Minting process
 const [mintAmount, setMintAmount] = useState(1);
@@ -148,6 +149,7 @@ const [mintAmount, setMintAmount] = useState(1);
 
   useEffect(() => {
     reloadNfts();
+    all_events();
   }, [tombFinance, account]);
 
  
@@ -537,27 +539,27 @@ const [mintAmount, setMintAmount] = useState(1);
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -1).toString()]+'.png'} />
- <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}>  {minters[(minters.length -1).toString()]} </div>
+ <toplist> {minters[(minters.length -1).toString()]} </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
            <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -2).toString()] +'.png'} />
- <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}> {minters[(minters.length -2).toString()]}  </div>
+ <toplist>{minters[(minters.length -2).toString()]}  </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
            <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -3).toString()] +'.png'} />
- <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}> {minters[(minters.length -3).toString()]}  </div>
+ <toplist> {minters[(minters.length -3).toString()]}  </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
            <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -4).toString()] +'.png'} />
- <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}> {minters[(minters.length -4).toString()]}  </div>
+ <toplist> {minters[(minters.length -4).toString()]}  </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
            <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -5).toString()] +'.png'} />
- <div style={{fontSize: '18px', fontWeight:'600', paddingLeft: '10px'}}> {minters[(minters.length -5).toString()]}  </div>
+<toplist>{minters[(minters.length -5).toString()]}  </toplist>
  
  </div>
  </Box>
