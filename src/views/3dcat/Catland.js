@@ -19,7 +19,6 @@ import Nav from '../../components/Nav/Nav';
 // Import custom css
 import "./style.css";
 import { BorderLeft } from '@material-ui/icons';
-import { cpuUsage } from 'process';
 
 const Web3 = require('web3')
 const web3 = new Web3("https://rpc.ftm.tools/")
