@@ -157,9 +157,9 @@ const [mintAmount, setMintAmount] = useState(1);
 
   const getImageFromJSON = async (json) => {
     try {
-      const { image, name} = await (await fetch('https://miniversefinance.mypinata.cloud/ipfs/' + json.replace('ipfs://', ''))).json();
+      const { image, name} = await (await fetch('https://artion3.mypinata.cloud/ipfs/' + json.replace('ipfs://', ''))).json();
       return {
-        image: 'https://miniversefinance.mypinata.cloud/ipfs/' + image.replace('ipfs://', ''),
+        image: 'https://artion3.mypinata.cloud/ipfs/' + image.replace('ipfs://', ''),
         name,
       };
     } catch(e) {
@@ -539,27 +539,27 @@ const [mintAmount, setMintAmount] = useState(1);
             <h3 style={{fontWeight: '700', fontSize: '2rem'}}>Recently Minted</h3>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
-          <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -1).toString()]+'.png'} />
+          <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://artion3.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -1).toString()]+'.png'} />
  <toplist> {newminters[(newminters.length -1).toString()]} </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
-           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -2).toString()] +'.png'} />
+           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://artion3.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -2).toString()] +'.png'} />
  <toplist>{minters[(minters.length -2).toString()]}  </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
-           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -3).toString()] +'.png'} />
+           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://artion3.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -3).toString()] +'.png'} />
  <toplist> {minters[(minters.length -3).toString()]}  </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
-           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -4).toString()] +'.png'} />
+           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://artion3.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -4).toString()] +'.png'} />
  <toplist> {minters[(minters.length -4).toString()]}  </toplist>
 </div>
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
 
-           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://miniversefinance.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -5).toString()] +'.png'} />
+           <img  style={{width: '70px', height:'100px', border: '0px black solid', borderRadius: '9999px', overflow: 'hidden'}} src={'https://artion3.mypinata.cloud/ipfs/QmdLoJKtozS5r3L2FSxfDQVRUPCuw7QLwyiLixtc1DRrg7/'+Token_id[(Token_id.length -5).toString()] +'.png'} />
 <toplist>{minters[(minters.length -5).toString()]}  </toplist>
  
  </div>

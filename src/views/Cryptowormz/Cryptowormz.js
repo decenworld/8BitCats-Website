@@ -98,9 +98,9 @@ const [mintAmount, setMintAmount] = useState(1);
   
   const getImageFromJSON = async (json) => {
     try {
-      const { image, name} = await (await fetch('https://miniversefinance.mypinata.cloud/ipfs/' + json.replace('https://ipfs.io/ipfs/', ''))).json();
+      const { image, name} = await (await fetch('https://artion3.mypinata.cloud/ipfs/' + json.replace('https://ipfs.io/ipfs/', ''))).json();
       return {
-        image: 'https://miniversefinance.mypinata.cloud/ipfs/' + image.replace('https://ipfs.io/ipfs/', ''),
+        image: 'https://artion3.mypinata.cloud/ipfs/' + image.replace('https://ipfs.io/ipfs/', ''),
         name,
       };
     } catch(e) {
