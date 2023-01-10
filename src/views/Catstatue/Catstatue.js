@@ -13,7 +13,7 @@ import { createGlobalStyle } from 'styled-components';
 //import useBanks from '../../hooks/useBanks';
 import useTombFinance from '../../hooks/useTombFinance';
 
-import PitImage from '../../assets/img/background.png';
+import PitImage from './as.png';
 import Nav from '../../components/Nav/Nav';
 
 
@@ -171,6 +171,14 @@ const [mintAmount, setMintAmount] = useState(1);
         <Route exact path={path}>
           <BackgroundImage />
           <div style={{ textAlign: 'center', color: 'white' }}>
+                          <div style={{
+    background: 'rgba(0, 0, 0, 0.6)',
+    width: '400px',
+    padding: '10px',
+    margin: 'auto',
+    borderRadius: '15px',
+ 
+  }}>
           <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>CAT STATUE</h2>
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
                                       
@@ -225,6 +233,8 @@ const [mintAmount, setMintAmount] = useState(1);
 
                     <br></br>
                     </span>
+                    </div>
+                    <br></br>
 
           
             <span style={{ fontSize: '36px' }}>

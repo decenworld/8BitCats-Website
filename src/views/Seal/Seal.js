@@ -13,7 +13,7 @@ import { createGlobalStyle } from 'styled-components';
 //import useBanks from '../../hooks/useBanks';
 import useTombFinance from '../../hooks/useTombFinance';
 
-import PitImage from '../../assets/img/background.png';
+import PitImage from './background.png';
 
 import Nav from '../../components/Nav/Nav';
 
@@ -180,6 +180,14 @@ const [mintAmount, setMintAmount] = useState(3);
           <BackgroundImage />
           <Nav></Nav>
           <div style={{ textAlign: 'center', color: 'white' }}>
+              <div style={{
+    background: 'rgba(0, 0, 0, 0.6)',
+    width: '400px',
+    padding: '10px',
+    margin: 'auto',
+    borderRadius: '15px',
+ 
+  }}>
           <h2 style={{ textAlign:'center', marginBottom: '5px'  }}>Seals</h2>
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
                                       
@@ -235,7 +243,8 @@ const [mintAmount, setMintAmount] = useState(3);
                     <br></br>
                     </span>
 
-          
+          </div>
+<br></br>
             <span style={{ fontSize: '36px' }}>
               { parseInt(nftStakedTotalSupply * 100 / nftTotalSupply) } % Seals STAKED
             </span>
@@ -244,10 +253,10 @@ const [mintAmount, setMintAmount] = useState(3);
             <Grid container spacing={2}>
               <Grid xs={6} item>
                 <Box style={{
-                  background: 'gray',
+    background: 'rgba(0, 0, 0, 0.8)',
                   minHeight: '500px',
                   padding: '1rem',
-                  borderRadius: '4px',
+                  borderRadius: '15px',
                   borderTop: '6px black solid',
                   borderBottom: '6px black solid',
                   borderRight: '6px black solid',
@@ -285,9 +294,9 @@ const [mintAmount, setMintAmount] = useState(3);
               </Grid>
               <Grid xs={6} item>
                 <Box style={{
-                  background: 'gray',
+    background: 'rgba(0, 0, 0, 0.8)',
                   padding: '1rem',
-                  borderRadius: '4px',
+                  borderRadius: '15px',
                   visibility: indexOfSelectedNft === -1 && indexOfSelectedNftInWallet === -1 ? 'hidden' : 'visible',
                   height: '100px',
                   borderTop: '6px black solid',
@@ -382,10 +391,10 @@ const [mintAmount, setMintAmount] = useState(3);
                   }
                 </Box>
                 <Box style={{
-                  background: 'gray',
+                      background: 'rgba(0, 0, 0, 0.8)',
                   minHeight: '300px',
                   padding: '1rem',
-                  borderRadius: '4px',
+                  borderRadius: '15px',
                   marginTop: '2rem',
                   borderTop: '6px black solid',
                   borderBottom: '6px black solid',
