@@ -198,7 +198,7 @@ const [mintAmount, setMintAmount] = useState(3);
              </span>
                  </Grid>
                      <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
-                     <img style={{width: '200px', height:'200px', border: '1px black solid'}} src={require('./example.gif')} />
+                     <img style={{width: '200px', height:'200px', border: '1px black solid'}} src={require('./example.webp')} />
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
 
                       <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Seal Only 15 FTM</h4>

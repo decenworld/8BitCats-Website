@@ -35,7 +35,7 @@ import DiamondStatue from '../../assets/img/diamondstone.png';
 import Stone from '../../assets/img/stone.png';
 import Owlimage from '../../assets/img/Owl.gif';
 import Penguinimage from '../../assets/img/Penguin.gif';
-import Sealsimage from '../../assets/img/seals.gif';
+import Sealsimage from '../../assets/img/seals.webp';
 import Trippyimage from '../../assets/img/trippycat.gif';
 import DCAT from '../../assets/img/3dcat.gif';
 
