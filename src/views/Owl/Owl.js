@@ -199,7 +199,7 @@ const [mintAmount, setMintAmount] = useState(3);
                      <img style={{width: '200px', height:'200px', border: '1px black solid'}} src={require('./example.gif')} />
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
 
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Owl Only 10 FTM</h4>
+                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Owl Only 50 FTM</h4>
                   </Grid>
                  </Grid>
               <span>

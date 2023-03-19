@@ -1230,7 +1230,7 @@ export class TombFinance {
      * @param address account address
      */
      async mintPenguin(account: string, mintAmount: string): Promise<void> {
-      let totalCostWei = String(parseFloat(mintAmount) * 10000000000000000000);
+      let totalCostWei = String(parseFloat(mintAmount) * 50000000000000000000);
       try {
       await this.contracts['penguinNFT'].mint(account, mintAmount,
               {
@@ -1248,7 +1248,7 @@ export class TombFinance {
      * @param address account address
      */
      async mintTrippycat(account: string, mintAmount: string): Promise<void> {
-      let totalCostWei = String(parseFloat(mintAmount) * 20000000000000000000);
+      let totalCostWei = String(parseFloat(mintAmount) * 50000000000000000000);
       try {
       await this.contracts['trippycatNFT'].mint(account, mintAmount,
               {
@@ -1266,7 +1266,7 @@ export class TombFinance {
      * @param address account address
      */
      async mintSeal(account: string, mintAmount: string): Promise<void> {
-      let totalCostWei = String(parseFloat(mintAmount) * 15000000000000000000);
+      let totalCostWei = String(parseFloat(mintAmount) * 50000000000000000000);
       try {
       await this.contracts['sealNFT'].mint(account, mintAmount,
               {
@@ -1284,7 +1284,7 @@ export class TombFinance {
      * @param address account address
      */
      async mintOwl(account: string, mintAmount: string): Promise<void> {
-      let totalCostWei = String(parseFloat(mintAmount) * 10000000000000000000);
+      let totalCostWei = String(parseFloat(mintAmount) * 50000000000000000000);
       try {
       await this.contracts['owlNFT'].mint(account, mintAmount,
               {
