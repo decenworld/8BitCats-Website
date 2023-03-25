@@ -328,7 +328,7 @@ const [mintAmount, setMintAmount] = useState(3);
                             Claim
                           </Button>
                         </div>
-                        <p style={{maxWidth: '50%'}}>Claimable: { reward / 1e18 } Cat Shares</p>
+                        <p style={{maxWidth: '50%'}}>Claimable: { reward / 1e18 } MEOW COINS</p>
                       </Box>
                     </>
                   }

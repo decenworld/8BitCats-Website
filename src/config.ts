@@ -18,9 +18,9 @@ const configurations: { [env: string]: Configuration } = {
       TOMB: ['0x6c021ae822bea943b2e66552bde1d2696a53fbb7', 18], // ZOO: 0x09e145a1d53c0045f41aeef25d8ff982ae74dd56 0
       USDC: ['0x04068da6c83afcfa0e13ba15a6696662335d5b75', 6], // SHIBA: 0x9ba3e4f84a34df4e08c112e1a0ff148b81655615 9
       FANG: ['0x49894fcc07233957c35462cfc3418ef0cc26129f', 18],
-      MvDOLLAR: ['0x8CcD162E5997363Dc2101371B3B09f316D012306', 18],
+      MvDOLLAR: ['0xd8584d6a05e126ad0d2232e80799ac8edc3afd9c', 18],
       'USDT-FTM-LP': ['0x2b4C76d0dc16BE1C31D4C1DC53bF9B45987Fc75c', 18],
-      'MVDOLLAR-USDC-LP': ['0x20f1F2F12ca4F4B241aB9745EE61745ECC97c60a', 18],
+      'MVDOLLAR-USDC-LP': ['0xe41D4A941931e5b45502d93A433C73f15E1b62bd', 18],
       'MSHARE-USDC-LP': ['0xAE3439d64f1fC15188F660Fa35cfb16d7257c0eb', 18],
       'MVDOLLAR-MSHARE-LP': ['0x85E8DcBc11eF5C5F98277B20A041C8ab90E0e2f7', 18]
     },
@@ -101,7 +101,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   /*shares*/
   LPRewardPool1ShareRewardPool: {
     name: 'CATCOINS-USDC LP',
-    poolId: 1,
+    poolId: 0,
     sectionInUI: 2,
     contract: 'LPRewardPool1ShareRewardPool',
     depositTokenName: 'MVDOLLAR-USDC-LP',
@@ -114,7 +114,7 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
   },
   LPRewardPool2ShareRewardPool: {
     name: 'CATSHARE-USDC LP',
-    poolId: 0,
+    poolId: 4,
     sectionInUI: 2,
     contract: 'LPRewardPool2ShareRewardPool',
     depositTokenName: 'MSHARE-USDC-LP',
@@ -139,13 +139,13 @@ export const bankDefinitions: { [contractName: string]: BankInfo } = {
     closedForStaking: false,
   },
   mvdollarShareRewardPool: {
-    name: 'CATCOINS',
-    poolId: 2,
+    name: 'MvDOLLAR',
+    poolId: 1,
     sectionInUI: 2,
     contract: 'mvdollarShareRewardPool',
     depositTokenName: 'MvDOLLAR',
     earnTokenName: 'MSHARE',
-    earnTokenName2: 'CATSHARE',
+    earnTokenName2: 'MvDOLLAR',
     multiplier: "100x",
     finished: false,
     sort: 3,

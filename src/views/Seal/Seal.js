@@ -201,7 +201,7 @@ const [mintAmount, setMintAmount] = useState(3);
                      <img style={{width: '200px', height:'200px', border: '1px black solid'}} src={require('./example.webp')} />
           <Grid container justify="center" spacing={0} style={{marginTop: '10px', marginBottom: '10px'}}>
 
-                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Seal Only 50 FTM</h4>
+                      <h4 style={{ textAlign:'center', marginBottom: '2px'  }}>1 Seal Only 25 FTM</h4>
                   </Grid>
                  </Grid>
               <span>
@@ -319,6 +319,7 @@ const [mintAmount, setMintAmount] = useState(3);
                         justifyContent: 'space-between'
                       }}>
                         <div>
+                          
                           <Button
                             variant='contained' 
                             color="primary" 
@@ -337,7 +338,7 @@ const [mintAmount, setMintAmount] = useState(3);
                             Claim
                           </Button>
                         </div>
-                        <p style={{maxWidth: '50%'}}>Claimable: { reward / 1e18 } Cat Shares</p>
+                        <p style={{maxWidth: '50%'}}>Claimable: { reward / 1e18 } MEOW COINS</p>
                       </Box>
                     </>
                   }

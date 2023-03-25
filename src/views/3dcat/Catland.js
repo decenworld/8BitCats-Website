@@ -330,7 +330,7 @@ const [mintAmount, setMintAmount] = useState(1);
                             <div style={{ fontSize: '10px', marginBottom: '8px'}}>
                               
          <p></p>
-              <Button color="primary" href="https://spooky.fi/#/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
+              <Button color="primary" href="https://spooky.fi/#/swap?outputCurrency=0xd8584d6a05e126ad0d2232e80799ac8edc3afd9c&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
                 <h3>Buy CATCOIN</h3>
               </Button>
               <br></br>
@@ -430,7 +430,7 @@ const [mintAmount, setMintAmount] = useState(1);
                             Claim
                           </Button>
                         </div>
-                        <p style={{maxWidth: '50%'}}>Claimable: { reward / 1e18 } CAT SHARES</p>
+                        <p style={{maxWidth: '50%'}}>Claimable: { reward / 1e18 } MEOW COINS</p>
                       </Box>
                     </>
                   }

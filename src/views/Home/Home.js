@@ -361,53 +361,18 @@ border-style: solid;
           className={`menu ${isActive ? "active" : "inactive"}`}
         >
           <ul>
-            <li>
-              <a href="/boardroom">Boardroom</a>
-            </li>
-            <li>
-              <a href="/farms">Farms</a>
-            </li>
+            
+          
                                 <li>
               <a href="/catstatue">Golden Statue</a>
             </li>
                                                <li>
               <a href="/diamondstone">Diamond Stone</a>
             </li>
-
-                                                 <li>
-                                                                        <li>
-                      
-              <a href="/3dcat">3D Cats</a>
-            </li>
+                                               <li>
               <a href="/seal">Seals</a>
             </li>
-                                                              <li>
-              <a href="/trippycat">Trippycat</a>
-            </li>
-                                               <li>
-              <a href="/owl">Owls</a>
-            </li>
-
-                                                    <li>
-              <a href="/penguin">Penguins</a>
-            </li>
-
-            <li>
-              <a href="/cryptoman">Cryptoman</a>
-            </li>
-                    
-                                          <li>
-              <a href="/fantomllama">Fantom Llama</a>
-            </li>
- 
-                        <li>
-              <a href="/cats">8-Bit Cats</a>
-            </li>
-     
-        
-                                  <li>
-              <a href="/info">Info</a>
-            </li>
+                                                               
             <li>
               <a href="https://8bitcats.gitbook.io/whitepaper/">Whitepaper</a>
             </li>
@@ -415,10 +380,10 @@ border-style: solid;
         </nav>
 
               </div>
- <a href='https://spooky.fi/#/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75'>
+ <a href='https://spooky.fi/#/swap?outputCurrency=0xd8584d6a05e126ad0d2232e80799ac8edc3afd9c'>
             <span className='bg-brown-200 p-1 fixed top-2 right-2 z-50 flex items-center shadow-lg cursor-pointer'
             style={{border: "solid", borderWidth: "3px", marginRight: "10px",  
-            imageRendering: "pixelated", borderRadius: "10px", width: "140px", height: "50px"}}
+           borderRadius: "10px", width: "140px", height: "60px"}}
 
             >
 
@@ -441,25 +406,19 @@ border-style: solid;
             <span id="house" className='house' style={{position: "absolute", top: "1450px", left: "1600px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px", imageRendering: "pixelated"}} />
-                <img src={Penguinimage} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./penguin'>
             <img src={House} width="134" height="165" className="inset-0"  />
                 <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>STAKING</span></div>
-            </a>
+  <span style={{marginLeft: "3px"}}>CLOSED</span></div>
             </span>
 
              <span id="housetripcat" className='housetripcat' style={{position: "absolute", top: "1320px", left: "2430px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px", imageRendering: "pixelated"}} />
-                <img src={Trippyimage} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./trippycat'>
             <img src={House} width="134" height="165" className="inset-0"  />
                 <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>STAKING</span></div>
-            </a>
+  <span style={{marginLeft: "3px"}}>CLOSED</span></div>
             </span>
 
 
@@ -467,30 +426,21 @@ border-style: solid;
                         <span id="house2" className='house2' style={{position: "absolute", top: "1150px", left: "1650px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-                <img src={Owlimage} width="50" height="50 " className="inset-0" 
-
-                style={{position: "absolute", top: "90px", left: "195px"
-              }} />
-
+             
   
-            <a href='./owl'>
             <img src={House} width="134" height="165" className="inset-0"  />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>STAKING</span></div>
-            </a>
+  <span style={{marginLeft: "3px"}}>CLOSED</span></div>
             </span>
 
                 <span id="house3" className='house3' style={{position: "absolute", top: "1150px", left: "1950px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-             <img src={Sealsimage} width="50" height="50 " className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./seal'>
 
             <img src={House} width="134" height="165" className="inset-0"  />
                             <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "10px"}}>STAKING</span></div>
-</a>
+  <span style={{marginLeft: "10px"}}>CLOSED</span></div>
 
             </span>
 
@@ -504,12 +454,9 @@ border-style: solid;
                         <span id="llamahouse" className='llamahouse' style={{position: "absolute", top: "740px", left: "1700px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-                <img src={"https://fantomllama.netlify.app/config/images/example.gif"} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./fantomllama'>
             <img src={Farm} width="134" height="165" className="inset-0"  />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "80px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>STAKING</span></div>
-            </a>
+  <span style={{marginLeft: "3px"}}>CLOSED</span></div>
             </span>
 
 
@@ -518,13 +465,10 @@ border-style: solid;
 >
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-                <img src={Cats} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./cats'>
             <img src={HouseRed} width="134" height="165" className="inset-0"  />
                             <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>STAKING</span></div>
-            </a>
+  <span style={{marginLeft: "3px"}}>CLOSED</span></div>
             </span>
 
 
@@ -533,13 +477,10 @@ border-style: solid;
 >
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-                <img src={Cryptoman} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./cryptoman'>
             <img src={HouseRed} width="134" height="165" className="inset-0"  />
                             <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>STAKING</span></div>
-            </a>
+  <span style={{marginLeft: "3px"}}>CLOSED</span></div>
             </span>
 
                      <span id="housered" className='housered' style={{position: "absolute", top: "1210px", left: "3400px", imageRendering: "pixelated"}}
@@ -547,8 +488,8 @@ border-style: solid;
 >
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px"}} />
-                <img src={DCAT} width="50" height="50" className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
-            <a href='./3dcat'>
+             <img src={Sealsimage} width="50" height="50 " className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./seal'>
             <img src={HouseRed} width="134" height="165" className="inset-0"  />
                             <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
@@ -560,21 +501,17 @@ border-style: solid;
 // catcoin/red house starts here
 >
 
-            <a href='./boardroom'>
             <img src={Boardroom} width="190" height="165" className="inset-0"  />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "122px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "80px", left: "35px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>BOARDROOM</span></div>
-            </a>
+  <span style={{marginLeft: "20px"}}>CLOSED</span></div>
             </span>
                       <span id="farm" className='farm' style={{position: "absolute", top: "1190px", left: "3100px", imageRendering: "pixelated"}}
 // catcoin/red house starts here
 >
 
-            <a href='./farms'>
             <img src={Farm} width="134" height="165" className="inset-0"  />
-<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "75px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "60px", left: "30px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>FARMS</span></div>
-            </a>
+<div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "125px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "60px", left: "10px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
+  <span style={{marginLeft: "20px"}}>CLOSED</span></div>
             </span>
 
 

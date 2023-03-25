@@ -1266,7 +1266,7 @@ export class TombFinance {
      * @param address account address
      */
      async mintSeal(account: string, mintAmount: string): Promise<void> {
-      let totalCostWei = String(parseFloat(mintAmount) * 50000000000000000000);
+      let totalCostWei = String(parseFloat(mintAmount) * 25000000000000000000);
       try {
       await this.contracts['sealNFT'].mint(account, mintAmount,
               {

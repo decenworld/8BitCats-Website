@@ -221,7 +221,7 @@ const Cats = () => {
               <p></p>
               <h3>SpookySwap</h3>
 
-              <Button color="primary" href="https://spooky.fi/#/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
+              <Button color="primary" href="https://spooky.fi/#/swap?outputCurrency=0xd8584d6a05e126ad0d2232e80799ac8edc3afd9c&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '10px' }}>
                 Buy CATCOIN
               </Button>
               <Button color="primary" href="https://spooky.fi/#/swap?outputCurrency=0x6E88D9A9D326bAC2AdE987b9Cd49c571Ec8a8A9e&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
@@ -285,7 +285,7 @@ const Cats = () => {
                 {tombTotalSupply}
               </span>
               <p></p>
-              <Button color="primary" href="https://spooky.fi/#/swap?outputCurrency=0x8CcD162E5997363Dc2101371B3B09f316D012306&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
+              <Button color="primary" href="https://spooky.fi/#/swap?outputCurrency=0xd8584d6a05e126ad0d2232e80799ac8edc3afd9c&inputCurrency=0x04068da6c83afcfa0e13ba15a6696662335d5b75" variant="contained" className={'shinyButton ' + classes.button} style={{ margin: '0px' }}>
                 <h3>Buy CATCOIN</h3>
               </Button>
 

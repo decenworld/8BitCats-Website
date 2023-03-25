@@ -49,6 +49,7 @@ const AccountModal: React.FC<ModalProps> = ({ onDismiss }) => {
 };
 
 const StyledValue = styled.div`
+  margin-top: 15px;
   font-size: 15px;
   font-weight: 700;
   text-align: center;
@@ -67,8 +68,8 @@ const Balances = styled.div`
   flex-direction: row;
   justify-content: center;
   margin-bottom: ${(props) => props.theme.spacing[4]}px;
-  height: 25px;
-  width: 25px;
+  height: 50px;
+  width: 50px;
     margin: auto;
 
 `;
