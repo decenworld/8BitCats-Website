@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Rubik');
 
 body {
   margin: 0;
-  font-family: "Press Start 2P", cursive;
+  font-family: "Rustik";
 
 
   -webkit-font-smoothing: antialiased;
@@ -22,8 +23,6 @@ body {
 
 h2 {
    font-family: "Press Start 2P", cursive;
-
-
 }
 
 
@@ -35,16 +34,6 @@ h4 {
    font-family: "Press Start 2P", cursive;
 }
 
-  @media (max-width: 767.98px) {
-      h1 {
-    font-size: 30px;
-      font-weight: 500;
-  } 
-  h2 {
-    font-size: 20px;
-      font-weight: 500;
-  } 
-}
 
 mintButton {
 background: #92CD41;
@@ -129,6 +118,20 @@ word-spacing: revert;
 }
 
 
+.GameBanner {
+  padding-left: 10rem !important;
+  padding-right: 10rem !important;
+}
+
+@media screen and (max-width: 600px) {
+  .GameBanner {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+
+
 TextSupply {
   color: var(--primary-text);
   font-size: 12px;
@@ -139,4 +142,44 @@ TextSupply {
     font-size: 62px;
       font-weight: 500;
   }
+}
+
+.h-0 {
+  height: 0;
+}
+
+.md\:pb-[25\%] {
+  padding-bottom: 25%;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.lg\:block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-max {
+  height: max-content;
+}
+
+.items-center {
+  align-items: center;
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
 @font-face {
   font-family: 'superstar';
   src: local('superstar'), url('./fonts/Antipasto.ttf') format('truetype');
@@ -72,7 +74,7 @@ code {
 
 .wallet-button {
   color: #fff;
-  font-family: 'monospace', sans-serif !important;
+  font-family: 'Rubik' !important;
   font-size: 1.2rem !important;
   text-align: left !important;
   justify-content: flex-start !important;
@@ -164,10 +166,10 @@ code {
   position: relative !important;
 }
 .ijwpow {
-  background-color: rgba(255, 255, 255, 0) !important;
+  background-color: rgb(49, 49, 94) !important;
 }
 .makeStyles-appBar-2 {
-  background-color: rgba(255, 255, 255, 0) !important;
+  background-color: rgb(49, 49, 94) !important;
 }
 .walletconnecttitle {
   color: #322f32;
@@ -182,16 +184,63 @@ code {
   color: #fff !important;
 }
 .MuiButton-containedPrimary{
-  background: #BBA14F !important;
+    font-family: 'Rubik' !important;
+
+appearance: button;
+  font-size: 1.5rem !important;
+
+  background: #7D50E6 !important;
+background-image: none;
+border-bottom-color: rgb(229, 231, 235);
+border-bottom-left-radius: 4px;
+border-bottom-right-radius: 4px;
+border-bottom-style: solid;
+border-bottom-width: 0px;
+border-image-outset: 0;
+border-image-repeat: stretch;
+border-image-slice: 100%;
+border-image-source: none;
+border-image-width: 1;
+border-left-color: rgb(229, 231, 235);
+border-left-style: solid;
+border-left-width: 0px;
+border-right-color: rgb(229, 231, 235);
+border-right-style: solid;
+border-right-width: 0px;
+border-top-color: rgb(229, 231, 235);
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-top-style: solid;
+border-top-width: 0px;
+box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
+box-sizing: border-box;
+color: rgb(243, 232, 255);
+cursor: pointer;
+font-family: Rubik;
+font-weight: 700;
+height: 60px;
+line-height: 32px;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+padding-bottom: 0px;
+padding-left: 28px;
+padding-right: 28px;
+padding-top: 0px;
+tab-size: 4;
+text-transform: none;
+width: 157.9px
 }
 
 .MuiButton-containedPrimary:hover{
-  background: #5f657a !important;
+  background: #966df7 !important;
 }
 
 .wallet-button {
   color: #fff;
-  font-family: 'monospace', sans-serif !important;
+  font-family: 'Rubik' !important;
+font-weight: "700";
   font-size: 1.2rem !important;
   text-align: left !important;
   justify-content: flex-start !important;

@@ -32,8 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-    color: '#e0e3bd',
-    'background-color': 'rgba(44, 62, 80, 0.65)',
+      background: '#e0e3bd',
     borderBottom: '1px solid rgba(52, 152, 219, 0.65)',
     padding: '0',
     marginBottom: '3rem',
@@ -45,22 +44,67 @@ const useStyles = makeStyles((theme) => ({
   drawerPaper: {
     width: 240,
   },
+    textBar: {
+      flex: "1 1 0%",
+      width: "0",
+      justifyContent: "flex-start",
+    alignItems: "center",
+    display: "flex",
+    },
   hide: {
     display: 'none',
   },
   toolbar: {
-    flexWrap: 'wrap',
+      paddingTop: "1rem",
+      paddingBottom: "1.25rem",
+  //    marginLeft: "auto",
+      marginRight: "auto",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      maxWidth: "1460px",
   },
   toolbarTitle: {
     fontFamily: 'monospace',
     fontSize: '30px',
     flexGrow: 1,
   },
+    connectWallet: {
+    boxShadow: 'var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)',
+    '--tw-shadow': '0px 1px 2px rgba(16,24,40,.05)',
+    '--tw-shadow-color': 'var(--color-black)',
+    '--tw-text-opacity': 1,
+    color: 'rgb(243 232 255/var(--tw-text-opacity))',
+    fontWeight: 700,
+    fontSize: '1.5rem',
+    lineHeight: '2rem',
+    fontFamily: 'Rubik',
+    paddingLeft: '28px',
+    paddingRight: '28px',
+    '--tw-bg-opacity': 1,
+    backgroundColor: 'rgb(125 80 230/var(--tw-bg-opacity))',
+    borderRadius: '4px',
+    width: '100%',
+    height: '100%',
+    cursor: 'pointer',
+    WebkitAppearance: 'button',
+    textTransform: 'none',
+    margin: 0,
+    padding: 0,
+  },
   link: {
-    textTransform: 'uppercase',
-    color: '#fff',
-    fontSize: '14px',
-    margin: theme.spacing(1, 2),
+    transitionProperty: 'color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color',
+    transitionTimingFunction: 'cubic-bezier(.4,0,.2,1)',
+    transitionDuration: '.15s',
+    '--tw-text-opacity': 1,
+    color: 'rgb(243 232 255/var(--tw-text-opacity))',
+    marginRight: '1rem',
+    fontWeight: 700,
+    fontSize: '2rem',
+    paddingLeft: '1.5rem',
+    lineHeight: '2rem',
+    whiteSpace: 'nowrap',
+    cursor: 'pointer',
     textDecoration: 'none',
     '&:hover': {
       textDecoration: 'none',
@@ -73,6 +117,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       textDecoration: 'none',
     },
+  
   },
 }));
 
@@ -97,31 +142,37 @@ const Nav = () => {
       <Toolbar className={classes.toolbar}>
         {matches ? (
           <>
-            <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>     
+     <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>     
             <a rel="noopener noreferrer" href="https://8bitcats.com" className={classes.link}>
-              <img alt="MiniVerse" src={mvLogo} height="50px" style={{marginTop: '15px'}} />
+              <img alt="MiniVerse" src={mvLogo} height="50px" width="350px" style={{display: 'inherit', paddingLeft: '7rem', marginTop: '5px'}} />
               </a> 
             </Typography>
-             <AccountButton text="Connect" />
-            <Box mr={5}>
+          
+       
+            <Box className={classes.textBar} style={{paddingLeft: "7rem"}} >
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
-                                    <Link color="textPrimary" to="/seal" className={classes.link}>
-                Seals
+                                <Link color="textPrimary" to="/game" className={classes.link}>
+                Game
               </Link>
-              
+                                <Link color="textPrimary" to="/seal" className={classes.link}>
+                Mint
+              </Link>
                                             <Link color="textPrimary" to="/catstatue" className={classes.link}>
                 Golden Statue
               </Link>
                                     <Link color="textPrimary" to="/diamondstone" className={classes.link}>
                 Diamond Stone
               </Link>
-                 
-              
-                      
+        
+           
+            
+       
                   
-
+              <div style={{paddingLeft: "25rem"}}>
+   <AccountButton text="Connect" />
+   </div>
 
 
 
@@ -186,15 +237,11 @@ const Nav = () => {
                   <AccountButton text="Connect" />
                 </ListItem>
                 <ListItemLink primary="HOME" to="/" />
+                                <ListItemLink primary="GAME" to="/game" />
+                <ListItemLink primary="MINT" to="/seal" />
                 <ListItemLink primary="DIAMOND STONE" to="/diamondstone" />
                 <ListItemLink primary="CAT STATUE" to="/catstatue" />
-    
-                <ListItemLink primary="SEALS" to="/seal" />
             
-            
-                       <ListItem button component="a" href="https://8bitcats.gitbook.io/whitepaper/">
-    <ListItemText primary="WHITEPAPER" />
-  </ListItem>     
 
 
 

@@ -43,6 +43,8 @@ const Stone = lazy(() => import('./views/Stone'));
 const Owl = lazy(() => import('./views/Owl'));
 const Penguin = lazy(() => import('./views/Penguin'));
 const Seal = lazy(() => import('./views/Seal'));
+const Game = lazy(() => import('./views/Game'));
+
 
 const Trippycat = lazy(() => import('./views/Trippycat'));
 const DCat = lazy(() => import('./views/3dcat'));
@@ -93,6 +95,10 @@ const App: React.FC = () => {
               <Route path="/catland">
               <Catland />
             </Route>
+                         <Route path="/game">
+              <Game />
+            </Route>
+            
             <Route path="/boardroom">
               <Masonry />
             </Route>
@@ -153,6 +159,7 @@ const App: React.FC = () => {
               <Seal />
               
             </Route>
+                    
     
                               <Route path="/info">
               <Info />
