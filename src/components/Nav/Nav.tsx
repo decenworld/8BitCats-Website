@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
-      background: '#e0e3bd',
+      background: '#1a1a4c',
     borderBottom: '1px solid rgba(52, 152, 219, 0.65)',
     padding: '0',
     marginBottom: '3rem',
@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme) => ({
   },
   brandLink: {
     textDecoration: 'none',
-    color: '#e0e3bd',
+    color: '#1a1a4c',
     '&:hover': {
       textDecoration: 'none',
     },
@@ -170,7 +170,7 @@ const Nav = () => {
             
        
                   
-              <div style={{paddingLeft: "25rem"}}>
+              <div style={{paddingLeft: "10rem"}}>
    <AccountButton text="Connect" />
    </div>
 

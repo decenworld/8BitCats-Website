@@ -305,7 +305,7 @@ const [mintAmount, setMintAmount] = useState(3);
   padding-right: 5rem !important;
 }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 600px) {
       .Sealimg {
         padding-left: 0 !important;
         padding-right: 0 !important;
