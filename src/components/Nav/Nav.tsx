@@ -144,12 +144,12 @@ const Nav = () => {
           <>
      <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>     
             <a rel="noopener noreferrer" href="https://8bitcats.com" className={classes.link}>
-              <img alt="MiniVerse" src={mvLogo} height="50px" width="350px" style={{display: 'inherit', paddingLeft: '7rem', marginTop: '5px'}} />
+              <img alt="MiniVerse" src={mvLogo} height="50px" width="150px" style={{display: 'inherit', paddingLeft: '1rem', marginTop: '5px'}} />
               </a> 
             </Typography>
           
        
-            <Box className={classes.textBar} style={{paddingLeft: "7rem"}} >
+            <Box className={classes.textBar} style={{paddingLeft: "0.2rem"}} >
               <Link color="textPrimary" to="/" className={classes.link}>
                 Home
               </Link>
