@@ -38,6 +38,7 @@ import Penguinimage from '../../assets/img/Penguin.gif';
 import Sealsimage from '../../assets/img/seals.webp';
 import Trippyimage from '../../assets/img/trippycat.gif';
 import DCAT from '../../assets/img/3dcat.gif';
+import Chibiimage from '../../assets/img/chibi.webp';
 
 
 import GoblingAxe from '../../assets/img/goblings/spr_axe.gif';
@@ -372,7 +373,9 @@ border-style: solid;
                                                <li>
               <a href="/seal">Seals</a>
             </li>
-                                                               
+            <li>
+                                <a href="/chibicats">Chibi Cats</a>
+            </li>                                             
             <li>
               <a href="https://8bitcats.gitbook.io/whitepaper/">Whitepaper</a>
             </li>
@@ -412,13 +415,17 @@ border-style: solid;
   <span style={{marginLeft: "3px"}}>CLOSED</span></div>
             </span>
 
+
              <span id="housetripcat" className='housetripcat' style={{position: "absolute", top: "1320px", left: "2430px", imageRendering: "pixelated"}}>
 
                 <img src={Sign} width="100" height="100" className="inset-0" style={{position: "absolute", top: "80px", left: "170px", imageRendering: "pixelated"}} />
+                             <img src={Chibiimage} width="50" height="50 " className="inset-0" style={{position: "absolute", top: "90px", left: "195px"}} />
+            <a href='./chibicats'>
             <img src={House} width="134" height="165" className="inset-0"  />
                 <img src={Smoke} width="30" height="50" className="inset-0" style={{position: "absolute", top: "21px", left: "5px"}} />
 <div class="bg-brown-300 p-1 text-white text-shadow text-xs w-fit" style={{position: "absolute", width: "100px", borderStyle: "solid", borderWidth: "1px", imageRendering: "pixelated", borderRadius: "5px", top: "110px", left: "20px", borderImage: 'url("https://raw.githubusercontent.com/decenworld/gamingdemo/5f3cab580fc688ec00661ee94545dbb9f829a460/src/assets/img/wall-sign.png") 25% / 3 / 0 repeat'}}>
-  <span style={{marginLeft: "3px"}}>CLOSED</span></div>
+  <span style={{marginLeft: "20px"}}>MINT </span></div>
+  </a>
             </span>
 
 

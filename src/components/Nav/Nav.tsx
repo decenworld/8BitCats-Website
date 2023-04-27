@@ -159,6 +159,9 @@ const Nav = () => {
                                 <Link color="textPrimary" to="/seal" className={classes.link}>
                 Mint
               </Link>
+                                                  <Link color="textPrimary" to="/chibicats" className={classes.link}>
+                Chibi Cats
+              </Link>
                                             <Link color="textPrimary" to="/catstatue" className={classes.link}>
                 Golden Statue
               </Link>

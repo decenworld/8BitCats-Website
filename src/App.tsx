@@ -48,6 +48,7 @@ const Game = lazy(() => import('./views/Game'));
 
 const Trippycat = lazy(() => import('./views/Trippycat'));
 const DCat = lazy(() => import('./views/3dcat'));
+const Chibicats = lazy(() => import('./views/Chibicats'));
 
 
 const Info = lazy(() => import('./views/Info'));
@@ -166,6 +167,9 @@ const App: React.FC = () => {
             </Route>
                                     <Route path="/3dcat">
               <DCat />
+            </Route>
+                                                <Route path="/chibicats">
+              <Chibicats />
             </Route>
             <Route path="*">
               <NoMatch />
