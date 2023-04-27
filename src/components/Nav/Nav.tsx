@@ -203,7 +203,7 @@ const Nav = () => {
         ) : (
           <>
             <IconButton
-              color="inherit"
+              color="secondary"
               aria-label="open drawer"
               onClick={handleDrawerOpen}
               edge="start"
